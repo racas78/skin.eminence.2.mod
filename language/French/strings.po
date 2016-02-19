@@ -1617,3 +1617,7 @@ msgstr "Permet de définir l'information affichée sur les séries TV et les sai
 msgctxt "#31727"
 msgid "[B]AutoCompletion for virtual keyboard[/B] addon is needed to show autocompletion of keyboard."
 msgstr "L'extension [B]AutoCompletion for virtual keyboard[/B] est nécessaire pour afficher la saisie automatique du clavier."
+
+msgctxt "#31728"
+msgid "Cycle"
+msgstr "Cycle"

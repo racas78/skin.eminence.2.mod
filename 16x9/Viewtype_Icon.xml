@@ -1285,6 +1285,391 @@
             </control>
         </control>
     </include>
+    
+    
+        <include name="Viewtype_Cycle">
+        <control type="group">
+            <visible>Control.IsVisible(156)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <include name="Object_Line">
+                <param name="width" value="1879" />
+                <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+            </include>
+            <include name="View_Cycle">
+                <param name="id" value="156" />
+<!-- Modification Param -->                
+                <param name="name" value="Posters" />
+                <param name="width" value="1888" />
+                <param name="condition" value="Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)" />
+            </include>
+            <control type="group">
+                <top>712</top>
+                <left>1</left>
+                <include name="Object_Line">
+                    <param name="width" value="1879" />                      
+                </include>
+            </control>
+            <include>Object_Arrows_Vertical</include>
+        </control>
+    </include>
+
+    <include name="View_Cycle">
+        <param name="updownid" default="true" />
+        <param name="posx" default="1" />
+        <param name="posy" default="-6" />
+        <param name="height" default="682" />
+        <param name="infovisible" default="false" />
+        <definition>
+            <control type="group">
+                <control type="panel" id="$PARAM[id]">
+                    <top>$PARAM[posy]</top>
+                    <left>$PARAM[posx]</left>
+                    <width>$PARAM[width]</width>
+                    <height>$PARAM[height]</height>
+                    <onup condition="$PARAM[updownid]">$PARAM[id]</onup>
+                    <ondown condition="$PARAM[updownid]">$PARAM[id]</ondown>
+                    <onup condition="!$PARAM[updownid]">$PARAM[onup]</onup>
+                    <ondown condition="!$PARAM[updownid]">$PARAM[ondown]</ondown>
+                    <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
+                    <onleft condition="!StringCompare(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onleft>
+                    <pagecontrol>60</pagecontrol>
+                    <preloaditems>2</preloaditems>
+                    <orientation>vertical</orientation>
+                    <viewtype label="$PARAM[name]">icons</viewtype>
+                    <scrolltime tween="quadratic">400</scrolltime>
+                    <visible>$PARAM[condition]</visible>
+                    <itemlayout height="341" width="236" condition="!$PARAM[infovisible]">
+                        <control type="group">
+                            <left>0</left>
+                            <right>pad</right>
+                            <bottom>6</bottom>
+                            <top>6</top>
+                            <control type="image">
+                                <width>100%</width>
+                                <height>100%</height>
+                                <texture colordiffuse="PosterBorder">common/white.png</texture>
+                            </control>
+                            <control type="image">
+                                <left>pad</left>
+                                <right>pad</right>
+                                <top>pad</top>
+                                <bottom>pad</bottom>
+                                <aspectratio>keep</aspectratio>
+                                <texture background="true">$VAR[Image_Poster]</texture>
+                                <visible>IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))</visible>
+                            </control>
+                            <control type="image">
+                                <left>pad</left>
+                                <right>pad</right>
+                                <top>pad</top>
+                                <bottom>pad</bottom>
+<!-- Modification Aspectratio -->                            
+                                <aspectratio>stretch</aspectratio>
+                                <texture background="true">$VAR[Image_Poster]</texture>
+                                <visible>![IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))]</visible>
+                            </control>
+<!-- Ajout Control -->                        
+                        <control type="image">
+                            <right>15</right>
+                            <top>15</top>
+                            <height>32</height>
+                            <width>32</width>                         
+                            <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                        </control>                            
+                            <control type="image">
+                                <right>15</right>
+                                <top>15</top>
+                                <height>32</height>
+                                <width>32</width>
+<!-- Modification Texture -->                            
+                            <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+                                <visible>!IsEmpty(ListItem.Overlay)</visible>
+                            </control>
+                        </control>
+                    </itemlayout>
+
+                    <itemlayout height="350" width="243" condition="$PARAM[infovisible]">
+                        <control type="group">
+                            <left>0</left>
+                            <right>pad</right>
+                            <bottom>5</bottom>
+                            <top>5</top>
+                            <control type="image">
+                                <width>100%</width>
+                                <height>100%</height>
+                                <texture colordiffuse="PosterBorder">common/white.png</texture>
+                            </control>
+                            <control type="image">
+                                <left>pad</left>
+                                <right>pad</right>
+                                <top>pad</top>
+                                <bottom>pad</bottom>
+                                <aspectratio>keep</aspectratio>
+                                <texture background="true">$VAR[Image_Poster]</texture>
+                                <visible>IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))</visible>
+                            </control>
+                            <control type="image">
+                                <left>pad</left>
+                                <right>pad</right>
+                                <top>pad</top>
+                                <bottom>pad</bottom>
+                                <aspectratio>scale</aspectratio>
+                                <texture background="true">$VAR[Image_Poster]</texture>
+                                <visible>![IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))]</visible>
+                            </control>                   
+                            <control type="image">
+                                <right>15</right>
+                                <top>15</top>
+                                <height>32</height>
+                                <width>32</width>
+                                <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+                                <visible>!IsEmpty(ListItem.Overlay)</visible>
+                            </control>
+                            <control type="image">
+                                <right>15</right>
+                                <top>15</top>
+                                <height>32</height>
+                                <width>32</width>                       
+                                <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+                                <visible>!IsEmpty(ListItem.Overlay)</visible>
+                            </control>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="341" width="236" condition="!$PARAM[infovisible]">
+                    <!-- Left Poster Info -->
+					<control type="group">
+						<posx>0</posx>	
+						<posy>0</posy>
+						<visible>Container(156).Column(0) | Container(156).Column(1) | Container(156).Column(2) | Container(156).Column(3)</visible>
+						<animation effect="fade" start="0" end="0" delay="0" time="50" reversible="false">UnFocus</animation>
+						<animation effect="fade" start="0" end="0" delay="0" time="50" reversible="false">Hidden</animation>
+						<control type="image">
+							<posx>0</posx>
+							<top>6</top>
+							<width>698</width>
+							<height>329</height>
+							<texture colordiffuse="DialogBG">common/white.png</texture>							
+							<animation effect="zoom" start="0,47,1,329" end="23,47,698,329" delay="600" time="300" reversible="false">Focus</animation>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>8</posy>
+							<width>709</width>
+							<height>81</height>
+							<texture border="0,0,14,0" colordiffuse="$VAR[HighlightColor]" flipy="true">common/right-11.png</texture>
+							<animation effect="zoom" start="0,41,1,64" end="23,41,708,64" delay="600" time="300" reversible="false">Focus</animation>
+						</control>
+						<!-- Info -->
+						<control type="group">
+							<posx>270</posx>
+							<posy>6</posy>
+							<include>View_Cycle_Info_Left</include>
+						</control>
+					</control>
+					<!-- Right Poster Info -->
+					<control type="group">
+						<posx>-620</posx>	
+						<posy>0</posy>
+						<visible>Container(156).Column(4) | Container(156).Column(5) | Container(156).Column(6) | Container(156).Column(7)</visible>
+						<animation effect="fade" start="0" end="0" delay="0" time="50" reversible="false">UnFocus</animation>
+						<animation effect="fade" start="0" end="0" delay="0" time="50" reversible="false">Hidden</animation>
+						<control type="image">
+							<posx>0</posx>
+							<top>6</top>
+							<width>698</width>
+							<height>329</height>
+							<texture colordiffuse="DialogBG" border="8">common/white.png</texture>
+							<animation effect="zoom" start="698,47,1,329" end="-698,47,551,329" delay="600" time="300" reversible="false">Focus</animation>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>8</posy>
+							<width>709</width>
+							<height>81</height>
+							<texture border="14,0,0,0" colordiffuse="$VAR[HighlightColor]" flipy="true" flipx="true">common/right-11.png</texture>
+							<animation effect="zoom" start="698,47,1,64" end="-698,47,569,64" delay="600" time="300" reversible="false">Focus</animation>
+						</control>
+						<!-- Info -->
+						<control type="group">
+							<posx>80</posx>
+							<posy>6</posy>
+							<include>View_Cycle_Info_Right</include>
+						</control>
+					</control>
+                    
+                        <control type="group">
+                            <left>0</left>
+                            <right>pad</right>
+                            <bottom>6</bottom>
+                            <top>6</top>
+                            <control type="image">
+                                <width>100%</width>
+                                <height>100%</height>
+                                <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                            </control>
+                            <control type="image">
+                                <left>pad</left>
+                                <right>pad</right>
+                                <top>pad</top>
+                                <bottom>pad</bottom>
+                                <aspectratio>keep</aspectratio>
+                                <texture background="true">$VAR[Image_Poster]</texture>
+                                <visible>IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))</visible>
+                            </control>
+                            <control type="image">
+                                <left>pad</left>
+                                <right>pad</right>
+                                <top>pad</top>
+                                <bottom>pad</bottom>
+<!-- Modification Aspectratio -->                            
+                                <aspectratio>stretch</aspectratio>
+                                <texture background="true">$VAR[Image_Poster]</texture>
+                                <visible>![IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))]</visible>
+                            </control>
+                        </control>
+                    </focusedlayout>
+                </control>
+            </control>
+        </definition>
+    </include>
+    
+    <include name="View_Cycle_Info_Left">
+		<animation effect="fade" start="0" end="100" delay="900" time="200" reversible="false">Focus</animation>
+		<control type="label">
+		        <posx>-45</posx>
+			<width>440</width>
+			<height>58</height>
+			<scroll>yes</scroll>
+			<font>Font-Sublabel</font>
+			<label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)]</label>
+			<textcolor>ffffffff</textcolor>
+		</control>
+		<control type="textbox">
+			<posx>-30</posx>
+			<posy>60</posy>
+			<width>445</width>
+			<height>230</height>
+			<align>left</align>
+			<font>Font-ListInfo-Small</font>
+			<label>$INFO[ListItem.Plot]</label>
+			<textcolor>LineLabel</textcolor>
+			<shadowcolor>00000000</shadowcolor>
+			<visible>!substring(ListItem.Path,videodb://movies/sets,left)</visible>
+		</control>	
+		<control type="label">
+			<posx>-30</posx>
+			<posy>60</posy>
+			<width>445</width>
+			<height>230</height>
+			<align>center</align>
+			<font>Font-ListInfo-Small</font>
+			<label>20457</label>
+			<textcolor>LineLabel</textcolor>
+			<shadowcolor>00000000</shadowcolor>
+			<visible>substring(ListItem.Path,videodb://movies/sets,left)</visible>
+		</control>			
+		<control type="label">
+			<posx>-30</posx>
+			<posy>290</posy>
+			<width>445</width>
+			<font>Font-ListInfo-Small-Bold</font>
+			<label>$INFO[ListItem.Genre]</label>
+			<textcolor>$VAR[HighlightColor2]</textcolor>
+		</control>
+		
+					<control type="image">        
+						            <posx>400</posx>
+        						    <posy>12</posy>
+      							   <width>32</width>
+            						   <height>32</height>
+						            <aspectratio aligny="top">keep</aspectratio>         
+						            <texture>$VAR[Image_Indicator_Back]</texture>
+						            <animation effect="fade" start="0" end="100" delay="900" time="200" reversible="false">Focus</animation>
+						  </control>
+						        <control type="image">        
+						            <posx>400</posx>
+        						    <posy>12</posy>
+      							   <width>32</width>
+            						   <height>32</height>
+						            <aspectratio aligny="top">keep</aspectratio>         
+						            <texture colordiffuse="$VAR[HighlightColor]">$VAR[Image_Indicator]</texture>
+						            <animation effect="fade" start="0" end="100" delay="900" time="200" reversible="false">Focus</animation>
+						  </control>
+	</include>
+	
+	<include name="View_Cycle_Info_Right">
+		<animation effect="fade" start="0" end="100" delay="900" time="200" reversible="false">Focus</animation>
+		<control type="label">
+			<posx>100</posx>
+			<width>440</width>
+			<height>58</height>
+			<align>right</align>
+			<scroll>yes</scroll>
+			<font>Font-Sublabel</font>
+			<label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)]</label>
+			<textcolor>ffffffff</textcolor>
+		</control>
+		<control type="textbox">
+			<posx>80</posx>
+			<posy>60</posy>
+			<width>445</width>
+			<height>230</height>
+			<align>right</align>
+			<font>Font-ListInfo-Small</font>
+			<label>$INFO[ListItem.Plot]</label>
+			<textcolor>LineLabel</textcolor>
+			<shadowcolor>00000000</shadowcolor>
+			<visible>!substring(ListItem.Path,videodb://movies/sets,left)</visible>
+		</control>
+		<control type="label">
+			<posx>80</posx>
+			<posy>60</posy>
+			<width>445</width>
+			<height>230</height>
+			<align>center</align>
+			<font>Font-ListInfo-Small</font>
+			<label>20457</label>
+			<textcolor>LineLabel</textcolor>
+			<shadowcolor>00000000</shadowcolor>
+			<visible>substring(ListItem.Path,videodb://movies/sets,left)</visible>
+		</control>
+		<control type="label">
+			<posx>80</posx>
+			<posy>290</posy>
+			<width>445</width>
+			<align>right</align>
+			<font>Font-ListInfo-Small-Bold</font>
+			<label>$INFO[ListItem.Genre]</label>
+			<textcolor>$VAR[HighlightColor2]</textcolor>
+		</control>
+		
+							<control type="image">        
+						           <posx>65</posx>
+        					           <posy>12</posy>
+      							   <width>32</width>
+            						   <height>32</height>
+						            <aspectratio aligny="top">keep</aspectratio>         
+						            <texture>$VAR[Image_Indicator_Back]</texture>
+						            <animation effect="fade" start="0" end="100" delay="900" time="200" reversible="false">Focus</animation>
+						  </control>
+						        <control type="image">        
+						           <posx>65</posx>
+        						   <posy>12</posy>
+      							   <width>32</width>
+            						   <height>32</height>
+						            <aspectratio aligny="top">keep</aspectratio>         
+						            <texture colordiffuse="$VAR[HighlightColor]">$VAR[Image_Indicator]</texture>
+						            <animation effect="fade" start="0" end="100" delay="900" time="200" reversible="false">Focus</animation>
+						  </control>
+	</include>	
+
+
  
  
 </includes>

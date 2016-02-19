@@ -20,4 +20,5 @@
     <view id="Info List" value="508" languageid="31192" type="movies,tvshows,episodes,sets,seasons,setmovies"/>
     <view id="Info List 2" value="509" languageid="31646" type="movies,tvshows,episodes,sets,seasons,setmovies"/>
     <view id="Fanarts/Thumbs list" value="506" languageid="31164" type="movies,tvshows,episodes,sets,seasons,artists,songs,setmovies"/>
+    <view id="Cycle" value="156" languageid="31728" type="movies,tvshows,sets,seasons,setmovies"/>
 </views>

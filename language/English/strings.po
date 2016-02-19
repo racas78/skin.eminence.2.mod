@@ -1621,3 +1621,7 @@ msgstr ""
 msgctxt "#31727"
 msgid "[B]AutoCompletion for virtual keyboard[/B] addon is needed to show autocompletion of keyboard."
 msgstr ""
+
+msgctxt "#31728"
+msgid "Cycle"
+msgstr ""
