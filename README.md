@@ -1,2 +1,2 @@
-# skin.arctic.zephyr-mod
-Skin Arctic Zephir Mod for KODI
+# skin.eminence.2.mod
+Skin Eminence 2.0 MOD for KODI
