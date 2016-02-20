@@ -887,7 +887,108 @@
             </control>
         </control>
     </include>
+       
+    <include name="Viewtype_BigWide_Classic">
+        <control type="group">
+            <visible>Control.IsVisible(157)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <include name="Object_Line">
+                <param name="width" value="1880" />
+                <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+            </include>
+            <include name="View_BigWide_Classic">
+                <param name="id" value="157" />
+            </include>
+        </control>
+    </include>
+    
+    <include name="View_BigWide_Classic">
+        <control type="group">
+            <control type="wraplist" id="$PARAM[id]">
+                <left>0</left>
+                <right>0</right>
+                <top>0</top>
+                <bottom>0</bottom>
+                <onleft>$PARAM[id]</onleft>
+                <onright>$PARAM[id]</onright>
+                <ondown>60</ondown>
+                <onup condition="!Skin.HasSetting(KioskMode)">9000</onup>
+                <pagecontrol>60</pagecontrol>
+                <preloaditems>0</preloaditems>
+                <orientation>horizontal</orientation>
+                <viewtype label="$LOCALIZE[31532]">bigwide</viewtype>
+                <scrolltime tween="quadratic">400</scrolltime>
+                <visible>$PARAM[condition]</visible>
+                <itemlayout height="690" width="1900">
+                <control type="image">
+                    <posx>-20</posx>
+                    <posy>-280</posy>
+                    <width>1920</width>
+                    <height>1080</height>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <texture background="true" diffuse="common/white.png">$VAR[Image_Fanart]</texture>
+                </control>
+            </itemlayout>
+           
+            <focusedlayout height="690" width="1900">
+                <control type="image">
+                    <posx>-20</posx>
+                    <posy>-280</posy>
+                    <width>1920</width>
+                    <height>1080</height>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <texture background="true" diffuse="common/white.png">$VAR[Image_Fanart]</texture>
+                </control>
+            </focusedlayout>
+            </control>
+        </control>
+        
+        <control type="group">
+                    <left>0</left>
+                    <right>0</right>
+                    <bottom>0</bottom>
+                    <height>70</height>        
+                    <control type="image">
+                        <left>0</left>
+                        <right>0</right>
+                        <bottom>0</bottom>
+                        <height>70</height>
+                        <texture colordiffuse="ff181818">common/gradient.png</texture>
+                    </control>
+                    <control type="label">
+                        <posx>30</posx>
+                        <width>auto</width>
+                        <aligny>center</aligny>
+                        <height>70</height>
+                        <font>Font-Button</font>
+                        <textcolor>ffffffff</textcolor>
+                        <selectedcolor>ffffffff</selectedcolor>
+                        <label>$INFO[ListItem.Label]</label>                 
+                    </control>
+                    <control type="image">
+                        <centerright>40</centerright>
+                        <centertop>37</centertop>
+                        <width>32</width>
+                        <height>32</height>
+                        <aspectratio aligny="top">keep</aspectratio>
+                        <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+                        <visible>!Container.Content(artists) + !Container.Content(albums) + !Container.Content(albums)</visible>
+                    </control>
+                    <control type="image">
+                        <centerright>40</centerright>
+                        <centertop>37</centertop>
+                        <width>32</width>
+                        <height>32</height>
+                        <aspectratio aligny="top">keep</aspectratio>           
+           	        <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+                        <visible>!Container.Content(artists) + !Container.Content(albums) + !Container.Content(albums)</visible>
+                    </control>
+                </control> 
+    </include>    
 
-    
-    
 </includes>

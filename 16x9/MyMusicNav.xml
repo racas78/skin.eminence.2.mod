@@ -4,7 +4,7 @@
     <menucontrol>9000</menucontrol>
     <defaultcontrol always="true">50</defaultcontrol>
 <!-- Modification Views -->    
-    <views>50,51,507,500,506,56,505,53,57,58</views>
+    <views>50,51,507,500,506,56,505,53,57,58,157</views>
     <onunload>SetProperty(NodeReturn,music,home)</onunload>
     <onunload>SetProperty(HubReturn,$INFO[Container.FolderPath],home)</onunload>
     <controls>
@@ -30,7 +30,8 @@
             <include>Viewtype_BigWide</include>
             <include>Viewtype_FanartList</include>
 <!-- Add Include -->               
-            <include>Viewtype_Posters_List2</include>           
+            <include>Viewtype_Posters_List2</include> 
+            <include>Viewtype_BigWide_Classic</include>          
         </control>
 
         <!-- Menu -->

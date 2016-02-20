@@ -1621,3 +1621,7 @@ msgstr "L'extension [B]AutoCompletion for virtual keyboard[/B] est nécessaire p
 msgctxt "#31728"
 msgid "Cycle"
 msgstr "Cycle"
+
+msgctxt "#31729"
+msgid "Big Fanarts"
+msgstr "Grands Fanarts"
