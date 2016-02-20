@@ -1744,7 +1744,7 @@
                             <height>52</height>
                             <align>center</align>
                             <aligny>center</aligny>
-                            <label>$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[20453]]</label>
+                            <label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]</label>
                             <font>Font-RSS</font>
                             <textcolor>ListLabel</textcolor>
                             <selectedcolor>ListLabel</selectedcolor>
