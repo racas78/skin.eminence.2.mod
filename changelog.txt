@@ -1,3 +1,6 @@
+[B]1.4.6[/B]
+Fix for music visualisation always stay.
+
 [B]1.4.5[/B]
 Add Big Banner view.
 Add duration on widgets.

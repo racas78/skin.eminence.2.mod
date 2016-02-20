@@ -87,7 +87,7 @@
 		<control type="group"> <!--OnScreen Info-->
 			<left>0</left>
 			<top>480</top>
-			<visible>!Skin.HasSetting(Hide.PlaybackInfos) + [Player.ShowInfo | Window.IsActive(MusicOSD)] + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
+			<visible>!Skin.HasSetting(Hide.PlaybackInfos) + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
 			<control type="image"> <!--Set Panel-->
 				<top>10</top>
 				<width>1920</width>
