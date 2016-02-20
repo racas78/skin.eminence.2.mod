@@ -150,6 +150,22 @@
         <value condition="!IsEmpty(Container(9500).ListItem.Art(fanart)) + !Skin.HasSetting(global.fanart)">$INFO[Container(9500).ListItem.Art(fanart)]</value>
         <value condition="!IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(global.fanart)">$INFO[ListItem.Art(fanart)]</value>
         <value condition="!IsEmpty(Skin.String(background.fallback))">$INFO[Skin.String(background.fallback)]</value>
+        <value condition="[Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)]+ Control.HasFocus(200)">$INFO[Container(200).ListItem.Property(Fanart)]</value>
+        <value condition="[Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)] + Control.HasFocus(201)">$INFO[Container(201).ListItem.Property(Fanart)]</value>
+        <value condition="[Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)] + Control.HasFocus(202)">$INFO[Container(202).ListItem.Property(Fanart)]</value>
+        <value condition="[Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)] + Control.HasFocus(203)">$INFO[Container(203).ListItem.Property(Fanart)]</value>
+        <value condition="[Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)]+ Control.HasFocus(204)">$INFO[Container(204).ListItem.Property(Fanart)]</value>
+        <value condition="[Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)] + Control.HasFocus(205)">$INFO[Container(205).ListItem.Property(Fanart)]</value>
+        <value condition="[Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)] + Control.HasFocus(206)">$INFO[Container(206).ListItem.Property(Fanart)]</value>
+        <value condition="Window.IsVisible(script-NextAired-TVGuide2.xml) + Control.HasFocus(207)">$INFO[Container(207).ListItem.Property(Fanart)]</value>
+        <value condition="Window.IsVisible(script-NextAired-TVGuide2.xml) + Control.HasFocus(208)">$INFO[Container(208).ListItem.Property(Fanart)]</value>
+        <value condition="Window.IsVisible(script-NextAired-TVGuide2.xml) + Control.HasFocus(209)">$INFO[Container(209).ListItem.Property(Fanart)]</value>
+        <value condition="Window.IsVisible(script-NextAired-TVGuide2.xml) + Control.HasFocus(210)">$INFO[Container(210).ListItem.Property(Fanart)]</value>
+        <value condition="Window.IsVisible(script-NextAired-TVGuide2.xml) + Control.HasFocus(211)">$INFO[Container(211).ListItem.Property(Fanart)]</value>
+        <value condition="Window.IsVisible(script-NextAired-TVGuide2.xml) + Control.HasFocus(212)">$INFO[Container(212).ListItem.Property(Fanart)]</value>
+        <value condition="Window.IsVisible(script-NextAired-TVGuide2.xml) + Control.HasFocus(213)">$INFO[Container(213).ListItem.Property(Fanart)]</value>
+        <value condition="Window.IsVisible(script-NextAired-TVGuide2.xml) + Control.HasFocus(214)">$INFO[Container(214).ListItem.Property(Fanart)]</value>
+        <value condition="Window.IsVisible(script-NextAired-TVGuide2.xml) + Control.HasFocus(215)">$INFO[Container(215).ListItem.Property(Fanart)]</value>
         <value>common/black.png</value>
     </variable>
 

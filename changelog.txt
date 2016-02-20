@@ -1,3 +1,7 @@
+[B]1.4.3[/B]
+Add fanarts support for Next Aired addon.
+Add season and episode number for next aired widget.
+
 [B]1.4.2[/B]
 Add cycle view.
 
