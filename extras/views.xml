@@ -5,6 +5,7 @@
     <view id="Posters list 1" value="504" languageid="31685" type="movies,setmovies,tvshows,seasons,sets,episodes"/>
     <view id="Posters list 2" value="507" languageid="31685" type="artists,albums,programs"/>
     <view id="Banners" value="55" languageid="31642" type="movies,tvshows,seasons"/>
+    <view id="Big Banner" value="158" languageid="31730" type="movies,tvshows,sets,seasons,setmovies,episodes"/>
     <view id="Frames" value="56" languageid="31644" type="movies,tvshows,seasons,episodes,pictures,sets,artists,setmovies"/>
     <view id="Gallery" value="505" languageid="31163" type="movies,tvshows,episodes,sets,seasons,artists,setmovies"/>
     <view id="Big wide" value="53" languageid="540" type="movies,tvshows,episodes,sets,seasons,artists,setmovies"/>

@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+    <variable name="Label_Title">
+        <value condition="Container.Content(episodes) + !IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
+        <value>$INFO[ListItem.Label]</value>
+    </variable>
+
+    <variable name="Label_Year">
+        <value condition="Container.Content(tvshows)">$LOCALIZE[31731] $INFO[ListItem.LastPlayed]</value>      
+        <value condition="Container.Content(episodes)">$LOCALIZE[31732] $INFO[ListItem.Premiered]</value>       
+        <value condition="!IsEmpty(ListItem.Year)">$INFO[ListItem.Year]</value>
+    </variable>
+
 <!-- Ajout ICI -->
     <variable name="Label_PostersList1">
         <value condition="Container.Content(artists)">$INFO[ListItem.Artist]</value>
@@ -475,9 +486,9 @@
     <variable name="Label_HomeWidget_Info">
         <value condition="[StringCompare(Container(9000).ListItem.Property(widget),Weather) | [IsEmpty(Container(9000).ListItem.Property(widget)) + StringCompare(Skin.String(home.fallbackwidget),Weather)]] + !IsEmpty(Skin.String(weather.fanart.path))">$INFO[Window(weather).Property(WeatherProvider)]</value>
 <!-- Modification Value -->        
-        <value condition="!Container(9001).IsUpdating + !IsEmpty(Container(9001).ListItem.Year) + !Skin.HasSetting(disable.rating)">$INFO[Container(9001).ListItem.Artist,,  •  ]$INFO[Container(9001).ListItem.TvShowTitle,,  •  ]$INFO[Container(9001).ListItem.Year]$INFO[Container(9001).ListItem.RatingAndVotes,  •  ,]</value>
+        <value condition="!Container(9001).IsUpdating + !IsEmpty(Container(9001).ListItem.Year) + !Skin.HasSetting(disable.rating)">$INFO[Container(9001).ListItem.Artist,,  •  ]$INFO[Container(9001).ListItem.TvShowTitle,,  •  ]$INFO[Container(9001).ListItem.Year]$INFO[Container(9001).ListItem.Duration,  •  , $LOCALIZE[31117]]$INFO[Container(9001).ListItem.RatingAndVotes,  •  ,]</value>
  <!-- Ajout Value -->       
-        <value condition="!Container(9001).IsUpdating + !IsEmpty(Container(9001).ListItem.Year) | Skin.HasSetting(disable.rating)">$INFO[Container(9001).ListItem.Artist,,  •  ]$INFO[Container(9001).ListItem.TvShowTitle,,  •  ]$INFO[Container(9001).ListItem.Year]</value>
+        <value condition="!Container(9001).IsUpdating + !IsEmpty(Container(9001).ListItem.Year) | Skin.HasSetting(disable.rating)">$INFO[Container(9001).ListItem.Artist,,  •  ]$INFO[Container(9001).ListItem.TvShowTitle,,  •  ]$INFO[Container(9001).ListItem.Year]$INFO[Container(9001).ListItem.Duration,  •  , $LOCALIZE[31117]]</value>
         <value condition="!Container(9001).IsUpdating + IsEmpty(Container(9001).ListItem.Year)">$INFO[Container(9001).ListItem.Artist,,  •  ]$INFO[Container(9001).ListItem.TvShowTitle]</value>
         <value>$LOCALIZE[31092]</value>
     </variable>

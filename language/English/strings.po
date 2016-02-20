@@ -1629,3 +1629,15 @@ msgstr ""
 msgctxt "#31729"
 msgid "Big Fanarts"
 msgstr ""
+
+msgctxt "#31730"
+msgid "Big Banner"
+msgstr ""
+
+msgctxt "#31731"
+msgid "Watched for the last time on"
+msgstr ""
+
+msgctxt "#31732"
+msgid "Aired for the last time on"
+msgstr ""

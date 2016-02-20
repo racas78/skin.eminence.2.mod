@@ -1,3 +1,9 @@
+[B]1.4.5[/B]
+Add Big Banner view.
+Add duration on widgets.
+Fix Movies Widget Hub.
+Replace unwatched indicator.
+
 [B]1.4.4[/B]
 Add Big Fanarts view.
 

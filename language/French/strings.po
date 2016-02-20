@@ -1625,3 +1625,15 @@ msgstr "Cycle"
 msgctxt "#31729"
 msgid "Big Fanarts"
 msgstr "Grands Fanarts"
+
+msgctxt "#31730"
+msgid "Big Banner"
+msgstr "Grande Bannière"
+
+msgctxt "#31731"
+msgid "Watched for the last time on"
+msgstr "Regardée pour la dernière fois le"
+
+msgctxt "#31732"
+msgid "Aired for the last time on"
+msgstr "Diffusé pour la dernière fois le"

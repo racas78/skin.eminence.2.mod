@@ -1649,7 +1649,7 @@
 			<textcolor>$VAR[HighlightColor2]</textcolor>
 		</control>
 		
-							<control type="image">        
+						<control type="image">        
 						           <posx>65</posx>
         					           <posy>12</posy>
       							   <width>32</width>
@@ -1668,8 +1668,229 @@
 						            <animation effect="fade" start="0" end="100" delay="900" time="200" reversible="false">Focus</animation>
 						  </control>
 	</include>	
+	
+	
+	<include name="Viewtype_Banner">
+        <control type="group">
+            <visible>Control.IsVisible(158)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <include name="Object_Line">
+                <param name="width" value="1879" />
+                <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+            </include>
+            <include name="View_Banner">
+                <param name="id" value="158" />            
+                <param name="name" value="Banner" />
+            </include>       
+            <include>Object_Arrows_Vertical</include>
+        </control>
+    </include>
 
-
- 
+    <include name="View_Banner">
+            <control type="group">
+                <control type="fixedlist" id="$PARAM[id]">
+                    <top>30</top>
+                    <width>1288</width>
+                    <height>649</height>
+                    <centerleft>50%</centerleft>
+                    <onup condition="$PARAM[updownid]">$PARAM[id]</onup>
+                    <ondown condition="$PARAM[updownid]">$PARAM[id]</ondown>
+                    <onup condition="!$PARAM[updownid]">$PARAM[onup]</onup>
+                    <ondown condition="!$PARAM[updownid]">$PARAM[ondown]</ondown>
+                    <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
+                    <onleft condition="!StringCompare(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onleft>
+                    <pagecontrol>60</pagecontrol>
+                    <preloaditems>2</preloaditems>
+                    <focusposition>1</focusposition>
+                    <movement>2</movement>
+                    <orientation>vertical</orientation>
+                    <viewtype label="$PARAM[name]">list</viewtype>
+                    <scrolltime tween="quadratic">400</scrolltime>
+                    
+                    <itemlayout width="1288" height="106" condition="!Container.Content(albums) + !Container.Content(songs)">
+                        <control type="label">
+                            <left>0</left>
+                            <centertop>34</centertop>
+                            <width>100%</width>
+                            <height>52</height>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Label]</label>
+                            <textcolor>ListLabel</textcolor>
+                            <selectedcolor>ListLabel</selectedcolor>
+                        </control>
+                        <control type="label">
+                            <centerbottom>34</centerbottom>
+                            <left>0</left>
+                            <width>100%</width>
+                            <height>52</height>
+                            <align>center</align>
+                            <aligny>center</aligny>                         
+                            <label>$VAR[Label_Year]</label>
+                            <font>Font-RSS</font>
+                            <textcolor>ListLabel</textcolor>
+                            <selectedcolor>ListLabel</selectedcolor>
+                            <visible>!Container.Content(seasons)</visible>
+                        </control>
+                        <control type="label">
+                            <centerbottom>34</centerbottom>
+                            <left>0</left>
+                            <width>100%</width>
+                            <height>52</height>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[20453]]</label>
+                            <font>Font-RSS</font>
+                            <textcolor>ListLabel</textcolor>
+                            <selectedcolor>ListLabel</selectedcolor>
+                            <visible>Container.Content(seasons)</visible>
+                        </control>
+                    </itemlayout>
+                                        
+                    <focusedlayout width="1288" height="310" condition="!Container.Content(episodes) + !Container.Content(albums) + !Container.Content(songs)">
+                        <control type="image">
+                            <left>0</left>
+                            <top>0</top>
+                            <width>1288</width>
+                            <height>300</height>
+                            <texture colordiffuse="PosterBorder" border="32">common/white.png</texture>
+                        </control>
+                        <control type="image">
+                                <left>10</left>
+                                <top>10</top>
+                                <right>10</right>
+                                <height>280</height>
+                                <texture border="8" colordiffuse="ff181818">common/gradient.png</texture>
+                            </control>
+                        <control type="image">
+                            <left>10</left>
+                            <top>10</top>
+                            <right>10</right>
+                            <height>230</height>
+                            <texture diffuse="common/white.png" background="true">$VAR[Image_Banner]</texture>
+                            <aspectratio scalediffuse="false">scale</aspectratio>
+                        </control>                  
+                        <control type="label">
+                            <centerbottom>47</centerbottom>
+                            <left>20</left>
+                            <width>1220</width>
+                            <height>40</height>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Label]</label>
+                            <font>Font-ListInfo-Bold</font>
+                            <textcolor>Selected</textcolor>
+                            <selectedcolor>Selected</selectedcolor>
+                        </control>
+                        <control type="label">
+                            <centerbottom>47</centerbottom>
+                            <right>20</right>
+                            <width>1220</width>
+                            <height>40</height>
+                            <align>right</align>
+                            <aligny>center</aligny>                            
+                            <label>$INFO[ListItem.Year]</label>
+                            <font>Font-ListInfo-Bold</font>
+                            <textcolor>Selected</textcolor>
+                            <selectedcolor>Selected</selectedcolor>
+                            <visible>!Container.Content(seasons)</visible>
+                        </control>
+                        <control type="image">
+                                <top>20</top>        
+			        <right>20</right>
+      				<width>32</width>
+            			<height>32</height>
+				<aspectratio aligny="top">keep</aspectratio>         
+				<texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+				<animation effect="fade" start="0" end="100" delay="100" time="200" reversible="false">Focus</animation>
+			</control>
+			<control type="image">  
+			        <top>20</top>       
+				<right>20</right>
+      				<width>32</width>
+            			<height>32</height>
+				<aspectratio aligny="top">keep</aspectratio>         
+				<texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+				<animation effect="fade" start="0" end="100" delay="100" time="200" reversible="false">Focus</animation>
+			</control>                        
+                    </focusedlayout>
+                    
+                    <focusedlayout width="1288" height="310" condition="Container.Content(episodes)">
+                        <control type="group">
+                            <centerleft>50%</centerleft>
+                            <control type="image">
+                                <left>0</left>
+                                <top>0</top>
+                                <width>1288</width>
+                                <height>300</height>
+                                <texture colordiffuse="PosterBorder" border="32">common/white.png</texture>
+                            </control>
+                            <control type="image">
+                                <left>10</left>
+                                <top>10</top>
+                                <right>10</right>
+                                <height>280</height>
+                                <texture border="8" colordiffuse="ff181818">common/gradient.png</texture>
+                            </control>
+                            <control type="image">
+                                <left>10</left>
+                                <top>10</top>
+                                <width>480</width>
+                                <height>280</height>
+                                <texture diffuse="common/white.png" background="true">$VAR[Image_Thumb]</texture>
+                                <aspectratio scalediffuse="false">scale</aspectratio>
+                            </control>                            
+                            <control type="label">
+                                <font>Font-ListInfo-Bold</font>
+                                <top>15</top>
+                                <left>500</left>
+                                <right>60</right>
+                                <height>40</height>
+                                <align>left</align>
+                                <aligny>top</aligny>
+                                <label>$INFO[ListItem.Label]</label>
+                                <textcolor>Selected</textcolor>
+                                <selectedcolor>Selected</selectedcolor>
+                            </control>                                                      
+                            <control type="textbox">
+                                <top>70</top>
+                                <left>500</left>
+                                <right>20</right>
+                                <bottom>36</bottom>
+                                <align>justify</align>
+                                <aligny>top</aligny>
+                                <label>$INFO[ListItem.Plot]</label>
+                                <font>Font-RSS</font>
+                                <textcolor>Selected</textcolor>
+                                <selectedcolor>Selected</selectedcolor>
+                            </control>
+                        <control type="image">
+                                <top>20</top>        
+			        <right>20</right>
+      				<width>32</width>
+            			<height>32</height>
+				<aspectratio aligny="top">keep</aspectratio>         
+				<texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+				<animation effect="fade" start="0" end="100" delay="100" time="200" reversible="false">Focus</animation>
+			</control>
+			<control type="image">  
+			        <top>20</top>       
+				<right>20</right>
+      				<width>32</width>
+            			<height>32</height>
+				<aspectratio aligny="top">keep</aspectratio>         
+				<texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+				<animation effect="fade" start="0" end="100" delay="100" time="200" reversible="false">Focus</animation>
+			</control>  
+		    </control>	   
+                    </focusedlayout>
+                </control>
+            </control>   
+     </include>   
  
 </includes>
