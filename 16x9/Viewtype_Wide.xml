@@ -921,7 +921,7 @@
                 <pagecontrol>60</pagecontrol>
                 <preloaditems>0</preloaditems>
                 <orientation>horizontal</orientation>
-                <viewtype label="$LOCALIZE[31532]">bigwide</viewtype>
+                <viewtype label="$LOCALIZE[31729]">bigwide</viewtype>
                 <scrolltime tween="quadratic">400</scrolltime>
                 <visible>$PARAM[condition]</visible>
                 <itemlayout height="690" width="1900">

@@ -1303,7 +1303,7 @@
             <include name="View_Cycle">
                 <param name="id" value="156" />
 <!-- Modification Param -->                
-                <param name="name" value="Posters" />
+                <param name="name" value="$LOCALIZE[31728]" />
                 <param name="width" value="1888" />
                 <param name="condition" value="Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)" />
             </include>
@@ -1685,7 +1685,7 @@
             </include>
             <include name="View_Banner">
                 <param name="id" value="158" />            
-                <param name="name" value="Banner" />
+                <param name="name" value="$LOCALIZE[31730]" />
             </include>       
             <include>Object_Arrows_Vertical</include>
         </control>

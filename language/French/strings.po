@@ -1619,8 +1619,8 @@ msgid "[B]AutoCompletion for virtual keyboard[/B] addon is needed to show autoco
 msgstr "L'extension [B]AutoCompletion for virtual keyboard[/B] est nécessaire pour afficher la saisie automatique du clavier."
 
 msgctxt "#31728"
-msgid "Cycle"
-msgstr "Cycle"
+msgid "Posters with emergence infos"
+msgstr "Posters avec apparition des informations"
 
 msgctxt "#31729"
 msgid "Big Fanarts"

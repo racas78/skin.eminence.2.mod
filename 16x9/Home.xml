@@ -30,6 +30,7 @@
         <include>Furniture_Background</include>
         <include>Home_Widget_Control</include>
         <include>Furniture_TopBar</include>
+        <include>Christmas</include>
 
         <control type="list" id="9988">           
             <description>hidden container for playlist background</description>

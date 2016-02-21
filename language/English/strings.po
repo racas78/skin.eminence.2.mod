@@ -1623,7 +1623,7 @@ msgid "[B]AutoCompletion for virtual keyboard[/B] addon is needed to show autoco
 msgstr ""
 
 msgctxt "#31728"
-msgid "Cycle"
+msgid "Posters with emergence infos"
 msgstr ""
 
 msgctxt "#31729"

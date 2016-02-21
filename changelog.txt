@@ -1,3 +1,7 @@
+[B]1.4.7[/B]
+Fix views names.
+Add stuff at Christmas.
+
 [B]1.4.6[/B]
 Fix for music visualisation always stay.
 
