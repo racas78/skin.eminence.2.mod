@@ -1138,146 +1138,246 @@
 
 <!-- Ajout Control -->                    
                     <!-- ADDONS -->
-                    <!-- Skin Shortcuts -->
-                    <control type="button" id="9101">
-                        <width>100%</width>
-                        <visible>ControlGroup(8000).HasFocus(8098)</visible>
-                        <include>Defs_OptionButton</include>
-                        <label>script.skinshortcuts</label>
-                        <label2>$VAR[StatusSkinShortcuts]</label2>
-                        <onclick condition="System.HasAddon(script.skinshortcuts)">Addon.OpenSettings(script.skinshortcuts)</onclick>
-                        <onclick condition="!System.HasAddon(script.skinshortcuts)">RunPlugin(plugin://script.skinshortcuts)</onclick>
-                    </control>
-                    <!-- Extended Info -->
-                    <control type="button" id="9102">
-                        <width>100%</width>
-                        <visible>ControlGroup(8000).HasFocus(8098)</visible>
-                        <include>Defs_OptionButton</include>
-                        <label>script.extendedinfo</label>
-                        <label2>$VAR[StatusExtendedInfo]</label2>
-                        <onclick condition="System.HasAddon(script.extendedinfo)">Addon.OpenSettings(script.extendedinfo)</onclick>
-                        <onclick condition="!System.HasAddon(script.extendedinfo)">RunPlugin(plugin://script.extendedinfo)</onclick>
-                    </control>
+                    <!--<onclick condition="!System.HasAddon(script.skinshortcuts)">Notification($LOCALIZE[19098] :,script.skinshortcuts $LOCALIZE[31609],7000)</onclick>-->
+                    <!-- Skin Shortcuts -->                 
+                    <control type="radiobutton" id="9101">
+			<width>100%</width>                        
+                        <radioposx>1350</radioposx>
+                        <label>script.skinshortcuts $INFO[System.AddonVersion(script.skinshortcuts),(,)]</label>
+			<textureradioonfocus colordiffuse="ff00991f">common/radio-on.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="ff00991f">common/radio-on.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="fff02222">common/status_off.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="fff02222">common/status_off.png</textureradiooffnofocus>
+			<onclick condition="!System.HasAddon(script.skinshortcuts)">RunPlugin(plugin://script.skinshortcuts)</onclick>
+			<onclick condition="System.HasAddon(script.skinshortcuts)">Addon.OpenSettings(script.skinshortcuts)</onclick>
+			<selected>System.HasAddon(script.skinshortcuts)</selected>
+			<include>Defs_OptionButton</include>
+			<visible>ControlGroup(8000).HasFocus(8098)</visible>
+		    </control>
+		    
+		    <!-- Extended Info -->
+		    <control type="radiobutton" id="9102">
+			<width>100%</width>                        
+                        <radioposx>1350</radioposx>
+                        <label>script.extendedinfo $INFO[System.AddonVersion(script.extendedinfo),(,)]</label>
+			<textureradioonfocus colordiffuse="ff00991f">common/radio-on.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="ff00991f">common/radio-on.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="fff02222">common/status_off.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="fff02222">common/status_off.png</textureradiooffnofocus>
+			<onclick condition="!System.HasAddon(script.extendedinfo)">RunPlugin(plugin://script.extendedinfo)</onclick>
+			<onclick condition="System.HasAddon(script.extendedinfo)">Addon.OpenSettings(script.extendedinfo)</onclick>
+			<selected>System.HasAddon(script.extendedinfo)</selected>
+			<include>Defs_OptionButton</include>
+			<visible>ControlGroup(8000).HasFocus(8098)</visible>
+		    </control>
+
                     <!-- Skin Helper Service -->
-                    <control type="button" id="9103">
-                        <width>100%</width>
-                        <visible>ControlGroup(8000).HasFocus(8098)</visible>
-                        <include>Defs_OptionButton</include>
-                        <label>script.skin.helper.service</label>
-                        <label2>$VAR[StatusSkinHelperService]</label2>
-                        <onclick condition="System.HasAddon(script.skin.helper.service)">Addon.OpenSettings(script.skin.helper.service)</onclick>
-                        <onclick condition="!System.HasAddon(script.skin.helper.service)">RunPlugin(plugin://script.skin.helper.service)</onclick>
-                    </control>
+                    <control type="radiobutton" id="9103">
+			<width>100%</width>                        
+                        <radioposx>1350</radioposx>
+                        <label>script.skin.helper.service $INFO[System.AddonVersion(script.skin.helper.service),(,)]</label>
+			<textureradioonfocus colordiffuse="ff00991f">common/radio-on.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="ff00991f">common/radio-on.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="fff02222">common/status_off.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="fff02222">common/status_off.png</textureradiooffnofocus>
+			<onclick condition="!System.HasAddon(script.skin.helper.service)">RunPlugin(plugin://script.skin.helper.service)</onclick>
+			<onclick condition="System.HasAddon(script.skin.helper.service)">Addon.OpenSettings(script.skin.helper.service)</onclick>
+			<selected>System.HasAddon(script.skin.helper.service)</selected>
+			<include>Defs_OptionButton</include>
+			<visible>ControlGroup(8000).HasFocus(8098)</visible>
+		    </control>
+                    
+                     <!-- Script Image Ressource Select -->
+		    <control type="radiobutton" id="9115">
+			<width>100%</width>                        
+                        <radioposx>1350</radioposx>
+                        <label>script.image.resource.select $INFO[System.AddonVersion(script.image.resource.select),(,)]</label>
+			<textureradioonfocus colordiffuse="ff00991f">common/radio-on.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="ff00991f">common/radio-on.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="fff02222">common/status_off.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="fff02222">common/status_off.png</textureradiooffnofocus>
+			<onclick condition="!System.HasAddon(script.image.resource.select)">RunPlugin(plugin://script.image.resource.select)</onclick>
+			<onclick condition="System.HasAddon(script.image.resource.select)">Addon.OpenSettings(script.image.resource.select)</onclick>
+			<selected>System.HasAddon(script.image.resource.select)</selected>
+			<include>Defs_OptionButton</include>
+			<visible>ControlGroup(8000).HasFocus(8098)</visible>
+		    </control>
+                    
                     <!-- Program Autocompletion -->
-                    <control type="button" id="9114">
-                        <width>100%</width>
-                        <visible>ControlGroup(8000).HasFocus(8098)</visible>
-                        <include>Defs_OptionButton</include>
-                        <label>plugin.program.autocompletion</label>
-                        <label2>$VAR[StatusProgramAutocompletion]</label2>
-                        <onclick condition="System.HasAddon(plugin.program.autocompletion)">Addon.OpenSettings(plugin.program.autocompletion)</onclick>
-                        <onclick condition="!System.HasAddon(plugin.program.autocompletion)">RunPlugin(plugin://plugin.program.autocompletion)</onclick>
-                    </control>
+                    <control type="radiobutton" id="9114">
+			<width>100%</width>                        
+                        <radioposx>1350</radioposx>
+                        <label>plugin.program.autocompletion $INFO[System.AddonVersion(plugin.program.autocompletion),(,)]</label>
+			<textureradioonfocus colordiffuse="ff00991f">common/radio-on.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="ff00991f">common/radio-on.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="fff02222">common/status_off.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="fff02222">common/status_off.png</textureradiooffnofocus>
+			<onclick condition="!System.HasAddon(plugin.program.autocompletion)">RunPlugin(plugin://plugin.program.autocompletion)</onclick>
+			<onclick condition="System.HasAddon(plugin.program.autocompletion)">Addon.OpenSettings(plugin.program.autocompletion)</onclick>
+			<selected>System.HasAddon(plugin.program.autocompletion)</selected>
+			<include>Defs_OptionButton</include>
+			<visible>ControlGroup(8000).HasFocus(8098)</visible>
+		    </control>
+                    
                     <!-- Library Data Provider -->
-                    <control type="button" id="9113">
-                        <width>100%</width>
-                        <visible>ControlGroup(8000).HasFocus(8098)</visible>
-                        <include>Defs_OptionButton</include>
-                        <label>service.library.data.provider</label>
-                        <label2>$VAR[StatusLibraryDataProvider]</label2>
-                        <onclick condition="System.HasAddon(service.library.data.provider)">Addon.OpenSettings(service.library.data.provider)</onclick>
-                        <onclick condition="!System.HasAddon(service.library.data.provider)">RunPlugin(plugin://service.library.data.provider)</onclick>
-                    </control>
+                    <control type="radiobutton" id="9113">
+			<width>100%</width>                        
+                        <radioposx>1350</radioposx>
+                        <label>service.library.data.provider $INFO[System.AddonVersion(service.library.data.provider),(,)]</label>
+			<textureradioonfocus colordiffuse="ff00991f">common/radio-on.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="ff00991f">common/radio-on.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="fff02222">common/status_off.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="fff02222">common/status_off.png</textureradiooffnofocus>
+			<onclick condition="!System.HasAddon(service.library.data.provider)">RunPlugin(plugin://service.library.data.provider)</onclick>
+			<onclick condition="System.HasAddon(service.library.data.provider)">Addon.OpenSettings(service.library.data.provider)</onclick>
+			<selected>System.HasAddon(service.library.data.provider)</selected>
+			<include>Defs_OptionButton</include>
+			<visible>ControlGroup(8000).HasFocus(8098)</visible>
+		    </control>
+                    
                     <!-- Play Album -->
-                    <control type="button" id="9104">
-                        <width>100%</width>
-                        <visible>ControlGroup(8000).HasFocus(8098)</visible>
-                        <include>Defs_OptionButton</include>
-                        <label>script.playalbum</label>
-                        <label2>$VAR[StatusPlayAlbum]</label2>
-                        <onclick condition="System.HasAddon(script.playalbum)">Addon.OpenSettings(script.playalbum)</onclick>
-                        <onclick condition="!System.HasAddon(script.playalbum)">RunPlugin(plugin://script.playalbum)</onclick>
-                    </control>     
+                    <control type="radiobutton" id="9104">
+			<width>100%</width>                        
+                        <radioposx>1350</radioposx>
+                        <label>script.playalbum $INFO[System.AddonVersion(script.playalbum),(,)]</label>
+			<textureradioonfocus colordiffuse="ff00991f">common/radio-on.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="ff00991f">common/radio-on.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="fff02222">common/status_off.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="fff02222">common/status_off.png</textureradiooffnofocus>
+			<onclick condition="!System.HasAddon(script.playalbum)">RunPlugin(plugin://script.playalbum)</onclick>
+			<onclick condition="System.HasAddon(script.playalbum)">Addon.OpenSettings(script.playalbum)</onclick>
+			<selected>System.HasAddon(script.playalbum)</selected>
+			<include>Defs_OptionButton</include>
+			<visible>ControlGroup(8000).HasFocus(8098)</visible>
+		    </control>
+                     
                     <!-- Global Search -->
-                    <control type="button" id="9105">
-                        <width>100%</width>
-                        <visible>ControlGroup(8000).HasFocus(8098)</visible>
-                        <include>Defs_OptionButton</include>
-                        <label>script.globalsearch</label>
-                        <label2>$VAR[StatusGlobalSearch]</label2>
-                        <onclick condition="System.HasAddon(script.globalsearch)">Addon.OpenSettings(script.globalsearch)</onclick>
-                        <onclick condition="!System.HasAddon(script.globalsearch)">RunPlugin(plugin://script.globalsearch)</onclick>
-                    </control>                                 
+                    <control type="radiobutton" id="9105">
+			<width>100%</width>                        
+                        <radioposx>1350</radioposx>
+                        <label>script.globalsearch $INFO[System.AddonVersion(script.globalsearch),(,)]</label>
+			<textureradioonfocus colordiffuse="ff00991f">common/radio-on.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="ff00991f">common/radio-on.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="fff02222">common/status_off.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="fff02222">common/status_off.png</textureradiooffnofocus>
+			<onclick condition="!System.HasAddon(script.globalsearch)">RunPlugin(plugin://script.globalsearch)</onclick>
+			<onclick condition="System.HasAddon(script.globalsearch)">Addon.OpenSettings(script.globalsearch)</onclick>
+			<selected>System.HasAddon(script.globalsearch)</selected>
+			<include>Defs_OptionButton</include>
+			<visible>ControlGroup(8000).HasFocus(8098)</visible>
+		    </control>
+                                                     
                     <!-- NextUp Notification -->
-                    <control type="button" id="9106">
-                        <width>100%</width>
-                        <visible>ControlGroup(8000).HasFocus(8098)</visible>
-                        <include>Defs_OptionButton</include>
-                        <label>service.nextup.notification</label>
-                        <label2>$VAR[StatusNextupNotification]</label2>
-                        <onclick condition="System.HasAddon(service.nextup.notification)">Addon.OpenSettings(service.nextup.notification)</onclick>
-                        <onclick condition="!System.HasAddon(service.nextup.notification)">RunPlugin(plugin://service.nextup.notification)</onclick>
-                    </control>
+                    <control type="radiobutton" id="9106">
+			<width>100%</width>                        
+                        <radioposx>1350</radioposx>
+                        <label>service.nextup.notification $INFO[System.AddonVersion(service.nextup.notification),(,)]</label>
+			<textureradioonfocus colordiffuse="ff00991f">common/radio-on.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="ff00991f">common/radio-on.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="fff02222">common/status_off.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="fff02222">common/status_off.png</textureradiooffnofocus>
+			<onclick condition="!System.HasAddon(service.nextup.notification)">RunPlugin(plugin://service.nextup.notification)</onclick>
+			<onclick condition="System.HasAddon(service.nextup.notification)">Addon.OpenSettings(service.nextup.notification)</onclick>
+			<selected>System.HasAddon(service.nextup.notification)</selected>
+			<include>Defs_OptionButton</include>
+			<visible>ControlGroup(8000).HasFocus(8098)</visible>
+		    </control>
+                    
                     <!-- Artwork Downloader -->
-                    <control type="button" id="9107">
-                        <width>100%</width>
-                        <visible>ControlGroup(8000).HasFocus(8098)</visible>
-                        <include>Defs_OptionButton</include>
-                        <label>script.artwork.downloader</label>
-                        <label2>$VAR[StatusArtworkDownloader]</label2>
-                        <onclick condition="System.HasAddon(script.artwork.downloader)">Addon.OpenSettings(script.artwork.downloader)</onclick>
-                        <onclick condition="!System.HasAddon(script.artwork.downloader)">RunPlugin(plugin://script.artwork.downloader)</onclick>
-                    </control>
+                    <control type="radiobutton" id="9107">
+			<width>100%</width>                        
+                        <radioposx>1350</radioposx>
+                        <label>script.artwork.downloader $INFO[System.AddonVersion(script.artwork.downloader),(,)]</label>
+			<textureradioonfocus colordiffuse="ff00991f">common/radio-on.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="ff00991f">common/radio-on.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="fff02222">common/status_off.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="fff02222">common/status_off.png</textureradiooffnofocus>
+			<onclick condition="!System.HasAddon(script.artwork.downloader)">RunPlugin(plugin://script.artwork.downloader)</onclick>
+			<onclick condition="System.HasAddon(script.artwork.downloader)">Addon.OpenSettings(script.artwork.downloader)</onclick>
+			<selected>System.HasAddon(script.artwork.downloader)</selected>
+			<include>Defs_OptionButton</include>
+			<visible>ControlGroup(8000).HasFocus(8098)</visible>
+		    </control>
+                    
                     <!-- Artist Slideshow -->
-                    <control type="button" id="9108">
-                        <width>100%</width>
-                        <visible>ControlGroup(8000).HasFocus(8098)</visible>
-                        <include>Defs_OptionButton</include>
-                        <label>script.artistslideshow</label>
-                        <label2>$VAR[StatusArtistSlideshow]</label2>
-                        <onclick condition="System.HasAddon(script.artistslideshow)">Addon.OpenSettings(script.artistslideshow)</onclick>
-                        <onclick condition="!System.HasAddon(script.artistslideshow)">RunPlugin(plugin://script.artistslideshow)</onclick>
-                    </control>
+                    <control type="radiobutton" id="9108">
+			<width>100%</width>                        
+                        <radioposx>1350</radioposx>
+                        <label>script.artistslideshow $INFO[System.AddonVersion(script.artistslideshow),(,)]</label>
+			<textureradioonfocus colordiffuse="ff00991f">common/radio-on.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="ff00991f">common/radio-on.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="fff02222">common/status_off.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="fff02222">common/status_off.png</textureradiooffnofocus>
+			<onclick condition="!System.HasAddon(script.artistslideshow)">RunPlugin(plugin://script.artistslideshow)</onclick>
+			<onclick condition="System.HasAddon(script.artistslideshow)">Addon.OpenSettings(script.artistslideshow)</onclick>
+			<selected>System.HasAddon(script.artistslideshow)</selected>
+			<include>Defs_OptionButton</include>
+			<visible>ControlGroup(8000).HasFocus(8098)</visible>
+		    </control>
+
                     <!-- TV Show Next Aired -->
-                    <control type="button" id="9109">
-                        <width>100%</width>
-                        <visible>ControlGroup(8000).HasFocus(8098)</visible>
-                        <include>Defs_OptionButton</include>
-                        <label>script.tv.show.next.aired</label>
-                        <label2>$VAR[StatusTVShowNextAired]</label2>
-                        <onclick condition="System.HasAddon(script.tv.show.next.aired)">Addon.OpenSettings(script.tv.show.next.aired)</onclick>
-                        <onclick condition="!System.HasAddon(script.tv.show.next.aired)">RunPlugin(plugin://script.tv.show.next.aired)</onclick>
-                    </control>
+                    <control type="radiobutton" id="9109">
+			<width>100%</width>                        
+                        <radioposx>1350</radioposx>
+                        <label>script.tv.show.next.aired $INFO[System.AddonVersion(script.tv.show.next.aired),(,)]</label>
+			<textureradioonfocus colordiffuse="ff00991f">common/radio-on.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="ff00991f">common/radio-on.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="fff02222">common/status_off.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="fff02222">common/status_off.png</textureradiooffnofocus>
+			<onclick condition="!System.HasAddon(script.tv.show.next.aired)">RunPlugin(plugin://script.tv.show.next.aired)</onclick>
+			<onclick condition="System.HasAddon(script.tv.show.next.aired)">Addon.OpenSettings(script.tv.show.next.aired)</onclick>
+			<selected>System.HasAddon(script.tv.show.next.aired)</selected>
+			<include>Defs_OptionButton</include>
+			<visible>ControlGroup(8000).HasFocus(8098)</visible>
+		    </control>
+                    
                     <!-- CU Lyrics -->
-                    <control type="button" id="9110">
-                        <width>100%</width>
-                        <visible>ControlGroup(8000).HasFocus(8098)</visible>
-                        <include>Defs_OptionButton</include>
-                        <label>script.cu.lrclyrics</label>
-                        <label2>$VAR[StatusCULyrics]</label2>
-                        <onclick condition="System.HasAddon(script.cu.lrclyrics)">Addon.OpenSettings(script.cu.lrclyrics)</onclick>
-                        <onclick condition="!System.HasAddon(script.cu.lrclyrics)">RunPlugin(plugin://script.cu.lrclyrics)</onclick>
-                    </control>
+                    <control type="radiobutton" id="9110">
+			<width>100%</width>                        
+                        <radioposx>1350</radioposx>
+                        <label>script.cu.lrclyrics $INFO[System.AddonVersion(script.cu.lrclyrics),(,)]</label>
+			<textureradioonfocus colordiffuse="ff00991f">common/radio-on.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="ff00991f">common/radio-on.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="fff02222">common/status_off.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="fff02222">common/status_off.png</textureradiooffnofocus>
+			<onclick condition="!System.HasAddon(script.cu.lrclyrics)">RunPlugin(plugin://script.cu.lrclyrics)</onclick>
+			<onclick condition="System.HasAddon(script.cu.lrclyrics)">Addon.OpenSettings(script.cu.lrclyrics)</onclick>
+			<selected>System.HasAddon(script.cu.lrclyrics)</selected>
+			<include>Defs_OptionButton</include>
+			<visible>ControlGroup(8000).HasFocus(8098)</visible>
+		    </control>
+                    
                     <!-- CDArt Manager -->
-                    <control type="button" id="9111">
-                        <width>100%</width>
-                        <visible>ControlGroup(8000).HasFocus(8098)</visible>
-                        <include>Defs_OptionButton</include>
-                        <label>script.cdartmanager</label>
-                        <label2>$VAR[StatusCDArtManager]</label2>
-                        <onclick condition="System.HasAddon(script.cdartmanager)">Addon.OpenSettings(script.cdartmanager)</onclick>
-                        <onclick condition="!System.HasAddon(script.cdartmanager)">RunPlugin(plugin://script.cdartmanager)</onclick>
-                    </control> 
+                    <control type="radiobutton" id="9111">
+			<width>100%</width>                        
+                        <radioposx>1350</radioposx>
+                        <label>script.cdartmanager $INFO[System.AddonVersion(script.cdartmanager),(,)]</label>
+			<textureradioonfocus colordiffuse="ff00991f">common/radio-on.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="ff00991f">common/radio-on.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="fff02222">common/status_off.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="fff02222">common/status_off.png</textureradiooffnofocus>
+			<onclick condition="!System.HasAddon(script.cdartmanager)">RunPlugin(plugin://script.cdartmanager)</onclick>
+			<onclick condition="System.HasAddon(script.cdartmanager)">Addon.OpenSettings(script.cdartmanager)</onclick>
+			<selected>System.HasAddon(script.cdartmanager)</selected>
+			<include>Defs_OptionButton</include>
+			<visible>ControlGroup(8000).HasFocus(8098)</visible>
+		    </control>
+                    
                     <!-- Youtube -->
-                    <control type="button" id="9112">
-                        <width>100%</width>
-                        <visible>ControlGroup(8000).HasFocus(8098)</visible>
-                        <include>Defs_OptionButton</include>
-                        <label>plugin.video.youtube</label>
-                        <label2>$VAR[StatusYoutube]</label2>
-                        <onclick condition="System.HasAddon(plugin.video.youtube)">Addon.OpenSettings(plugin.video.youtube)</onclick>
-                        <onclick condition="!System.HasAddon(plugin.video.youtube)">RunPlugin(plugin://plugin.video.youtube)</onclick>
-                    </control>                    
+                    <control type="radiobutton" id="9112">
+			<width>100%</width>                        
+                        <radioposx>1350</radioposx>
+                        <label>plugin.video.youtube $INFO[System.AddonVersion(plugin.video.youtube),(,)]</label>
+			<textureradioonfocus colordiffuse="ff00991f">common/radio-on.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="ff00991f">common/radio-on.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="fff02222">common/status_off.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="fff02222">common/status_off.png</textureradiooffnofocus>
+			<onclick condition="!System.HasAddon(plugin.video.youtube)">RunPlugin(plugin://plugin.video.youtube)</onclick>
+			<onclick condition="System.HasAddon(plugin.video.youtube)">Addon.OpenSettings(plugin.video.youtube)</onclick>
+			<selected>System.HasAddon(plugin.video.youtube)</selected>
+			<include>Defs_OptionButton</include>
+			<visible>ControlGroup(8000).HasFocus(8098)</visible>
+		    </control>              
                     
                 </control>
             </control>

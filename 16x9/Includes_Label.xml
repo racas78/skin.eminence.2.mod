@@ -421,7 +421,9 @@
 <!-- Ajout Value -->
          <value condition="Control.HasFocus(9021)">$LOCALIZE[31726]</value>  
 <!-- Ajout Value -->
-         <value condition="Control.HasFocus(9114)">$LOCALIZE[31727]</value>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+         <value condition="Control.HasFocus(9114)">$LOCALIZE[31727]</value>
+<!-- Ajout Value -->
+         <value condition="Control.HasFocus(9115)">$LOCALIZE[31610]</value>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
     </variable>
 
     <variable name="Label_PlayerStatus">
@@ -484,11 +486,9 @@
         <value condition="!Container(9001).IsUpdating">$INFO[Container(9001).ListItem.Plot]$INFO[Container(9001).ListItem.Property(Album_Description)]$INFO[Container(9001).ListItem.Property(Addon.Description)]</value>
     </variable>
     <variable name="Label_HomeWidget_Info">
-        <value condition="[StringCompare(Container(9000).ListItem.Property(widget),Weather) | [IsEmpty(Container(9000).ListItem.Property(widget)) + StringCompare(Skin.String(home.fallbackwidget),Weather)]] + !IsEmpty(Skin.String(weather.fanart.path))">$INFO[Window(weather).Property(WeatherProvider)]</value>
-<!-- Modification Value -->        
-        <value condition="!Container(9001).IsUpdating + !IsEmpty(Container(9001).ListItem.Year) + !Skin.HasSetting(disable.rating)">$INFO[Container(9001).ListItem.Artist,,  •  ]$INFO[Container(9001).ListItem.TvShowTitle,,  •  ]$INFO[Container(9001).ListItem.Year]$INFO[Container(9001).ListItem.Duration,  •  , $LOCALIZE[31117]]$INFO[Container(9001).ListItem.RatingAndVotes,  •  ,]</value>
- <!-- Ajout Value -->       
-        <value condition="!Container(9001).IsUpdating + !IsEmpty(Container(9001).ListItem.Year) | Skin.HasSetting(disable.rating)">$INFO[Container(9001).ListItem.Artist,,  •  ]$INFO[Container(9001).ListItem.TvShowTitle,,  •  ]$INFO[Container(9001).ListItem.Year]$INFO[Container(9001).ListItem.Duration,  •  , $LOCALIZE[31117]]</value>
+        <value condition="[StringCompare(Container(9000).ListItem.Property(widget),Weather) | [IsEmpty(Container(9000).ListItem.Property(widget)) + StringCompare(Skin.String(home.fallbackwidget),Weather)]] + !IsEmpty(Skin.String(weather.fanart.path))">$INFO[Window(weather).Property(WeatherProvider)]</value>       
+        <value condition="!Container(9001).IsUpdating + !IsEmpty(Container(9001).ListItem.Year) + !Skin.HasSetting(disable.rating)">$INFO[Container(9001).ListItem.Artist,,  •  ]$INFO[Container(9001).ListItem.TvShowTitle,,  •  ]$INFO[Container(9001).ListItem.Year]$INFO[Window(Home).Property(SkinHelper.ListItemDuration),  •  ,]$INFO[Container(9001).ListItem.RatingAndVotes,  •  ,]</value>
+        <value condition="!Container(9001).IsUpdating + !IsEmpty(Container(9001).ListItem.Year) | Skin.HasSetting(disable.rating)">$INFO[Container(9001).ListItem.Artist,,  •  ]$INFO[Container(9001).ListItem.TvShowTitle,,  •  ]$INFO[Container(9001).ListItem.Year]$INFO[Window(Home).Property(SkinHelper.ListItemDuration),  •  ,]</value>
         <value condition="!Container(9001).IsUpdating + IsEmpty(Container(9001).ListItem.Year)">$INFO[Container(9001).ListItem.Artist,,  •  ]$INFO[Container(9001).ListItem.TvShowTitle]</value>
         <value>$LOCALIZE[31092]</value>
     </variable>
@@ -631,61 +631,5 @@
     <variable name="Label_SkinSetting_EpisodesFlags">
         <value condition="IsEmpty(Skin.String(episodesflags))">$LOCALIZE[31720]</value>
         <value>$INFO[Skin.String(episodesflags)]</value>
-    </variable>
-    <variable name="StatusSkinShortcuts">
-        <value condition="System.HasAddon(script.skinshortcuts)">$LOCALIZE[31610] ($INFO[System.AddonVersion(script.skinshortcuts)])</value>
-        <value>$LOCALIZE[31609]</value>
-    </variable>
-    <variable name="StatusExtendedInfo">
-        <value condition="System.HasAddon(script.extendedinfo)">$LOCALIZE[31610] ($INFO[System.AddonVersion(script.extendedinfo)])</value>
-        <value>$LOCALIZE[31609]</value>
-    </variable>
-    <variable name="StatusSkinHelperService">
-        <value condition="System.HasAddon(script.skin.helper.service)">$LOCALIZE[31610] ($INFO[System.AddonVersion(script.skin.helper.service)])</value>
-        <value>$LOCALIZE[31609]</value>
-    </variable>
-    <variable name="StatusGlobalSearch">
-        <value condition="System.HasAddon(script.globalsearch)">$LOCALIZE[31610] ($INFO[System.AddonVersion(script.globalsearch)])</value>
-        <value>$LOCALIZE[31609]</value>
-    </variable>
-    <variable name="StatusPlayAlbum">
-        <value condition="System.HasAddon(script.playalbum)">$LOCALIZE[31610] ($INFO[System.AddonVersion(script.playalbum)])</value>
-        <value>$LOCALIZE[31609]</value>
-    </variable>
-    <variable name="StatusNextupNotification">
-        <value condition="System.HasAddon(service.nextup.notification)">$LOCALIZE[31610] ($INFO[System.AddonVersion(service.nextup.notification)])</value>
-        <value>$LOCALIZE[31609]</value>
-    </variable>
-    <variable name="StatusArtworkDownloader">
-        <value condition="System.HasAddon(script.artwork.downloader)">$LOCALIZE[31610] ($INFO[System.AddonVersion(script.artwork.downloader)])</value>
-        <value>$LOCALIZE[31609]</value>
-    </variable>
-    <variable name="StatusArtistSlideshow">
-        <value condition="System.HasAddon(script.artistslideshow)">$LOCALIZE[31610] ($INFO[System.AddonVersion(script.artistslideshow)])</value>
-        <value>$LOCALIZE[31609]</value>
-    </variable>
-    <variable name="StatusTVShowNextAired">
-        <value condition="System.HasAddon(script.tv.show.next.aired)">$LOCALIZE[31610] ($INFO[System.AddonVersion(script.tv.show.next.aired)])</value>
-        <value>$LOCALIZE[31609]</value>
-    </variable>
-    <variable name="StatusYoutube">
-        <value condition="System.HasAddon(plugin.video.youtube)">$LOCALIZE[31610] ($INFO[System.AddonVersion(plugin.video.youtube)])</value>
-        <value>$LOCALIZE[31609]</value>
-    </variable>
-    <variable name="StatusCULyrics">
-        <value condition="System.HasAddon(script.cu.lrclyrics)">$LOCALIZE[31610] ($INFO[System.AddonVersion(script.cu.lrclyrics)])</value>
-        <value>$LOCALIZE[31609]</value>
-    </variable>
-    <variable name="StatusCDArtManager">
-        <value condition="System.HasAddon(script.cdartmanager)">$LOCALIZE[31610] ($INFO[System.AddonVersion(script.cdartmanager)])</value>
-        <value>$LOCALIZE[31609]</value>
-    </variable>
-    <variable name="StatusLibraryDataProvider">
-        <value condition="System.HasAddon(service.library.data.provider)">$LOCALIZE[31610] ($INFO[System.AddonVersion(service.library.data.provider)])</value>
-        <value>$LOCALIZE[31609]</value>
-    </variable>
-    <variable name="StatusProgramAutocompletion">
-        <value condition="System.HasAddon(plugin.program.autocompletion)">$LOCALIZE[31610] ($INFO[System.AddonVersion(plugin.program.autocompletion)])</value>
-        <value>$LOCALIZE[31609]</value>
     </variable>
 </includes>

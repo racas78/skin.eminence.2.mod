@@ -1147,11 +1147,11 @@ msgid "This category contains all necessary addons so that the skin works correc
 msgstr ""
 
 msgctxt "#31609"
-msgid "Not installed"
+msgid "must be manually installed"
 msgstr ""
 
 msgctxt "#31610"
-msgid "Installed"
+msgid "[B]Image Resource Select Addon[/B] addon is needed to select addons (genres icons, studios icons, weather icons, etc...)."
 msgstr ""
 
 msgctxt "#31611"

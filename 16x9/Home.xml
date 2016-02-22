@@ -12,6 +12,7 @@
     <onload>ClearProperty(FO9001)</onload>
     <onload>ClearProperty(extinfo,home)</onload>
     <onload>SetProperty(HubReturn,Home)</onload>
+    <onload>SetProperty(SkinHelper.WidgetContainer,9001)</onload>
 <!-- Modification Onload -->    
     <onload condition="IsEmpty(Skin.String(HomeStyle))">Skin.SetString(HomeStyle, beveled)</onload>
     <onload condition="!IsEmpty(Skin.String(home.headericon))">SetProperty(Header.Icon,$INFO[Skin.String(home.headericon)])</onload>

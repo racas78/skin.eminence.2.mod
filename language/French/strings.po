@@ -1143,12 +1143,12 @@ msgid "This category contains all necessary addons so that the skin works correc
 msgstr "Cette catégorie contient l'ensemble des extensions nécessaires au bon fonctionnement du thème."
 
 msgctxt "#31609"
-msgid "Not installed"
-msgstr "Non installée"
+msgid "must be manually installed"
+msgstr "doit être installé manuellement"
 
 msgctxt "#31610"
-msgid "Installed"
-msgstr "Installée"
+msgid "[B]Image Resource Select Addon[/B] addon is needed to select addons (genres icons, studios icons, weather icons, etc...)."
+msgstr "L'extension [B]Image Resource Select Addon[/B] est nécessaire pour sélectionner les extensions (icônes des genres, icônes des studios, icônes Météo, etc...)."
 
 msgctxt "#31611"
 msgid "[B]Skin Shortcuts[/B] addon is needed to personnalise menus and widgets."
