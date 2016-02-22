@@ -1,3 +1,6 @@
+[B]1.5.0[/B]
+Fix on music infos.
+
 [B]1.4.9[/B]
 Changes in necessary addons in skin settings.
 Change duration format on widgets.

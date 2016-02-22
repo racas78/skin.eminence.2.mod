@@ -258,7 +258,7 @@
                             </control>
 
                             <!-- Mood -->
-                            <control type="group">
+                            <!--<control type="group">
                                 <height>36</height>
                                 <width>100%</width>
                                 <visible>!IsEmpty(ListItem.Property(Artist_Mood))</visible>
@@ -277,7 +277,7 @@
                                     <height>36</height>
                                     <label>$INFO[ListItem.Property(Artist_Mood)]</label>
                                 </control>
-                            </control>
+                            </control>-->
 
                             <!-- Style -->
                             <control type="group">
