@@ -1637,3 +1637,7 @@ msgstr "Regardée pour la dernière fois le"
 msgctxt "#31732"
 msgid "Aired for the last time on"
 msgstr "Diffusé pour la dernière fois le"
+
+msgctxt "#31733"
+msgid "Hide Next Aired infos"
+msgstr "Masquer les informations de prochaine diffusion"

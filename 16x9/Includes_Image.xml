@@ -121,8 +121,8 @@
         <value condition="Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SkinSettings.xml)">common/info.png</value>
         <value condition="Player.HasMedia + Player.Paused">common/pause.png</value>
         <value condition="Player.HasMedia + !Player.Paused">common/play.png</value>
-        <value condition="!IsEmpty(Window(Home).Property(NextAired.NextDate))">common/nextaired.png</value>
-        <value condition="IsEmpty(Window(Home).Property(NextAired.NextDate)) + !IsEmpty(Window(Home).Property(NextAired.LatestTitle))">common/nextaired.png</value>
+        <value condition="!IsEmpty(Window(Home).Property(NextAired.NextDate)) + !Skin.HasSetting(hidenextairedinfos)">common/nextaired.png</value>
+        <value condition="IsEmpty(Window(Home).Property(NextAired.NextDate)) + !IsEmpty(Window(Home).Property(NextAired.LatestTitle)) + !Skin.HasSetting(hidenextairedinfos)">common/nextaired.png</value>
 <!-- Ajout Value -->        
         <value condition="Window.IsVisible(AddonBrowser.xml)">common/rss_update.png</value>
     </variable>

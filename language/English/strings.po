@@ -1641,3 +1641,7 @@ msgstr ""
 msgctxt "#31732"
 msgid "Aired for the last time on"
 msgstr ""
+
+msgctxt "#31733"
+msgid "Hide Next Aired infos"
+msgstr ""

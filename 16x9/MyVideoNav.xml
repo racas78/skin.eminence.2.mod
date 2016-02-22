@@ -86,9 +86,18 @@
                 
                 <!-- Watched toggle -->
                 <control type="radiobutton" id="14">
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionRadioButton</include>
                     <label>20367</label>
                     <visible>Control.IsEnabled(14)</visible>
+                </control>
+                
+                <!-- Hide Next Aired Infos -->
+                <control type="radiobutton" id="44">
+                    <include>Defs_OptionRadioButton</include>
+                    <label>31733</label>
+                    <selected>Skin.HasSetting(hidenextairedinfos)</selected>
+                    <onclick>Skin.ToggleSetting(hidenextairedinfos)</onclick>
+                    <visible>Container.Content(tvshows)</visible>
                 </control>
                 
                 <!-- Filter -->
@@ -127,13 +136,6 @@
                     <include>Defs_OptionButton</include>
                     <onclick>SetFocus(50)</onclick>
                 </control>
-                <!-- Back Panels -->
-                <!-- <control type="radiobutton" id="9001">
-                    <label>31004</label>
-                    <include>Defs_OptionButton</include>
-                    <onclick>Skin.ToggleSetting(global.backpanelmode)</onclick>
-                    <selected>Skin.HasSetting(global.backpanelmode)</selected>
-                </control> -->
             </control>
 
         </control>
