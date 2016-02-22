@@ -836,6 +836,7 @@
                 <font>Font-Header</font>
                 <label>$INFO[ListItem.SortLetter]</label>
                 <textcolor>HomeBarFG</textcolor>
+                <visible>!Skin.HasSetting(disable.headertile)</visible>
             </control>
         </control>
         <control type="label">
