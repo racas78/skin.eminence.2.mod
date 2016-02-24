@@ -100,6 +100,16 @@
                     <visible>Container.Content(tvshows)</visible>
                 </control>
                 
+                <!-- Hide/Show Indicators -->
+                <control type="button" id="45">
+                    <include>Defs_OptionRadioButton</include>
+                    <label>$LOCALIZE[31734] : $VAR[Label_Indicators]</label>
+                    <onclick condition="IsEmpty(Skin.String(indicators))">Skin.SetString(indicators,$LOCALIZE[31735])</onclick>
+                    <onclick condition="StringCompare(Skin.String(indicators),$LOCALIZE[31189])">Skin.SetString(indicators,$LOCALIZE[31735])</onclick>
+                    <onclick condition="StringCompare(Skin.String(indicators),$LOCALIZE[31735])">Skin.SetString(indicators,$LOCALIZE[31736])</onclick>
+                    <onclick condition="StringCompare(Skin.String(indicators),$LOCALIZE[31736])">Skin.SetString(indicators,$LOCALIZE[31189])</onclick>
+                </control>
+                
                 <!-- Filter -->
                 <control type="edit" id="19">
                     <include>Defs_OptionButton</include>

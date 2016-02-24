@@ -1645,3 +1645,15 @@ msgstr ""
 msgctxt "#31733"
 msgid "Hide Next Aired infos"
 msgstr ""
+
+msgctxt "#31734"
+msgid "Indicators"
+msgstr ""
+
+msgctxt "#31735"
+msgid "All"
+msgstr ""
+
+msgctxt "#31736"
+msgid "Hide unwatched indicator only"
+msgstr ""

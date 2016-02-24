@@ -1641,3 +1641,15 @@ msgstr "Diffusé pour la dernière fois le"
 msgctxt "#31733"
 msgid "Hide Next Aired infos"
 msgstr "Masquer les informations de prochaine diffusion"
+
+msgctxt "#31734"
+msgid "Indicators"
+msgstr "Indicateurs"
+
+msgctxt "#31735"
+msgid "All"
+msgstr "Tous"
+
+msgctxt "#31736"
+msgid "Hide unwatched indicator only"
+msgstr "Masquer l'indicateur des non vus seuleument"

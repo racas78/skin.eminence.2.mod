@@ -632,4 +632,8 @@
         <value condition="IsEmpty(Skin.String(episodesflags))">$LOCALIZE[31720]</value>
         <value>$INFO[Skin.String(episodesflags)]</value>
     </variable>
+    <variable name="Label_Indicators">
+        <value condition="IsEmpty(Skin.String(indicators))">$LOCALIZE[31739]</value>
+        <value>$INFO[Skin.String(indicators)]</value>
+    </variable>
 </includes>
