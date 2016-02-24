@@ -141,9 +141,8 @@
                     <width>500</width>
                     <height>281</height>
                     <texture>$VAR[PlayerClearArt]</texture>
-                    <aspectratio align="right" aligny="bottom">keep</aspectratio>
+                    <aspectratio align="center" aligny="bottom">keep</aspectratio>
                     <visible>Skin.HasSetting(videoosd.showclearart)</visible>
-                    <animation effect="slide" start="0" end="-70,0" condition="IsEmpty(Player.Art(clearart)) + IsEmpty(Player.Art(tvshow.clearart))">Conditional</animation>
                     <visible>!Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
                 </control>
             <control type="image">
@@ -202,8 +201,7 @@
                 <control type="image">
                         <width>168</width>
                         <height>240</height>
-                        <texture fallback="DefaultAddonVideo.png">$VAR[PlayerPoster]</texture>
-                        <visible>!IsEmpty(Player.Art(tvshow.poster)) | !IsEmpty(Player.Art(poster))</visible>
+                        <texture fallback="DefaultVideoPlayer.png">$VAR[PlayerPoster]</texture>
                 </control>
 <!-- Ajout Control -->                   
                 <control type="image">
@@ -211,8 +209,8 @@
                         <width>168</width>
                         <height>168</height>
                         <aspectratio>keep</aspectratio>
-                        <texture fallback="DefaultAddonVideo.png">$INFO[Player.Art(thumb)]</texture>
-                        <visible>VideoPlayer.Content(LiveTV) + !IsEmpty(Player.Art(thumb))</visible>
+                        <texture fallback="DefaultVideoPlayer.png">$INFO[Player.Art(thumb)]</texture>
+                        <visible>VideoPlayer.Content(LiveTV)</visible>
                 </control>   
                 
                 <control type="grouplist">

@@ -759,7 +759,7 @@
             <visible>IsEmpty(Skin.String(HeaderStyle)) | Skin.String(HeaderStyle, beveledheadertile)</visible>
             <visible>![Window.IsVisible(visualisation) + Skin.HasSetting(osdmusic.disabletile)]</visible>
             <visible>!Control.HasFocus(9002) + ![Control.HasFocus(9000) + Window.IsVisible(DialogButtonMenu.xml)] + !Window.IsVisible(Custom_Password.xml)</visible>
-            <visible>!Skin.HasSetting(disable.headertile)</visible>
+            <visible>[VideoPlayer.IsFullscreen | !Skin.HasSetting(disable.headertile)]</visible>
         </control>
 <!-- Ajout Control -->        
         <control type="image">
@@ -773,7 +773,7 @@
             <visible>Skin.String(HeaderStyle, roundedheadertile)</visible>
             <visible>![Window.IsVisible(visualisation) + Skin.HasSetting(osdmusic.disabletile)]</visible>
            <visible>!Control.HasFocus(9002) + ![Control.HasFocus(9000) + Window.IsVisible(DialogButtonMenu.xml)] + !Window.IsVisible(Custom_Password.xml)</visible>
-           <visible>!Skin.HasSetting(disable.headertile)</visible>
+           <visible>[VideoPlayer.IsFullscreen | !Skin.HasSetting(disable.headertile)]</visible>
         </control>
 <!-- Ajout Control -->           
         <control type="image">
@@ -787,11 +787,10 @@
             <visible>Skin.String(HeaderStyle, squaredheadertile)</visible>
             <visible>![Window.IsVisible(visualisation) + Skin.HasSetting(osdmusic.disabletile)]</visible>
             <visible>!Control.HasFocus(9002) + ![Control.HasFocus(9000) + Window.IsVisible(DialogButtonMenu.xml)] + !Window.IsVisible(Custom_Password.xml)</visible>
-            <visible>!Skin.HasSetting(disable.headertile)</visible>
+            <visible>[VideoPlayer.IsFullscreen | !Skin.HasSetting(disable.headertile)]</visible>
         </control>
     </include>
-    <include name="Furniture_TopBar_Tile_Content">
-        
+    <include name="Furniture_TopBar_Tile_Content">        
         <control type="image">
             <posy>10</posy>
             <posx>30</posx>
@@ -803,7 +802,7 @@
             <visible>!Container.Scrolling</visible>
             <visible>!Window.IsVisible(DialogBusy.xml)</visible>
             <visible>!Control.HasFocus(9002) + ![Control.HasFocus(9000) + Window.IsVisible(DialogButtonMenu.xml)] + !Window.IsVisible(Custom_Password.xml)</visible>
-            <visible>!Skin.HasSetting(disable.headertile)</visible>
+            <visible>[VideoPlayer.IsFullscreen | !Skin.HasSetting(disable.headertile)]</visible>
 <!-- Ajout Visible -->            
             <visible>![Window.IsVisible(visualisation) + Skin.HasSetting(osdmusic.disabletile)]</visible>
             <animation type="Visible">
@@ -851,7 +850,7 @@
 <!-- Ajout Visible -->            
             <visible>![Window.IsVisible(visualisation) + Skin.HasSetting(osdmusic.disabletile)]</visible>
             <visible>!Control.HasFocus(9002) + ![Control.HasFocus(9000) + Window.IsVisible(DialogButtonMenu.xml)] + !Window.IsVisible(Custom_Password.xml)</visible>
-            <visible>!Skin.HasSetting(disable.headertile)</visible>
+            <visible>[VideoPlayer.IsFullscreen | !Skin.HasSetting(disable.headertile)]</visible>
         </control>
     </include>
     <include name="Furniture_TopBar_Header">
@@ -915,6 +914,7 @@
                 <width>1200</width>
                 <height>100</height>
                 <font>Font-Header</font>
+                <scroll>yes</scroll>
                 <label>$INFO[Player.Title]</label>
                 <aligny>top</aligny>
                 <textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>

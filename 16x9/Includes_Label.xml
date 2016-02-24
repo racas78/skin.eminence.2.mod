@@ -482,7 +482,7 @@
     </variable>
     <variable name="Label_HomeWidget_Plot">
 <!-- Modification Value -->    
-        <value condition="[StringCompare(Container(9000).ListItem.Property(widget),Weather) | [IsEmpty(Container(9000).ListItem.Property(widget)) + StringCompare(Skin.String(home.fallbackwidget),Weather)]] + !IsEmpty(Skin.String(weather.fanart.path))">$INFO[Window(weather).Property(Current.FeelsLike),$LOCALIZE[402] ,]$INFO[System.TemperatureUnits]$INFO[Window(weather).Property(Current.WindSpeed),[CR]$LOCALIZE[404] , ]$INFO[Window(weather).Property(Current.Humidity),[CR], [LOWERCASE]$LOCALIZE[406][/LOWERCASE]]</value>
+        <value condition="[StringCompare(Container(9000).ListItem.Property(widget),Weather) | [IsEmpty(Container(9000).ListItem.Property(widget)) + StringCompare(Skin.String(home.fallbackwidget),Weather)]] + !IsEmpty(Skin.String(weather.fanart.path))">$INFO[Window(weather).Property(Current.FeelsLike),$LOCALIZE[402] : ,]$INFO[System.TemperatureUnits]$INFO[Window(weather).Property(Current.WindSpeed),[CR]$LOCALIZE[404] : , ]$INFO[Window(weather).Property(Current.Humidity),[CR]$LOCALIZE[406] : ,]</value>
         <value condition="!Container(9001).IsUpdating">$INFO[Container(9001).ListItem.Plot]$INFO[Container(9001).ListItem.Property(Album_Description)]$INFO[Container(9001).ListItem.Property(Addon.Description)]</value>
     </variable>
     <variable name="Label_HomeWidget_Info">
