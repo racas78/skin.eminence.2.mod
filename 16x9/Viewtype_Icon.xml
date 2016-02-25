@@ -627,7 +627,7 @@
                                 <right>pad</right>
                                 <top>pad</top>
                                 <bottom>pad</bottom>
-                                <aspectratio>keep</aspectratio>
+                                <aspectratio>stretch</aspectratio>
                                 <texture background="true">$VAR[Image_Poster]</texture>
                                 <visible>IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))</visible>
                             </control>
@@ -678,7 +678,7 @@
                                 <right>pad</right>
                                 <top>pad</top>
                                 <bottom>pad</bottom>
-                                <aspectratio>keep</aspectratio>
+                                <aspectratio>stretch</aspectratio>
                                 <texture background="true">$VAR[Image_Poster]</texture>
                                 <visible>IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))</visible>
                             </control>
@@ -687,7 +687,7 @@
                                 <right>pad</right>
                                 <top>pad</top>
                                 <bottom>pad</bottom>
-                                <aspectratio>scale</aspectratio>
+                                <aspectratio>stretch</aspectratio>
                                 <texture background="true">$VAR[Image_Poster]</texture>
                                 <visible>![IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))]</visible>
                             </control>
@@ -734,7 +734,7 @@
                                 <right>pad</right>
                                 <top>pad</top>
                                 <bottom>pad</bottom>
-                                <aspectratio>keep</aspectratio>
+                                <aspectratio>stretch</aspectratio>
                                 <texture background="true">$VAR[Image_Poster]</texture>
                                 <visible>IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))</visible>
                             </control>
@@ -791,7 +791,7 @@
                                 <right>pad</right>
                                 <top>pad</top>
                                 <bottom>pad</bottom>
-                                <aspectratio>keep</aspectratio>
+                                <aspectratio>stretch</aspectratio>
                                 <texture background="true">$VAR[Image_Poster]</texture>
                                 <visible>IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))</visible>
                             </control>
@@ -800,7 +800,7 @@
                                 <right>pad</right>
                                 <top>pad</top>
                                 <bottom>pad</bottom>
-                                <aspectratio>scale</aspectratio>
+                                <aspectratio>stretch</aspectratio>
                                 <texture background="true">$VAR[Image_Poster]</texture>
                                 <visible>![IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))]</visible>
                             </control>
@@ -1303,7 +1303,7 @@
             <include name="View_Cycle">
                 <param name="id" value="156" />
 <!-- Modification Param -->                
-                <param name="name" value="$LOCALIZE[31728]" />
+                <param name="name" value="$LOCALIZE[31732]" />
                 <param name="width" value="1888" />
                 <param name="condition" value="Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)" />
             </include>
@@ -1323,7 +1323,6 @@
         <param name="posx" default="1" />
         <param name="posy" default="-6" />
         <param name="height" default="682" />
-        <param name="infovisible" default="false" />
         <definition>
             <control type="group">
                 <control type="panel" id="$PARAM[id]">
@@ -1343,7 +1342,7 @@
                     <viewtype label="$PARAM[name]">icons</viewtype>
                     <scrolltime tween="quadratic">400</scrolltime>
                     <visible>$PARAM[condition]</visible>
-                    <itemlayout height="341" width="236" condition="!$PARAM[infovisible]">
+                    <itemlayout height="341" width="236">
                         <control type="group">
                             <left>0</left>
                             <right>pad</right>
@@ -1359,7 +1358,7 @@
                                 <right>pad</right>
                                 <top>pad</top>
                                 <bottom>pad</bottom>
-                                <aspectratio>keep</aspectratio>
+                                <aspectratio>stretch</aspectratio>
                                 <texture background="true">$VAR[Image_Poster]</texture>
                                 <visible>IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))</visible>
                             </control>
@@ -1394,54 +1393,7 @@
                         </control>
                     </itemlayout>
 
-                    <itemlayout height="350" width="243" condition="$PARAM[infovisible]">
-                        <control type="group">
-                            <left>0</left>
-                            <right>pad</right>
-                            <bottom>5</bottom>
-                            <top>5</top>
-                            <control type="image">
-                                <width>100%</width>
-                                <height>100%</height>
-                                <texture colordiffuse="PosterBorder">common/white.png</texture>
-                            </control>
-                            <control type="image">
-                                <left>pad</left>
-                                <right>pad</right>
-                                <top>pad</top>
-                                <bottom>pad</bottom>
-                                <aspectratio>keep</aspectratio>
-                                <texture background="true">$VAR[Image_Poster]</texture>
-                                <visible>IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))</visible>
-                            </control>
-                            <control type="image">
-                                <left>pad</left>
-                                <right>pad</right>
-                                <top>pad</top>
-                                <bottom>pad</bottom>
-                                <aspectratio>scale</aspectratio>
-                                <texture background="true">$VAR[Image_Poster]</texture>
-                                <visible>![IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))]</visible>
-                            </control>                   
-                            <control type="image">
-                                <right>15</right>
-                                <top>15</top>
-                                <height>32</height>
-                                <width>32</width>
-                                <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
-                                <visible>!IsEmpty(ListItem.Overlay)</visible>
-                            </control>
-                            <control type="image">
-                                <right>15</right>
-                                <top>15</top>
-                                <height>32</height>
-                                <width>32</width>                       
-                                <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
-                                <visible>!IsEmpty(ListItem.Overlay)</visible>
-                            </control>
-                        </control>
-                    </itemlayout>
-                    <focusedlayout height="341" width="236" condition="!$PARAM[infovisible]">
+                    <focusedlayout height="341" width="236">
                     <!-- Left Poster Info -->
 					<control type="group">
 						<posx>0</posx>	
@@ -1518,7 +1470,7 @@
                                 <right>pad</right>
                                 <top>pad</top>
                                 <bottom>pad</bottom>
-                                <aspectratio>keep</aspectratio>
+                                <aspectratio>stretch</aspectratio>
                                 <texture background="true">$VAR[Image_Poster]</texture>
                                 <visible>IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))</visible>
                             </control>
@@ -1685,7 +1637,7 @@
             </include>
             <include name="View_Banner">
                 <param name="id" value="158" />            
-                <param name="name" value="$LOCALIZE[31730]" />
+                <param name="name" value="$LOCALIZE[31734]" />
             </include>       
             <include>Object_Arrows_Vertical</include>
         </control>

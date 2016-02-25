@@ -454,9 +454,12 @@
         <value condition="!IsEmpty(Skin.String(home.fallbackwidget)) + !IsEmpty(Skin.String(home.fallbackwidget.name))">$INFO[Skin.String(home.fallbackwidget.name)]</value>
         <value>$LOCALIZE[31095]</value>
     </variable>
+    
 
     <variable name="Label_Hub_WidgetType">
         <value condition="Skin.HasSetting(furniture.hidehubplot)">$VAR[Label_Hub_WidgetLabel]$VAR[Label_Hub_WidgetLabel2,  •  ,]</value>
+        <value condition="!IsEmpty(Container(9501).ListItem.Property(widgetPath)) + !Control.IsVisible(9499)">$INFO[Container(9501).ListItem.Property(widgetName)]</value>
+        <value condition="!IsEmpty(Container(9501).ListItem.Property(hubImage)) + Control.IsVisible(9499)">$INFO[Container(9501).ListItem.Label]</value>
         <value condition="Window.IsVisible(1101) + !IsEmpty(Skin.String(Widget.1101.Label))">$INFO[Skin.String(Widget.1101.Label)]</value>
         <value condition="Window.IsVisible(1102) + !IsEmpty(Skin.String(Widget.1102.Label))">$INFO[Skin.String(Widget.1102.Label)]</value>
         <value condition="Window.IsVisible(1103) + !IsEmpty(Skin.String(Widget.1103.Label))">$INFO[Skin.String(Widget.1103.Label)]</value>

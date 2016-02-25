@@ -86,7 +86,7 @@
                 
                 <!-- Watched toggle -->
                 <control type="radiobutton" id="14">
-                    <include>Defs_OptionRadioButton</include>
+                    <include>Defs_OptionButton</include>
                     <label>20367</label>
                     <visible>Control.IsEnabled(14)</visible>
                 </control>

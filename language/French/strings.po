@@ -1653,3 +1653,7 @@ msgstr "Tous"
 msgctxt "#31736"
 msgid "Hide unwatched indicator only"
 msgstr "Masquer l'indicateur des non vus seuleument"
+
+msgctxt "#31737"
+msgid "Hub Image"
+msgstr "Image du Hub"

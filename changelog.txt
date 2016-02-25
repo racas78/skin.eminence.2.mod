@@ -1,3 +1,10 @@
+[B]1.5.4[/B]
+Add possibility to choose a widget or a picture/multi pictures for each item of Hub (Thanks 
+rhodges).
+
+[B]1.5.3[/B]
+Changes in Cycle view.
+
 [B]1.5.2[/B]
 Add possibility to show all indicators / Hide unwatched indicators only / Hide all indicators in library settings.
 

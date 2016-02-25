@@ -259,5 +259,7 @@
 	<property property="ParentalControl" label="$LOCALIZE[106]" icon="common/lock_no.png">No</property>
 	<property property="ParentalControl" label="$LOCALIZE[107]" icon="common/lock_yes.png">Yes</property>
 	<alwaysReset>True</alwaysReset>
+	
+	<propertySettings property="hubImage" buttonID="9704" title="$LOCALIZE[31737]" showNone="True" imageBrowse="True" />
     
 </overrides>

@@ -39,6 +39,20 @@
                         <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
                         <visible>Control.HasFocus(9500)</visible>
                     </control>
+                    
+                    <control type="multiimage" id="9499">
+                      <width>1190</width>
+                      <height>670</height>
+                      <left>pad</left>
+                      <right>pad</right>
+                      <top>pad</top>
+                      <bottom>pad</bottom>
+                      <aspectratio>scale</aspectratio>
+                      <timeperimage>5000</timeperimage>
+                      <imagepath fallback="special://skin/extras/backgrounds/home.jpg">$INFO[Container(9501).ListItem.Property(hubImage)]</imagepath>
+                      <visible>!IsEmpty(Container(9501).ListItem.Property(hubImage))</visible>
+                    </control>
+                    
                     <control type="wraplist" id="9500">
                         <left>pad</left>
                         <right>pad</right>
@@ -72,6 +86,7 @@
                             </control>
                         </focusedlayout>
                         <content limit="10" target="video">$VAR[Defs_Hub_Widget]</content>
+                        <visible>!Control.IsVisible(9499)</visible>
                     </control>
                     <control type="group">
                         <left>pad</left>
@@ -79,6 +94,7 @@
                         <bottom>pad</bottom>
                         <height>122</height>
                         <visible>!Skin.HasSetting(furniture.hidehubplot)</visible>
+                        <visible>!Control.IsVisible(9499)</visible>
                         <control type="image">
                             <width>100%</width>
 <!-- Modification Height -->                            
