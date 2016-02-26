@@ -16,9 +16,7 @@
                 <param name="label" value="$INFO[Control.GetLabel(500)]" />
                 <param name="icon" value="special://skin/extras/icons/settings.png" />
             </include>
-
-            
-            
+  
             <control type="list" id="211">
                 <right>side</right>
                 <left>side</left>

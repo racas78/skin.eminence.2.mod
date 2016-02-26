@@ -1657,3 +1657,11 @@ msgstr "Masquer l'indicateur des non vus seuleument"
 msgctxt "#31737"
 msgid "Hub Image"
 msgstr "Image du Hub"
+
+msgctxt "#31738"
+msgid "Unwatched Movies"
+msgstr "Films non vus"
+
+msgctxt "#31739"
+msgid "Unwatched Episodes"
+msgstr "Episodes non vus"
