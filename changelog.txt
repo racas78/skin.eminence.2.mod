@@ -1,5 +1,6 @@
 [B]1.5.5[/B]
 Add Unwatched Movies & Unwatched Episodes widgets.
+Fix indicators not show by default.
 
 [B]1.5.4[/B]
 Add possibility to choose a widget or a picture/multi pictures for each item of Hub (Thanks 
