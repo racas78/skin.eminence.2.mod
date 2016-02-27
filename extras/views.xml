@@ -21,6 +21,7 @@
     <view id="Media Info 3" value="503" languageid="31148" type="movies,tvshows,episodes,sets,seasons,setmovies"/>
     <view id="Info List" value="508" languageid="31192" type="movies,tvshows,episodes,sets,seasons,setmovies"/>
     <view id="Info List 2" value="509" languageid="31646" type="movies,tvshows,episodes,sets,seasons,setmovies"/>
-    <view id="Fanarts/Thumbs list" value="506" languageid="31164" type="movies,tvshows,episodes,sets,seasons,artists,songs,setmovies"/>  
-    <view id="BigWide Classic" value="157" languageid="31729" type="movies,tvshows,sets,seasons,setmovies,episodes,artists,musicvideos"/>
+    <view id="Fanarts/Thumbs list" value="506" languageid="31164" type="movies,tvshows,episodes,sets,seasons,artists,songs,setmovies"/>
+    <view id="Fanart Logo" value="159" languageid="31742" type="movies,tvshows,sets,setmovies"/>  
+    <view id="BigWide Classic" value="157" languageid="31729" type="movies,tvshows,sets,seasons,setmovies,episodes,artists,musicvideos"/>   
 </views>

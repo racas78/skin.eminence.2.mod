@@ -125,7 +125,7 @@
                     <fadetime>200</fadetime>
                     <aspectratio>scale</aspectratio>
                     <texture>$VAR[Image_Thumb]</texture>
-                    <visible>Container.Content(movies)</visible>
+                    <visible>!Container.Content(tvshows)</visible>
                 </control>
                 <control type="image">
                     <left>pad</left>
@@ -961,5 +961,104 @@
         </definition>
     </include>
 
+    <!-- FANART LIST -->
+    <include name="Viewtype_FanartLogo">
+        <control type="group">
+            <visible>Control.IsVisible(159)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <control type="group">
+                <right>-10</right>
+                <width>1221</width>
+                <include>View_BigWide_Fanart</include>
+                <include>View_BigWide_Info</include>
+            </control>
+            <control type="group">
+                <right>0</right>
+                <width>1211</width>
+                <include name="Object_Line">
+                    <param name="width" value="1211" />
+                    <param name="label" value="19033" />
+                </include>
+            </control>
+            <include name="View_FanartLogo">
+                <param name="viewlabel" value="31742" />
+                <param name="posx" value="0" />
+                <param name="width" value="659" />
+                <param name="id" value="159" />
+            </include>
+            <control type="group">
+                <width>659</width>
+                <include>Object_Arrows_Vertical</include>
+            </control>
+        </control>
+    </include>
+    
+    <include name="View_FanartLogo">
+        <definition>
+            <control type="group">
+                <left>$PARAM[posx]</left>
+                <width>$PARAM[width]</width>
+                <include name="Object_Line">
+                    <param name="width" value="$PARAM[width]" />
+                    <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+                </include>
+                <control type="image">
+                    <width>$PARAM[width]</width>
+                    <height>height</height>
+                    <texture colordiffuse="PosterBorder">common/white.png</texture>
+                </control>
+                <include>Object_Scrollbar</include>
+                <control type="panel" id="$PARAM[id]">
+                    <top>0</top>
+                    <left>0</left>
+                    <width>$PARAM[width]</width>
+                    <height>height</height>
+                    <onup>$PARAM[id]</onup>
+                    <ondown>$PARAM[id]</ondown>
+                    <onleft>60</onleft>
+                    <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
+                    <pagecontrol>60</pagecontrol>
+                    <orientation>vertical</orientation>
+                    <viewtype label="$PARAM[viewlabel]">list</viewtype>
+                    <scrolltime tween="quadratic">400</scrolltime>
+                    <visible>$PARAM[condition]</visible>
+                    <itemlayout height="height" width="$PARAM[width]">
+                    </itemlayout>
+                    <focusedlayout height="height" width="$PARAM[width]">
+                        <control type="image">
+                            <centertop>50%</centertop>
+                            <centerleft>50%</centerleft>
+                            <width>500</width>             
+                            <height>188</height>
+                            <texture>$INFO[ListItem.Art(clearlogo)]</texture>
+                        </control>
+                        <control type="image">
+                            <centertop>50%</centertop>
+                            <centerleft>50%</centerleft>
+                            <width>500</width>             
+                            <height>188</height>
+                            <texture>$INFO[ListItem.Art(tvshow.clearlogo)]</texture>
+                        </control>
+                        <control type="label">
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <posx>30</posx>
+                            <width>600</width>    
+                            <scroll>yes</scroll>         
+                            <height>height</height>
+                            <font>Font-View</font>
+                            <label>$INFO[ListItem.Label]</label>
+                            <visible>IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+                        </control>
+                   </focusedlayout>
+                </control>
+            </control>
+        </definition>
+    </include>
 
 </includes>

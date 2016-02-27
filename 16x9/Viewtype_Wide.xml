@@ -174,7 +174,7 @@
 <!-- Modification Aspectratio -->                            
                             <aspectratio>stretch</aspectratio>
                             <texture background="true">$VAR[Image_Thumb]</texture>
-                            <visible>Container.Content(movies)</visible>
+                            <visible>!Container.Content(tvshows)</visible>
                         </control>
                         <control type="image">
                             <left>pad</left>
@@ -209,9 +209,18 @@
                             <right>pad</right>
                             <bottom>pad</bottom>
                             <height>48</height>
-                            <texture flipy="true" colordiffuse="9f000000">common/white.png</texture>
-<!-- Ajout Visible -->            
-            <visible>!Skin.HasSetting(hide.moviesplots) + ! Skin.HasSetting(hide.tvshowsplots)</visible>                            
+                            <texture flipy="true" colordiffuse="9f000000">common/white.png</texture>          
+                            <visible>!Skin.HasSetting(hide.moviesplots)</visible>
+                            <visible>!Container.Content(tvshows)</visible>                            
+                        </control>
+                        <control type="image">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <bottom>pad</bottom>
+                            <height>48</height>
+                            <texture flipy="true" colordiffuse="9f000000">common/white.png</texture>        
+                            <visible>!Skin.HasSetting(hide.tvshowsplots)</visible>     
+                            <visible>Container.Content(tvshows)</visible>                       
                         </control>
                         <control type="label">
                             <left>25</left>
@@ -220,9 +229,20 @@
                             <height>48</height>
                             <textcolor>HomeSubLabel</textcolor>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <label>$INFO[ListItem.Label]</label>
-<!-- Ajout Visible -->            
-            <visible>!Skin.HasSetting(hide.moviesplots) + ! Skin.HasSetting(hide.tvshowsplots)</visible>                            
+                            <label>$INFO[ListItem.Label]</label>          
+                            <visible>!Skin.HasSetting(hide.moviesplots)</visible>
+                            <visible>!Container.Content(tvshows)</visible>                             
+                        </control>
+                        <control type="label">
+                            <left>25</left>
+                            <right>25</right>
+                            <bottom>pad</bottom>
+                            <height>48</height>
+                            <textcolor>HomeSubLabel</textcolor>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>$INFO[ListItem.Label]</label>          
+                            <visible>!Skin.HasSetting(hide.tvshowsplots)</visible> 
+                            <visible>Container.Content(tvshows)</visible>                            
                         </control>
                         <control type="label">
                             <left>25</left>
@@ -232,11 +252,23 @@
                             <align>right</align>
                             <font>Font-ListInfo-Small</font>
                             <textcolor>HomeSubLabel</textcolor>
-                            <label>$INFO[ListItem.Label2]</label>
-<!-- Ajout Visible -->                            
-                            <visible>!Skin.HasSetting(disable.rating)</visible>
-<!-- Ajout Visible -->            
-            <visible>!Skin.HasSetting(hide.moviesplots) + ! Skin.HasSetting(hide.tvshowsplots)</visible>                                                        
+                            <label>$INFO[ListItem.Label2]</label>                           
+                            <visible>!Skin.HasSetting(disable.rating)</visible>         
+                            <visible>!Skin.HasSetting(hide.moviesplots)</visible>
+                            <visible>!Container.Content(tvshows)</visible>                                                         
+                        </control>
+                        <control type="label">
+                            <left>25</left>
+                            <right>25</right>
+                            <bottom>pad</bottom>
+                            <height>48</height>
+                            <align>right</align>
+                            <font>Font-ListInfo-Small</font>
+                            <textcolor>HomeSubLabel</textcolor>
+                            <label>$INFO[ListItem.Label2]</label>                           
+                            <visible>!Skin.HasSetting(disable.rating)</visible>         
+                            <visible>!Skin.HasSetting(hide.tvshowsplots)</visible>
+                            <visible>Container.Content(tvshows)</visible>                                                         
                         </control>
                     </control>
                 </itemlayout>
@@ -255,23 +287,20 @@
                             <left>pad</left>
                             <right>pad</right>
                             <top>pad</top>
-                            <bottom>pad</bottom>
-<!-- Modification Aspectratio -->                            
+                            <bottom>pad</bottom>                            
                             <aspectratio>stretch</aspectratio>
                             <texture background="true">$VAR[Image_Thumb]</texture>
-                            <visible>Container.Content(movies)</visible>
+                            <visible>!Container.Content(tvshows)</visible>
                         </control>
                         <control type="image">
                             <left>pad</left>
                             <right>pad</right>
                             <top>pad</top>
-                            <bottom>pad</bottom>
-<!-- Modification Aspectratio -->                            
+                            <bottom>pad</bottom>                        
                             <aspectratio>stretch</aspectratio>
                             <texture background="true">$VAR[Image_Thumb2]</texture>
                             <visible>Container.Content(tvshows)</visible>
-                        </control>
-<!-- Ajout Control -->                        
+                        </control>                   
                         <control type="image">
                             <right>15</right>
                             <top>15</top>
@@ -284,8 +313,7 @@
                             <right>15</right>
                             <top>15</top>
                             <height>32</height>
-                            <width>32</width>
-<!-- Modification Texture -->                            
+                            <width>32</width>                          
                             <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
                         </control>
@@ -294,9 +322,18 @@
                             <right>pad</right>
                             <bottom>pad</bottom>
                             <height>48</height>
-                            <texture flipy="true" colordiffuse="9f000000">common/white.png</texture>
-<!-- Ajout Visible -->            
-            <visible>!Skin.HasSetting(hide.moviesplots) + ! Skin.HasSetting(hide.tvshowsplots)</visible>                                   
+                            <texture flipy="true" colordiffuse="9f000000">common/white.png</texture>       
+                            <visible>!Skin.HasSetting(hide.moviesplots)</visible>
+                            <visible>!Container.Content(tvshows)</visible>                                    
+                        </control>
+                        <control type="image">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <bottom>pad</bottom>
+                            <height>48</height>
+                            <texture flipy="true" colordiffuse="9f000000">common/white.png</texture>       
+                            <visible>!Skin.HasSetting(hide.tvshowsplots)</visible>
+                            <visible>Container.Content(tvshows)</visible>                                    
                         </control>
                         <control type="label">
                             <left>25</left>
@@ -305,9 +342,20 @@
                             <height>48</height>
                             <font>Font-ListInfo-Small-Bold</font>
                             <textcolor>HomeSubLabel</textcolor>
-                            <label>$INFO[ListItem.Label]</label>
-<!-- Ajout Visible -->            
-            <visible>!Skin.HasSetting(hide.moviesplots) + ! Skin.HasSetting(hide.tvshowsplots)</visible>                             
+                            <label>$INFO[ListItem.Label]</label>        
+                            <visible>!Skin.HasSetting(hide.moviesplots)</visible>
+                            <visible>!Container.Content(tvshows)</visible>                              
+                        </control>
+                        <control type="label">
+                            <left>25</left>
+                            <right>25</right>
+                            <bottom>pad</bottom>
+                            <height>48</height>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <textcolor>HomeSubLabel</textcolor>
+                            <label>$INFO[ListItem.Label]</label>        
+                            <visible>!Skin.HasSetting(hide.tvshowsplots)</visible>
+                            <visible>Container.Content(tvshows)</visible>                              
                         </control>
                         <control type="label">
                             <left>25</left>
@@ -317,11 +365,23 @@
                             <align>right</align>
                             <font>Font-ListInfo-Small</font>
                             <textcolor>HomeSubLabel</textcolor>
-                            <label>$INFO[ListItem.Label2]</label>
-<!-- Ajout Visible -->                            
-                            <visible>!Skin.HasSetting(disable.rating)</visible>                 
-<!-- Ajout Visible -->            
-            <visible>!Skin.HasSetting(hide.moviesplots) + ! Skin.HasSetting(hide.tvshowsplots)</visible>                                        
+                            <label>$INFO[ListItem.Label2]</label>                           
+                            <visible>!Skin.HasSetting(disable.rating)</visible>                           
+                            <visible>!Skin.HasSetting(hide.moviesplots)</visible>
+                            <visible>!Container.Content(tvshows)</visible>                                           
+                        </control>
+                        <control type="label">
+                            <left>25</left>
+                            <right>25</right>
+                            <bottom>pad</bottom>
+                            <height>48</height>
+                            <align>right</align>
+                            <font>Font-ListInfo-Small</font>
+                            <textcolor>HomeSubLabel</textcolor>
+                            <label>$INFO[ListItem.Label2]</label>                           
+                            <visible>!Skin.HasSetting(disable.rating)</visible>                           
+                            <visible>!Skin.HasSetting(hide.tvshowsplots)</visible>
+                            <visible>Container.Content(tvshows)</visible>                                           
                         </control>
                     </control>
                 </focusedlayout>
@@ -403,7 +463,7 @@
 <!-- Modification Aspectratio -->                            
                 <aspectratio>stretch</aspectratio>
                 <texture background="true">$VAR[Image_Thumb]</texture>
-                <visible>Container.Content(movies)</visible>
+                <visible>!Container.Content(tvshows)</visible>
             </control>
             <control type="image">
                 <left>pad</left>
@@ -443,18 +503,24 @@
             <bottom>15</bottom>
             <height>122</height>
             <control type="image">
-                <width>100%</width>
-<!-- Modification Height -->                
+                <width>100%</width>               
                 <height>120</height>
-                <bottom>-5</bottom>
-<!-- Modification Texture -->                        
-                <texture flipy="true" colordiffuse="ff181818">common/gradient.png</texture>
-<!-- Ajout Visible -->            
-            <visible>!Skin.HasSetting(hide.moviesplots) + ! Skin.HasSetting(hide.tvshowsplots)</visible>                
+                <bottom>-5</bottom>                    
+                <texture flipy="true" colordiffuse="ff181818">common/gradient.png</texture>            
+                <visible>!Skin.HasSetting(hide.moviesplots)</visible>
+                <visible>!Container.Content(tvshows)</visible>                 
             </control>
-            <control type="group">
-<!-- Ajout Visible -->            
-            <visible>!Skin.HasSetting(hide.moviesplots) + ! Skin.HasSetting(hide.tvshowsplots)</visible>
+            <control type="image">
+                <width>100%</width>               
+                <height>120</height>
+                <bottom>-5</bottom>                    
+                <texture flipy="true" colordiffuse="ff181818">common/gradient.png</texture>            
+                <visible>!Skin.HasSetting(hide.tvshowsplots)</visible>
+                <visible>Container.Content(tvshows)</visible>                 
+            </control>
+            <control type="group">          
+            <visible>!Skin.HasSetting(hide.moviesplots)</visible>
+            <visible>!Container.Content(tvshows)</visible> 
                 <control type="label">
                     <left>side</left>
                     <right>side</right>
@@ -473,10 +539,8 @@
                     <textcolor>HomeSubLabel</textcolor>
                     <label>$VAR[Label_Label3,,  •  ]$INFO[ListItem.Rating]</label>
                     <visible>!Container.Content(seasons)</visible>
-<!-- Ajout Visible -->
 		<visible>!Skin.HasSetting(disable.rating)</visible>                    
-                </control>
-<!-- Ajout Control -->                
+                </control>              
                 <control type="label">
                     <left>side</left>
                     <right>side</right>
@@ -502,8 +566,63 @@
                  </control>
                 <control type="textbox">
                     <left>side</left>
+                    <right>side</right>                   
+                    <bottom>5</bottom>
+                    <height>68</height>
+                    <font>Font-ListInfo-Small</font>
+                    <textcolor>HomeSubLabel</textcolor>
+                    <label>$VAR[Label_Plot]</label>
+                </control>
+            </control>
+            <control type="group">          
+            <visible>!Skin.HasSetting(hide.tvshowsplots)</visible>
+            <visible>Container.Content(tvshows)</visible> 
+                <control type="label">
+                    <left>side</left>
                     <right>side</right>
-<!-- Modification Bottom -->                    
+                    <top>10</top>
+                    <height>32</height>
+                    <textcolor>HomeSubLabel</textcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
+                <control type="label">
+                    <left>side</left>
+                    <right>side</right>
+                    <top>10</top>
+                    <height>32</height>
+                    <align>right</align>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <textcolor>HomeSubLabel</textcolor>
+                    <label>$VAR[Label_Label3,,  •  ]$INFO[ListItem.Rating]</label>
+                    <visible>!Container.Content(seasons)</visible>
+		<visible>!Skin.HasSetting(disable.rating)</visible>                    
+                </control>              
+                <control type="label">
+                    <left>side</left>
+                    <right>side</right>
+                    <top>10</top>
+                    <height>32</height>
+                    <align>right</align>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <textcolor>HomeSubLabel</textcolor>
+                    <label>$VAR[Label_Label3]</label>
+                    <visible>!Container.Content(seasons)</visible>
+                    <visible>Skin.HasSetting(disable.rating)</visible>  
+                </control>
+                <control type="label">
+                    <left>side</left>
+                    <right>side</right>
+                    <top>10</top>
+                    <height>32</height>
+                    <align>right</align>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <textcolor>HomeSubLabel</textcolor>
+                    <label>$VAR[Label_ExtraInfo_Icons]</label>
+                    <visible>Container.Content(seasons)</visible>
+                 </control>
+                <control type="textbox">
+                    <left>side</left>
+                    <right>side</right>                   
                     <bottom>5</bottom>
                     <height>68</height>
                     <font>Font-ListInfo-Small</font>
@@ -557,7 +676,7 @@
                             <aspectratio>scale</aspectratio>
                             <texture background="true">$VAR[Image_Thumb]</texture>
                             <animation effect="fade" start="100" end="25" condition="true">Conditional</animation>
-                            <visible>Container.Content(movies)</visible>
+                            <visible>!Container.Content(tvshows)</visible>
                         </control>
                         <control type="image">
                             <left>pad</left>
@@ -618,7 +737,7 @@
                                 <texture background="true">$VAR[Image_Thumb]</texture>
                                 <animation effect="fade" start="100" end="25" time="200" reversible="false">UnFocus</animation>
                                 <animation effect="fade" start="25" end="100" time="200">Focus</animation>
-                                <visible>Container.Content(movies)</visible>
+                                <visible>!Container.Content(tvshows)</visible>
                             </control>
                             <control type="image">
                                 <left>pad</left>
@@ -869,18 +988,88 @@
             <bottom>15</bottom>
             <height>122</height>
             <control type="image">
-                <width>100%</width>
-<!-- Modification Height -->                  
+                <width>100%</width>             
                 <height>210</height>
-                <bottom>-5</bottom>
-<!-- Modification Texture -->                  
-                <texture flipy="true" colordiffuse="ff181818">common/gradient.png</texture>
-<!-- Ajout Visible -->            
-            <visible>!Skin.HasSetting(hide.moviesplots) + ! Skin.HasSetting(hide.tvshowsplots)</visible>                
+                <bottom>-5</bottom>                 
+                <texture flipy="true" colordiffuse="ff181818">common/gradient.png</texture>       
+                <visible>!Skin.HasSetting(hide.moviesplots)</visible>   
+                <visible>!Container.Content(tvshows)</visible>              
             </control>
-            <control type="group">
-<!-- Ajout Visible -->            
-            <visible>!Skin.HasSetting(hide.moviesplots) + ! Skin.HasSetting(hide.tvshowsplots)</visible>            
+            <control type="image">
+                <width>100%</width>             
+                <height>210</height>
+                <bottom>-5</bottom>                 
+                <texture flipy="true" colordiffuse="ff181818">common/gradient.png</texture>       
+                <visible>!Skin.HasSetting(hide.tvshowsplots)</visible>   
+                <visible>Container.Content(tvshows)</visible>              
+            </control>
+            <control type="group">       
+            <visible>!Skin.HasSetting(hide.moviesplots)</visible>
+            <visible>!Container.Content(tvshows)</visible>             
+                <control type="label">
+                    <left>side</left>
+                    <right>side</right>
+                    <top>10</top>
+                    <height>32</height>
+                    <textcolor>HomeSubLabel</textcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                    <visible>IsEmpty(ListItem.Art(clearlogo))</visible>
+                    <visible>IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+                </control>
+                <control type="image">
+                    <top>-70</top>
+                    <height>110</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture>$VAR[ClearLogoTop]</texture>
+                </control>
+                <control type="label">
+                    <left>side</left>
+                    <right>side</right>
+                    <top>10</top>
+                    <height>32</height>
+                    <align>right</align>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <textcolor>HomeSubLabel</textcolor>
+                    <label>$VAR[Label_Label3,,  •  ]$INFO[ListItem.Rating]</label>
+                    <visible>!Container.Content(seasons)</visible>
+		<visible>!Skin.HasSetting(disable.rating)</visible>                    
+                </control>           
+                <control type="label">
+                    <left>side</left>
+                    <right>side</right>
+                    <top>10</top>
+                    <height>32</height>
+                    <align>right</align>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <textcolor>HomeSubLabel</textcolor>
+                    <label>$VAR[Label_Label3]</label>
+                    <visible>!Container.Content(seasons)</visible>
+                    <visible>Skin.HasSetting(disable.rating)</visible>  
+                </control>
+                <control type="label">
+                    <left>side</left>
+                    <right>side</right>
+                    <top>10</top>
+                    <height>32</height>
+                    <align>right</align>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <textcolor>HomeSubLabel</textcolor>
+                    <label>$VAR[Label_ExtraInfo_Icons]</label>
+                    <visible>Container.Content(seasons)</visible>
+                 </control>
+                <control type="textbox">
+                    <left>side</left>
+                    <right>side</right>
+                    <bottom>5</bottom>
+                    <height>68</height>
+                    <font>Font-ListInfo-Small</font>
+                    <textcolor>HomeSubLabel</textcolor>
+                    <label>$VAR[Label_Plot]</label>
+                </control>
+            </control>
+            <control type="group">       
+            <visible>!Skin.HasSetting(hide.tvshowsplots)</visible>
+            <visible>Container.Content(tvshows)</visible>             
                 <control type="label">
                     <left>side</left>
                     <right>side</right>

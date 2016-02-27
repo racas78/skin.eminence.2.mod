@@ -1673,3 +1673,7 @@ msgstr "Pixélisé"
 msgctxt "#31741"
 msgid "[B]colorbox Script[/B] addon is needed to display pixelated fanart on music visualisation background."
 msgstr "L'extension [B]colorbox Script[/B] est nécessaire pour afficher un arrière-plan pixélisé sur l'écran de visualisation de la musique."
+
+msgctxt "#31742"
+msgid "Logos with Fanarts/Thumbs"
+msgstr "Logos avec Fanarts/Vignettes"
