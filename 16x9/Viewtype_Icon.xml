@@ -170,6 +170,16 @@
                             <height>256</height>
                             <aspectratio aligny="top">scale</aspectratio>
                             <texture background="true">$VAR[Image_Thumb]</texture>
+                            <visible>Container.Content(movies)</visible>
+                        </control>
+                        <control type="image">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <top>pad</top>
+                            <height>256</height>
+                            <aspectratio aligny="top">scale</aspectratio>
+                            <texture background="true">$VAR[Image_Thumb2]</texture>
+                            <visible>Container.Content(tvshows)</visible>
                         </control>
                         <control type="group">
                             <top>276</top>
@@ -367,6 +377,16 @@
                             <height>256</height>
                             <aspectratio aligny="top">scale</aspectratio>
                             <texture background="true">$VAR[Image_Thumb]</texture>
+                            <visible>Container.Content(movies)</visible>
+                        </control>
+                        <control type="image">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <top>pad</top>
+                            <height>256</height>
+                            <aspectratio aligny="top">scale</aspectratio>
+                            <texture background="true">$VAR[Image_Thumb2]</texture>
+                            <visible>Container.Content(tvshows)</visible>
                         </control>
                         <control type="group">
                             <top>276</top>
@@ -488,6 +508,15 @@
                         <aspectratio>stretch</aspectratio>
                         <fadetime>200</fadetime>
                         <texture background="true">$VAR[Image_Thumb]</texture>
+                        <visible>Container.Content(movies)</visible>
+                    </control>
+                    <control type="image">
+                        <width>100%</width>
+                        <height>363</height>                          
+                        <aspectratio>stretch</aspectratio>
+                        <fadetime>200</fadetime>
+                        <texture background="true">$VAR[Image_Thumb2]</texture>
+                        <visible>Container.Content(tvshows)</visible>
                     </control>
                     <control type="label">
                         <top>pad</top>
@@ -1796,7 +1825,17 @@
                                 <height>280</height>
                                 <texture diffuse="common/white.png" background="true">$VAR[Image_Thumb]</texture>
                                 <aspectratio scalediffuse="false">scale</aspectratio>
-                            </control>                            
+                                <visible>Container.Content(movies)</visible>
+                            </control>
+                            <control type="image">
+                                <left>10</left>
+                                <top>10</top>
+                                <width>480</width>
+                                <height>280</height>
+                                <texture diffuse="common/white.png" background="true">$VAR[Image_Thumb2]</texture>
+                                <aspectratio scalediffuse="false">scale</aspectratio>
+                                <visible>Container.Content(tvshows)</visible>
+                            </control>                                
                             <control type="label">
                                 <font>Font-ListInfo-Bold</font>
                                 <top>15</top>

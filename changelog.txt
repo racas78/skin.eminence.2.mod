@@ -1,6 +1,7 @@
 [B]1.5.6[/B]
 Fix finish time on OSD with 12 hours format.
 Fix indicators.
+Tweak for 16:9 thumbs to be independant with movies and tvshows.
 
 [B]1.5.5[/B]
 Add Unwatched Movies & Unwatched Episodes widgets.

@@ -78,16 +78,16 @@
         <value>$INFO[ListItem.Icon]</value>
     </variable>
 
-<!-- Modification Variable -->
     <variable name="Image_Thumb2">
-        <value condition="Container.Content(episodes) | Window.IsVisible(MyPics.xml)">$INFO[ListItem.Art(thumb)]</value>
-        <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+        <value condition="!IsEmpty(ListItem.Art(landscape)) + Skin.HasSetting(show.tvshowsthumbs)">$INFO[ListItem.Art(landscape)]</value>
+        <value condition="!IsEmpty(ListItem.Art(fanart)) + !Container.Content(episodes)">$INFO[ListItem.Art(fanart)]</value>
+        <value condition="!IsEmpty(ListItem.Thumb) + Window.IsVisible(MyPics.xml) + Container.Content(episodes)">$INFO[ListItem.Thumb]</value>
         <value>$INFO[ListItem.Icon]</value>
     </variable>
 
 <!-- Ajout Variable -->    
-        <variable name="Image_Thumb">
-        <value condition="!IsEmpty(ListItem.Art(landscape)) + [Skin.HasSetting(show.moviesthumbs) | Skin.HasSetting(show.tvshowsthumbs)]">$INFO[ListItem.Art(landscape)]</value>
+    <variable name="Image_Thumb">
+        <value condition="!IsEmpty(ListItem.Art(landscape)) + Skin.HasSetting(show.moviesthumbs)">$INFO[ListItem.Art(landscape)]</value>
         <value condition="!IsEmpty(ListItem.Art(fanart)) + !Container.Content(episodes)">$INFO[ListItem.Art(fanart)]</value>
         <value condition="!IsEmpty(ListItem.Thumb) + Window.IsVisible(MyPics.xml) + Container.Content(episodes)">$INFO[ListItem.Thumb]</value>
         <value>$INFO[ListItem.Icon]</value>

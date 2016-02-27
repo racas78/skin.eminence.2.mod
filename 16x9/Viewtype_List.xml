@@ -125,6 +125,17 @@
                     <fadetime>200</fadetime>
                     <aspectratio>scale</aspectratio>
                     <texture>$VAR[Image_Thumb]</texture>
+                    <visible>Container.Content(movies)</visible>
+                </control>
+                <control type="image">
+                    <left>pad</left>
+                    <width>560</width>
+                    <top>pad</top>
+                    <bottom>pad</bottom>
+                    <fadetime>200</fadetime>
+                    <aspectratio>scale</aspectratio>
+                    <texture>$VAR[Image_Thumb2]</texture>
+                    <visible>Container.Content(tvshows)</visible>
                 </control>
 <!-- Ajout Control -->                
                 <control type="image">
