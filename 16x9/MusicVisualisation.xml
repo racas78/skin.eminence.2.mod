@@ -3,10 +3,11 @@
 	<!-- visualisation -->
 	<defaultcontrol>-</defaultcontrol>
 	<onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow)</onload>
+	<onload condition="System.HasAddon(script.colorbox)">RunScript(script.colorbox,info=firstrun)</onload>
+        <onload condition="System.HasAddon(script.colorbox)">RunScript(script.colorbox,daemon=True,pixels=10,bits=1,radius=30)</onload> 
 	<controls>
 
 	<control type="visualisation" id="2">
-<!-- Modification Visible -->	
             <visible>Skin.HasSetting(OSDVisualisation.ShowFanart) | [!Skin.HasSetting(musicvis.fanartfallback) + [!System.HasAddon(script.artistslideshow) | !Skin.String(MusicVisualisation, artistslideshow)]] | [Skin.String(MusicVisualisation, fanart) + [!System.HasAddon(script.artistslideshow) | !Skin.String(MusicVisualisation, artistslideshow)] + IsEmpty(Player.Art(fanart))]</visible>
             <description>visualisation</description>
             <include>Dimensions_Fullscreen</include>
@@ -14,8 +15,7 @@
         <control type="image">
             <aspectratio>scale</aspectratio>
             <include>Dimensions_Fullscreen</include>
-            <texture background="true">$INFO[Player.Art(fanart)]</texture>
-<!-- Modification Visible -->            
+            <texture background="true">$INFO[Player.Art(fanart)]</texture>       
             <visible>IsEmpty(Skin.String(MusicVisualisation)) | Skin.String(MusicVisualisation, fanart)</visible>
             <visible>!IsEmpty(Player.Art(fanart))</visible>
             <animation effect="fade" start="100" end="65" time="0" condition="Skin.HasSetting(OSDVisualisation.ShowFanart)">Conditional</animation>
@@ -29,9 +29,17 @@
             <randomize>true</randomize>
             <fadetime>600</fadetime>
             <loop>yes</loop>
-            <imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
-<!-- Modification Visible -->            
-            <visible>System.HasAddon(script.artistslideshow) + Skin.String(MusicVisualisation, artistslideshow)</visible>
+            <imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>          
+            <visible>Skin.String(MusicVisualisation, artistslideshow)</visible>
+            <animation effect="fade" start="100" end="65" time="0" condition="Skin.HasSetting(OSDVisualisation.ShowFanart)">Conditional</animation>
+            <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
+            <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
+        </control>
+        <control type="image">
+            <aspectratio>scale</aspectratio>
+            <include>Dimensions_Fullscreen</include>
+            <texture background="true">$INFO[Window(home).Property(ImageFilterfa2)]</texture>
+            <visible>Skin.String(MusicVisualisation, pixelated)</visible>
             <animation effect="fade" start="100" end="65" time="0" condition="Skin.HasSetting(OSDVisualisation.ShowFanart)">Conditional</animation>
             <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
             <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
@@ -124,6 +132,7 @@
 					<aspectratio align="left">keep</aspectratio>
 					<fadetime>300</fadetime>
 					<texture background="true" fallback="osd/cd.png">$INFO[Skin.String(musiccdart.location)]$INFO[MusicPlayer.offset(1).Artist]$INFO[MusicPlayer.offset(1).Album,/,.png]</texture>
+					<visible>!IsEmpty(MusicPlayer.offset(1).Title)</visible>
 				</control>
 				<control type="image">
 					<left>22</left>

@@ -1,5 +1,6 @@
 [B]1.5.5[/B]
 Add Unwatched Movies & Unwatched Episodes widgets.
+Add new music visualisation background : Pixelated fanart (need script.colorbox addon).
 Fix indicators not show by default.
 
 [B]1.5.4[/B]

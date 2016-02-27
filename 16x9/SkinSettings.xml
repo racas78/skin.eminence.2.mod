@@ -1314,6 +1314,22 @@
 			<include>Defs_OptionButton</include>
 			<visible>ControlGroup(8000).HasFocus(8098)</visible>
 		    </control>
+		    
+		    <!-- Colorbox -->
+                    <control type="radiobutton" id="9116">
+			<width>100%</width>                        
+                        <radioposx>1350</radioposx>
+                        <label>script.colorbox $INFO[System.AddonVersion(script.colorbox),(,)]</label>
+			<textureradioonfocus colordiffuse="ff00991f">common/radio-on.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="ff00991f">common/radio-on.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="fff02222">common/status_off.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="fff02222">common/status_off.png</textureradiooffnofocus>
+			<onclick condition="!System.HasAddon(script.colorbox)">RunPlugin(plugin://script.colorbox)</onclick>
+			<onclick condition="System.HasAddon(script.colorbox)">Addon.OpenSettings(script.colorbox)</onclick>
+			<selected>System.HasAddon(script.colorbox)</selected>
+			<include>Defs_OptionButton</include>
+			<visible>ControlGroup(8000).HasFocus(8098)</visible>
+		    </control>
 
                     <!-- TV Show Next Aired -->
                     <control type="radiobutton" id="9109">

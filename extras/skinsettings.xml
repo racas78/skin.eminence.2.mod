@@ -44,12 +44,14 @@
     
     <!-- Music Visualisation -->
     <setting id="MusicVisualisation" value="fanart" label="Fanart" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/music_fanart_light.jpg" description=""/>
-    <setting id="MusicVisualisation" value="artistslideshow" label="$LOCALIZE[31565]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/music_artistslideshow_light.jpg" description=""/>
+    <setting id="MusicVisualisation" value="artistslideshow" label="$LOCALIZE[31565]" condition="System.HasAddon(script.artistslideshow) + Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/music_artistslideshow_light.jpg" description=""/>
     <setting id="MusicVisualisation" value="albumswall" label="$LOCALIZE[31637]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/music_albumswall_light.jpg" description=""/>
+    <setting id="MusicVisualisation" value="pixelated" label="$LOCALIZE[31740]" condition="System.HasAddon(script.colorbox) + Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/music_pixelated_light.jpg" description=""/>
     <setting id="MusicVisualisation" value="none" label="$LOCALIZE[31189]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/music_none_light.jpg" description=""/>
     
     <setting id="MusicVisualisation" value="fanart" label="Fanart" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/music_fanart_default.jpg" description=""/>
-    <setting id="MusicVisualisation" value="artistslideshow" label="$LOCALIZE[31565]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/music_artistslideshow_default.jpg" description=""/>
+    <setting id="MusicVisualisation" value="artistslideshow" label="$LOCALIZE[31565]" condition="System.HasAddon(script.artistslideshow) + Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/music_artistslideshow_default.jpg" description=""/>
     <setting id="MusicVisualisation" value="albumswall" label="$LOCALIZE[31637]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/music_albumswall_default.jpg" description=""/>
+    <setting id="MusicVisualisation" value="pixelated" label="$LOCALIZE[31740]" condition="System.HasAddon(script.colorbox) + Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/music_pixelated_default.jpg" description=""/>
     <setting id="MusicVisualisation" value="none" label="$LOCALIZE[31189]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/music_none_default.jpg" description=""/>
 </settings>

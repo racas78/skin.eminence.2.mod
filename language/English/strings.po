@@ -1669,3 +1669,11 @@ msgstr ""
 msgctxt "#31739"
 msgid "Unwatched Episodes"
 msgstr ""
+
+msgctxt "#31740"
+msgid "Pixelated"
+msgstr ""
+
+msgctxt "#31741"
+msgid "[B]colorbox Script[/B] addon is needed to display pixelated fanart on music visualisation background."
+msgstr ""
