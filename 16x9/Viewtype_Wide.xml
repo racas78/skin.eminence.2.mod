@@ -1235,6 +1235,267 @@
                         <visible>!Container.Content(artists) + !Container.Content(albums) + !Container.Content(albums)</visible>
                     </control>
                 </control> 
-    </include>    
+    </include>
+    
+    <!-- BIG WIDE CLEARART -->
+    <include name="Viewtype_BigWideClearArt">
+        <control type="group">
+            <visible>Control.IsVisible(160)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <include name="Object_Line">
+                <param name="width" value="1880" />
+                <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+            </include>
+            <include name="View_BigWideClearArt">
+                <param name="id" value="160" />
+                <param name="condition" value="Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)" />
+            </include>
+        </control>
+    </include>
+
+<!-- Add Include -->       
+    <include name="View_BigWideClearArt">
+        <control type="group">
+            <control type="wraplist" id="$PARAM[id]">
+                <top>0</top>
+                <left>-352</left>
+                <width>2736</width>
+                <height>height</height>
+                <onleft>$PARAM[id]</onleft>
+                <onright>$PARAM[id]</onright>
+                <ondown>60</ondown>
+                <onup condition="!Skin.HasSetting(KioskMode)">9000</onup>
+                <pagecontrol>60</pagecontrol>
+                <focusposition>2</focusposition>
+                <preloaditems>2</preloaditems>
+                <orientation>horizontal</orientation>
+                <viewtype label="$LOCALIZE[31743]">bigwide</viewtype>
+                <scrolltime tween="quadratic">400</scrolltime>
+                <visible>$PARAM[condition]</visible>
+                <itemlayout height="690" width="352">
+                    <control type="group">
+                        <left>0</left>
+                        <right>pad</right>
+                        <control type="image">
+                            <left>0</left>
+                            <right>0</right>
+                            <top>225</top>
+                            <bottom>225</bottom>
+                            <texture colordiffuse="PosterBorder">common/white.png</texture>
+                        </control>
+                        
+                        <control type="image">
+                            <left>10</left>
+                            <right>10</right>
+                            <top>235</top>
+                            <bottom>235</bottom>
+                            <texture colordiffuse="PosterBorder">common/white.png</texture>
+                        </control>
+
+                        <control type="label">
+                            <top>305</top>
+                            <centerleft>50%</centerleft>
+                            <height>80</height>
+                            <width>300</width>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <scroll>yes</scroll>
+                            <label>$INFO[ListItem.Label]</label>
+                            <visible>IsEmpty(ListItem.Art(clearlogo))</visible>
+                            <visible>IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+                        </control>
+                        
+                        <control type="image">
+                            <bottom>235</bottom>
+                            <height>169</height>
+                            <width>300</width>
+                            <centerleft>50%</centerleft>
+                            <aspectratio>stretch</aspectratio>
+                            <texture>$VAR[ClearArt_View]</texture>
+                        </control>
+                        
+                        <control type="image">
+                            <right>15</right>
+                            <top>240</top>
+                            <height>32</height>
+                            <width>32</width>
+                            <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+                        </control>
+                        <control type="image">
+                            <right>15</right>
+                            <top>240</top>
+                            <height>32</height>
+                            <width>32</width>                         
+                            <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+                        </control>
+                    </control>
+                </itemlayout>
+
+                <focusedlayout height="690" width="1186">
+                    <include>View_BigWide_Fanart</include>
+                    <control type="image">
+                        <posx>10</posx>
+                        <width>1156</width>             
+                        <height>190</height>
+                        <bottom>10</bottom>                 
+                        <texture flipy="true" colordiffuse="ff181818">common/gradient.png</texture>                 
+                    </control>
+                <control type="group">
+                    <visible>!Skin.HasSetting(hide.moviesplots)</visible>
+                    <visible>!Container.Content(tvshows)</visible>
+                    <control type="image">
+                        <posx>15</posx>
+                        <bottom>10</bottom>
+                        <height>169</height>
+                        <width>300</width>
+                        <aspectratio>stretch</aspectratio>
+                        <texture>$VAR[ClearArt_View]</texture>
+                        <visible>!substring(ListItem.Path,videodb://movies/sets,left)</visible>
+                     </control>
+                     <control type="image">
+                        <posx>438</posx>
+                        <bottom>10</bottom>
+                        <height>169</height>
+                        <width>300</width>
+                        <aspectratio>stretch</aspectratio>
+                        <texture>$VAR[ClearArt_View]</texture>
+                        <visible>substring(ListItem.Path,videodb://movies/sets,left)</visible>
+                     </control>
+                     <control type="label">
+                        <posx>15</posx>
+                        <bottom>10</bottom>
+                        <height>169</height>
+                        <width>300</width>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>Font-ListInfo-Small</font>
+                        <scroll>yes</scroll>
+                        <textcolor>HomeSubLabel</textcolor>
+                        <label>[B]$INFO[ListItem.Label][/B]</label>
+                        <visible>IsEmpty(ListItem.Art(clearart)) + IsEmpty(ListItem.Art(clearlogo))</visible>
+                        <visible>!substring(ListItem.Path,videodb://movies/sets,left)</visible>
+                    </control>
+                    <control type="label">
+                        <posx>10</posx>
+                        <bottom>10</bottom>
+                        <height>169</height>
+                        <width>1156</width>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>Font-ListInfo-Small</font>
+                        <scroll>yes</scroll>
+                        <textcolor>HomeSubLabel</textcolor>
+                        <label>[B]$INFO[ListItem.Label][/B]</label>
+                        <visible>IsEmpty(ListItem.Art(clearart)) + IsEmpty(ListItem.Art(clearlogo))</visible>
+                        <visible>substring(ListItem.Path,videodb://movies/sets,left)</visible>
+                    </control>
+                    <control type="textbox">
+                        <left>325</left>
+                        <width>831</width>  
+                        <bottom>15</bottom>
+                        <height>168</height>
+                        <font>Font-ListInfo-Small</font>
+                        <textcolor>HomeSubLabel</textcolor>
+                        <label>$VAR[Label_OverlayPlot]</label>
+                        <visible>!substring(ListItem.Path,videodb://movies/sets,left)</visible>
+                    </control>
+                </control>
+                
+                <control type="group">
+                    <visible>Skin.HasSetting(hide.moviesplots)</visible>
+                    <visible>!Container.Content(tvshows)</visible>
+                     <control type="image">
+                        <posx>438</posx>
+                        <bottom>10</bottom>
+                        <height>169</height>
+                        <width>300</width>
+                        <aspectratio>stretch</aspectratio>
+                        <texture>$VAR[ClearArt_View]</texture>
+                     </control>
+                     <control type="label">
+                        <posx>10</posx>
+                        <bottom>10</bottom>
+                        <height>169</height>
+                        <width>1156</width>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <scroll>yes</scroll>
+                        <textcolor>HomeSubLabel</textcolor>
+                        <label>$INFO[ListItem.Label]</label>
+                        <visible>IsEmpty(ListItem.Art(clearart)) + IsEmpty(ListItem.Art(clearlogo))</visible>
+                    </control>
+                </control>      
+                
+                <control type="group">
+                    <visible>!Skin.HasSetting(hide.tvshowsplots)</visible>
+                    <visible>Container.Content(tvshows)</visible>
+                    <control type="image">
+                        <posx>15</posx>
+                        <bottom>10</bottom>
+                        <height>169</height>
+                        <width>300</width>
+                        <aspectratio>stretch</aspectratio>
+                        <texture>$VAR[ClearArt_View]</texture>
+                     </control>
+                     <control type="label">
+                        <posx>15</posx>
+                        <bottom>10</bottom>
+                        <height>169</height>
+                        <width>300</width>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>Font-ListInfo-Small</font>
+                        <scroll>yes</scroll>
+                        <textcolor>HomeSubLabel</textcolor>
+                        <label>[B]$INFO[ListItem.Label][/B]</label>
+                        <visible>IsEmpty(ListItem.Art(clearart)) + IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearart)) + IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+                    </control>
+                    <control type="textbox">
+                        <left>325</left>
+                        <width>831</width>  
+                        <bottom>15</bottom>
+                        <height>168</height>
+                        <font>Font-ListInfo-Small</font>
+                        <textcolor>HomeSubLabel</textcolor>
+                        <label>$VAR[Label_OverlayPlot]</label>
+                    </control>
+                </control>
+                
+                <control type="group">
+                    <visible>Skin.HasSetting(hide.tvshowsplots)</visible>
+                    <visible>Container.Content(tvshows)</visible>
+                     <control type="image">
+                        <posx>438</posx>
+                        <bottom>10</bottom>
+                        <height>169</height>
+                        <width>300</width>
+                        <aspectratio>stretch</aspectratio>
+                        <texture>$VAR[ClearArt_View]</texture>
+                     </control>
+                     <control type="label">
+                        <posx>10</posx>
+                        <bottom>10</bottom>
+                        <height>169</height>
+                        <width>1156</width>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <scroll>yes</scroll>
+                        <textcolor>HomeSubLabel</textcolor>
+                        <label>$INFO[ListItem.Label]</label>
+                        <visible>IsEmpty(ListItem.Art(clearart)) + IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearart)) + IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+                    </control>
+                </control>  
+
+                </focusedlayout>
+            </control>
+        </control>
+        
+    </include>  
+        
 
 </includes>

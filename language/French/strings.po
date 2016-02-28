@@ -1677,3 +1677,7 @@ msgstr "L'extension [B]colorbox Script[/B] est nécessaire pour afficher un arri
 msgctxt "#31742"
 msgid "Logos with Fanarts/Thumbs"
 msgstr "Logos avec Fanarts/Vignettes"
+
+msgctxt "#31743"
+msgid "Big wide with cleararts"
+msgstr "Panoramique avec cleararts"

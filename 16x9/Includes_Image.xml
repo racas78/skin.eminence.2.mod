@@ -14,6 +14,13 @@
 		<value condition="Window.IsVisible(script-skin_helper_service-CustomInfo.xml) + !IsEmpty(Container(999).ListItem.Art(tvshow.clearart))">$INFO[Container(999).ListItem.Art(tvshow.clearart)]</value>
 		<value condition="Window.IsVisible(script-skin_helper_service-CustomInfo.xml) + !IsEmpty(Container(999).ListItem.Art(clearart))">$INFO[Container(999).ListItem.Art(clearart)]</value>
 	</variable>
+	
+	<variable name="ClearArt_View">
+        		<value condition="!IsEmpty(ListItem.Art(tvshow.clearart))">$INFO[ListItem.Art(tvshow.clearart)]</value>
+        		<value condition="!IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
+        		<value condition="!IsEmpty(ListItem.Art(tvshow.clearlogo))">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
+        		<value condition="!IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
+          </variable>
 
 <!-- Ajout Variable -->	
 	<variable name="PlayerClearArt">

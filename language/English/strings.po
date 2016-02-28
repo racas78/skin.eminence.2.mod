@@ -1681,3 +1681,7 @@ msgstr ""
 msgctxt "#31742"
 msgid "Logos with Fanarts/Thumbs"
 msgstr ""
+
+msgctxt "#31743"
+msgid "Big wide with cleararts"
+msgstr ""
