@@ -1,3 +1,6 @@
+[B]1.5.7[/B]
+Fix select dialog.
+
 [B]1.5.6[/B]
 Add new view : Logos with Fanarts/Thumbs.
 Fix finish time on OSD with 12 hours format.

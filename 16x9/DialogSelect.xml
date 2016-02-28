@@ -60,19 +60,40 @@
                 <param name="left" value="582" />
                 <param name="width" value="1160" />
             </include>
-            <control type="button" id="5">
-                <right>side</right>
-                <top>pad</top>
-                <align>right</align>
-                <height>60</height>
-                <onleft>6</onleft>
-                <onright>6</onright>
-                <onup>6</onup>
-                <ondown>6</ondown>
+
+            <control type="grouplist">
+            <visible>!Control.IsVisible(6)</visible>
+            <right>356</right>
+            <width>850</width>
+            <itemgap>10</itemgap>
+            <orientation>horizontal</orientation> 
+            <height>60</height>
+            <align>right</align>
+            <top>pad</top>
+            <control type="button" id="5">    
+                <width>460</width>         
+                <onleft>7</onleft>
+                <onright>7</onright>
+                <onup>3</onup>
+                <ondown>3</ondown>
+                <label>-</label>
                 <texturenofocus>noop</texturenofocus>
                 <texturefocus>noop</texturefocus>
                 <focusedcolor>$VAR[HighlightColor]</focusedcolor>
                 <include>Defs_OptionButton</include>
+            </control>
+            <control type="button" id="7">
+                <onleft>5</onleft>
+                <onright>5</onright>
+                <onup>3</onup>
+                <ondown>3</ondown>
+                <label>222</label>
+                <texturenofocus>noop</texturenofocus>
+                <texturefocus>noop</texturefocus>
+                <focusedcolor>$VAR[HighlightColor]</focusedcolor>
+                <onclick>Dialog.Close(selectdialog)</onclick>
+                <include>Defs_OptionButton</include>
+            </control>
             </control>
         </control>
 
