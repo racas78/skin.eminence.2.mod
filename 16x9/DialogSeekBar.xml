@@ -81,10 +81,11 @@
                 </control>
                 
                 <control type="label">
-                    <left>525</left>
-                    <bottom>19</bottom>
+                    <left>545</left>
+                    <bottom>16</bottom>
                     <height>48</height> 
                     <aligny>center</aligny>
+                    <font>Font-RSS</font>
                     <textcolor>LineLabel</textcolor> 
                     <label>$INFO[Player.FinishTime(xx)]</label>
                     <visible>!IsEmpty(Player.FinishTime(xx))</visible> 
@@ -212,6 +213,7 @@
                         <width>168</width>
                         <height>240</height>
                         <texture fallback="DefaultVideoPlayer.png">$VAR[PlayerPoster]</texture>
+                        <visible>!VideoPlayer.Content(LiveTV)</visible>
                 </control>
 <!-- Ajout Control -->                   
                 <control type="image">

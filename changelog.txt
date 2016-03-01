@@ -1,3 +1,8 @@
+[B]1.5.8[/B]
+Add new view : Cleararts list.
+Add new view : Logos list.
+Fix AM/PM on OSD.
+
 [B]1.5.7[/B]
 Add new view : Big wide with cleararts.
 Fix select dialog.

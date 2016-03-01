@@ -1685,3 +1685,15 @@ msgstr ""
 msgctxt "#31743"
 msgid "Big wide with cleararts"
 msgstr ""
+
+msgctxt "#31744"
+msgid "Cleararts list"
+msgstr ""
+
+msgctxt "#31745"
+msgid "Logos list"
+msgstr ""
+
+msgctxt "#31746"
+msgid "Hide bottom bar"
+msgstr ""

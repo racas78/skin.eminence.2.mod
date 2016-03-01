@@ -91,7 +91,7 @@
             <include>Animation.FadeOut</include>             
             <visible>!Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
             <visible>Skin.HasSetting(show.clearlogo)</visible> 
-            <visible>!Control.IsVisible(159)</visible>
+            <visible>!Control.IsVisible(159) + !Control.IsVisible(162)</visible>
             <centertop>115</centertop>
             <centerleft>50%</centerleft>
             <width>400</width>             

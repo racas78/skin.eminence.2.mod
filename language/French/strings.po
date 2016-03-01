@@ -1680,4 +1680,16 @@ msgstr "Logos avec Fanarts/Vignettes"
 
 msgctxt "#31743"
 msgid "Big wide with cleararts"
-msgstr "Panoramique avec cleararts"
+msgstr "Panoramique avec ClearArts"
+
+msgctxt "#31744"
+msgid "Cleararts list"
+msgstr "Liste de ClearArts"
+
+msgctxt "#31745"
+msgid "Logos list"
+msgstr "Liste de logos"
+
+msgctxt "#31746"
+msgid "Hide bottom bar"
+msgstr "Masquer la barre du bas"
