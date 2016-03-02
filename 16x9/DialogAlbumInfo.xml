@@ -511,7 +511,7 @@
                     <left>755</left>
                     <width>1108</width>
                     <height>670</height>
-                    <include>Animation.FadeIn.Slide</include>
+                    <include>Animation_FadeIn</include>
                     <ondown>ClearProperty(content)</ondown>
                     <ondown>9000</ondown>
                     <onback>ClearProperty(content)</onback>
@@ -542,7 +542,7 @@
                     <left>755</left>
                     <width>1108</width>
                     <height>670</height>
-                    <include>Animation.FadeIn.Slide</include>
+                    <include>Animation_FadeIn</include>
                     <ondown>ClearProperty(content)</ondown>
                     <ondown>9000</ondown>
                     <onback>ClearProperty(content)</onback>

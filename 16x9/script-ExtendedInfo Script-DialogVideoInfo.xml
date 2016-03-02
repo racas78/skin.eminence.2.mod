@@ -535,7 +535,7 @@
             <control type="list" id="650"><visible>false</visible></control>
             <!-- <control type="list" id="850"><visible>false</visible></control> -->
             <!-- <control type="list" id="950"><visible>false</visible></control> -->
-            <!-- <control type="list" id="1050"><visible>false</visible></control> -->
+            <control type="list" id="1050"><visible>false</visible></control>
             <control type="list" id="1250"><visible>false</visible></control>
             <control type="list" id="1350"><visible>false</visible></control>
             <control type="list" id="1450"><visible>false</visible></control>

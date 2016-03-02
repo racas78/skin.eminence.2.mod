@@ -87,8 +87,8 @@
 <!-- Ajout Include -->    
         <include name="ClearLogo">
         <control type="image" description="clearlogo">
-            <include>Animation.FadeIn</include>
-            <include>Animation.FadeOut</include>             
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>             
             <visible>!Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
             <visible>Skin.HasSetting(show.clearlogo)</visible> 
             <visible>!Control.IsVisible(159) + !Control.IsVisible(162)</visible>
@@ -104,8 +104,8 @@
 <!-- Ajout Include -->    
         <include name="ClearLogoHub">
         <control type="image" description="clearlogohub">
-            <include>Animation.FadeIn</include>
-            <include>Animation.FadeOut</include>             
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>             
             <visible>!Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
             <visible>Skin.HasSetting(furniture.showhublogo)</visible>         
             <centertop>115</centertop>
@@ -120,8 +120,8 @@
 <!-- Ajout Include -->    
         <include name="ClearLogoMusic">
         <control type="image" description="clearlogo">
-            <include>Animation.FadeIn</include>
-            <include>Animation.FadeOut</include>             
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>             
             <visible>!Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
             <visible>Skin.HasSetting(show.clearlogomusic)</visible>         
             <centertop>115</centertop>

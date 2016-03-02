@@ -310,7 +310,8 @@
 					<label>[UPPERCASE]$INFO[MusicPlayer.Property(Album_Label)]  [/UPPERCASE]</label>
 				</control>
 				<control type="image">
-					<include>VisibleFadeEffect</include>
+					<animation effect="fade" time="300">Visible</animation>
+		                        <animation effect="fade" time="300">Hidden</animation>
 					<width>500</width>
 					<height>500</height>
 					<aspectratio align="right">stretch</aspectratio>

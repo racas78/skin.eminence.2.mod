@@ -1,3 +1,6 @@
+[B]1.5.9[/B]
+Many fixes.
+
 [B]1.5.8[/B]
 Add new view : Cleararts list.
 Add new view : Logos list.
