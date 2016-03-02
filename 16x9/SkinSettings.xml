@@ -1040,6 +1040,18 @@
                         <onclick condition="Skin.String(SplashScreen)">Skin.Reset(SplashScreen)</onclick>
                     </control>
                     
+                    <!-- Auto update artwork downloader -->
+                    <control type="radiobutton" id="8913">
+                        <radioposx>1350</radioposx>
+                        <width>100%</width>
+                        <label>31747</label>
+                        <onclick>Skin.ToggleSetting(UpdateArt.Enabled)</onclick>
+                        <selected>Skin.HasSetting(UpdateArt.Enabled)</selected>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                        <visible></visible>
+                    </control>
+                    
                     <!-- Activate Password -->
                     <control type="radiobutton" id="8911">
                         <radioposx>1350</radioposx>

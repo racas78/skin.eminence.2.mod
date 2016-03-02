@@ -1693,3 +1693,11 @@ msgstr "Liste de logos"
 msgctxt "#31746"
 msgid "Hide bottom bar"
 msgstr "Masquer la barre du bas"
+
+msgctxt "#31747"
+msgid "Start automatically Artwork Downloader after library update"
+msgstr "Démarrer automatiquement Artwork Downloader après la mise à jour la bibliothèque"
+
+msgctxt "#31748"
+msgid "Download automatically all necessary artworks using [B]Artwork Downloader[/B] addon."
+msgstr "Permet de télécharger automatiquement tous les artworks nécessaires à l'aide de l'extension [B]Artwork Downloader[/B]."

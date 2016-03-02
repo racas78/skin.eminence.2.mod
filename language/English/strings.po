@@ -1697,3 +1697,11 @@ msgstr ""
 msgctxt "#31746"
 msgid "Hide bottom bar"
 msgstr ""
+
+msgctxt "#31747"
+msgid "Start automatically Artwork Downloader after library update"
+msgstr ""
+
+msgctxt "#31748"
+msgid "Download automatically all necessary artworks using [B]Artwork Downloader[/B] addon."
+msgstr ""

@@ -681,6 +681,12 @@
         <value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Movies.Count),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Movies.Count)][/COLOR] $LOCALIZE[20342]</value>
         <value condition="Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Movies.UnWatched),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Movies.UnWatched)][/COLOR] $LOCALIZE[20342]</value>
     </variable>
+    <variable name="Furniture_Counter_Tvshows">
+        <value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Tvshows.Count),0) + IntegerGreaterThan(Window(home).Property(Tvshows.Count),0)">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Tvshows.Count)][/COLOR] $LOCALIZE[20343]</value>
+        <value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Tvshows.Count),0) + !IntegerGreaterThan(Window(home).Property(Tvshows.Count),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Tvshows.Count)][/COLOR] $LOCALIZE[20343]</value>
+        <value condition="Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Movies.UnWatched),0) + IntegerGreaterThan(Window(home).Property(Tvshows.UnWatched),0)">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Tvshows.UnWatched)][/COLOR] $LOCALIZE[20343]</value>
+        <value condition="Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Movies.UnWatched),0) + IntegerGreaterThan(Window(home).Property(Tvshows.UnWatched),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Tvshows.UnWatched)][/COLOR] $LOCALIZE[20343]</value>
+    </variable>
     <variable name="Furniture_Counter_Episodes">
         <value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Episodes.Count),0) + IntegerGreaterThan(Window(home).Property(Movies.Count),0)">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Episodes.Count)][/COLOR] $LOCALIZE[20360]</value>
         <value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Episodes.Count),0) + !IntegerGreaterThan(Window(home).Property(Movies.Count),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Episodes.Count)][/COLOR] $LOCALIZE[20360]</value>
@@ -708,7 +714,7 @@
         <value condition="!IsEmpty(Skin.String(home.subheadertext))">$INFO[Skin.String(home.subheadertext)]</value>
         <value condition="Pvr.IsRecording">[COLOR=$VAR[HighlightColor2]]$LOCALIZE[19158]...[/COLOR]$INFO[Pvr.NowRecordingTitle,  ,]$INFO[Pvr.NowRecordingChannel,  ,]</value>
         <value condition="Pvr.HasTimer">[COLOR=$VAR[HighlightColor2]]$LOCALIZE[19157]...[/COLOR]$INFO[Pvr.NextRecordingTitle,  ,]$INFO[Pvr.NextRecordingDateTime,  ,]$INFO[Pvr.NextRecordingChannel,  ,]</value>
-        <value>$VAR[Furniture_Counter_Movies]$VAR[Furniture_Counter_Episodes]$VAR[Furniture_Counter_Songs]$VAR[Furniture_Counter_Channels]</value>
+        <value>$VAR[Furniture_Counter_Movies]$VAR[Furniture_Counter_Tvshows]$VAR[Furniture_Counter_Episodes]$VAR[Furniture_Counter_Songs]$VAR[Furniture_Counter_Channels]</value>
     </variable>
     <variable name="Furniture_TopBar_Tile_Text">
         <value condition="Window.IsVisible(DialogBusy.xml)">$LOCALIZE[503]</value>

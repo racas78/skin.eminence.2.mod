@@ -1548,10 +1548,10 @@
                         </control>                       
                         <control type="image">
                             <bottom>10</bottom>
-                            <height>169</height>
-                            <width>300</width>
+                            <height>186</height>
+                            <width>330</width>
                             <centerleft>50%</centerleft>
-                            <aspectratio>stretch</aspectratio>
+                            <aspectratio>keep</aspectratio>
                             <texture>$VAR[ClearArt_View]</texture>
                         </control>                        
                     </control>
@@ -1576,10 +1576,10 @@
                         </control>                       
                         <control type="image">
                             <bottom>10</bottom>
-                            <height>169</height>
-                            <width>300</width>
+                            <height>186</height>
+                            <width>330</width>
                             <centerleft>50%</centerleft>
-                            <aspectratio>stretch</aspectratio>
+                            <aspectratio>keep</aspectratio>
                             <texture>$VAR[ClearArt_View]</texture>
                         </control>                        
                     </control>
@@ -1938,22 +1938,22 @@
                         </control>                       
                         <control type="image">
                             <bottom>40</bottom>
-                            <height>169</height>
-                            <width>300</width>
+                            <height>186</height>
+                            <width>330</width>
                             <centerleft>50%</centerleft>
-                            <aspectratio>stretch</aspectratio>
+                            <aspectratio>keep</aspectratio>
                             <texture>$VAR[ClearLogoTop]</texture>
                         </control>                        
                     </control>
                 </itemlayout>
                 <focusedlayout height="690" width="378">                           
                     <control type="group">
-                        <animation effect="zoom" center="auto" start="100" end="130" time="480" tween="back" reversible="false">Focus</animation>
-			<animation effect="zoom" center="auto" start="130" end="100" time="1" tween="back" reversible="false">UnFocus</animation>
+                        <animation effect="zoom" center="auto" start="100" end="120" time="480" tween="back" reversible="false">Focus</animation>
+			<animation effect="zoom" center="auto" start="120" end="100" time="1" tween="back" reversible="false">UnFocus</animation>
                         <left>0</left>
                         <right>pad</right>
                         <control type="label">
-                            <top>395</top>
+                            <top>410</top>
                             <centerleft>50%</centerleft>
                             <height>240</height>
                             <width>300</width>
@@ -1965,11 +1965,11 @@
                             <visible>IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
                         </control>                       
                         <control type="image">
-                            <bottom>90</bottom>
-                            <height>169</height>
-                            <width>300</width>
+                            <bottom>70</bottom>
+                            <height>186</height>
+                            <width>330</width>
                             <centerleft>50%</centerleft>
-                            <aspectratio>stretch</aspectratio>
+                            <aspectratio>keep</aspectratio>
                             <texture>$VAR[ClearLogoTop]</texture>
                         </control>                        
                     </control>

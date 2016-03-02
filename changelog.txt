@@ -1,5 +1,8 @@
 [B]1.5.9[/B]
+Add number of TV shows on header.
+Add possibility to download automatically artworks after library update.
 Many fixes.
+Changes : bigger cleararts and logos on some views.
 
 [B]1.5.8[/B]
 Add new view : Cleararts list.
