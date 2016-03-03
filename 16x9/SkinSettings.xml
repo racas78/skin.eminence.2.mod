@@ -766,6 +766,18 @@
                         <radioposx>1350</radioposx>
                         <onclick>Skin.ToggleSetting(show.clearart)</onclick>
                         <selected>Skin.HasSetting(show.clearart)</selected>
+                        <enable>!Skin.HasSetting(show.cdart)</enable>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8097)</visible>
+                    </control>
+                    <!-- Show CDArt -->
+                    <control type="radiobutton" id="9022">
+                        <width>100%</width>
+                        <label>31749</label>
+                        <radioposx>1350</radioposx>
+                        <onclick>Skin.ToggleSetting(show.cdart)</onclick>
+                        <selected>Skin.HasSetting(show.cdart)</selected>
+                        <enable>!Skin.HasSetting(show.clearart)</enable>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8097)</visible>
                     </control>

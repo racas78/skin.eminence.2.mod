@@ -759,7 +759,7 @@ msgid "Disable classification infos (MPAA) display"
 msgstr "Masquer l'affichage des informations de classification"
 
 msgctxt "#31512"
-msgid "Show ClearArt on videos infos"
+msgid "Show ClearArts on videos infos"
 msgstr "Afficher les logos transparents sur les informations vidéos"
 
 msgctxt "#31513"
@@ -1047,7 +1047,7 @@ msgid "Hide display of Box Office on video infos."
 msgstr "Permet de masquer l'affichage des informations du Box-Office sur les informations vidéos."
 
 msgctxt "#31585"
-msgid "Show ClearArt on video infos."
+msgid "Show ClearArts on video infos."
 msgstr "Permet d'afficher les logos transparents (ClearArt) sur les informations vidéos."
 
 msgctxt "#31586"
@@ -1701,3 +1701,11 @@ msgstr "Démarrer automatiquement Artwork Downloader après la mise à jour la b
 msgctxt "#31748"
 msgid "Download automatically all necessary artworks using [B]Artwork Downloader[/B] addon."
 msgstr "Permet de télécharger automatiquement tous les artworks nécessaires à l'aide de l'extension [B]Artwork Downloader[/B]."
+
+msgctxt "#31749"
+msgid "Show CDArts on videos infos"
+msgstr "Afficher les disques sur les informations vidéos"
+
+msgctxt "#31750"
+msgid "Show CDArts on video infos."
+msgstr "Permet d'afficher les disques (CDArt) sur les informations vidéos."

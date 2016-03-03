@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+        <variable name="CDArt">
+		<value condition="!IsEmpty(ListItem.Art(discart))">$INFO[ListItem.Art(discart)]</value>
+		<value condition="IntegerGreaterThan(ListItem.VideoResolution,719)">common/cdart_hd.png</value>
+		<value condition="!IsEmpty(ListItem.VideoResolution)">common/cdart_sd.png</value>
+	</variable>
+
 <!-- Ajout Variable -->
 	<variable name="PlayerPoster">
         		<value condition="!IsEmpty(Player.Art(tvshow.poster))">$INFO[Player.Art(tvshow.poster)]</value>

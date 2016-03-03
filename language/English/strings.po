@@ -759,7 +759,7 @@ msgid "Disable classification infos (MPAA) display"
 msgstr ""
 
 msgctxt "#31512"
-msgid "Show ClearArt on videos infos"
+msgid "Show ClearArts on videos infos"
 msgstr ""
 
 msgctxt "#31513"
@@ -1051,7 +1051,7 @@ msgid "Hide display of Box Office on video infos."
 msgstr ""
 
 msgctxt "#31585"
-msgid "Show ClearArt on video infos."
+msgid "Show ClearArts on video infos."
 msgstr ""
 
 msgctxt "#31586"
@@ -1704,4 +1704,12 @@ msgstr ""
 
 msgctxt "#31748"
 msgid "Download automatically all necessary artworks using [B]Artwork Downloader[/B] addon."
+msgstr ""
+
+msgctxt "#31749"
+msgid "Show CDArts on videos infos"
+msgstr ""
+
+msgctxt "#31750"
+msgid "Show CDArts on video infos."
 msgstr ""

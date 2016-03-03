@@ -148,7 +148,7 @@
                     </control>
                 </control> 
                     
-<!-- Ajout ClearArt -->
+               <!-- ClearArt -->
             	<control type="image">
 			<right>0</right>
 			<bottom>20</bottom>
@@ -158,6 +158,21 @@
 			<texture>$VAR[ClearArt]</texture>
 			<visible>Skin.HasSetting(show.clearart)</visible>
 			<visible>!Control.HasFocus(51) + !Control.HasFocus(9500)</visible>						
+		</control>
+		
+		<!-- CDArt -->
+		<control type="image">
+			<right>10</right>
+			<bottom>30</bottom>
+			<width>280</width>
+			<height>280</height>
+			<texture>$VAR[CDArt]</texture>
+			<aspectratio aligny="center">keep</aspectratio>
+			<animation type="WindowOpen" reversible="false">
+			<effect type="rotate" end="-720000" center="auto" time="9000000" loop="true"  />
+			</animation>
+			<visible>Skin.HasSetting(show.cdart)</visible>
+			<visible>!Control.HasFocus(51) + !Control.HasFocus(9500)</visible>
 		</control>
 		
 <!-- Ajout Studio Logo -->
