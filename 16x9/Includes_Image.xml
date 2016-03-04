@@ -108,7 +108,7 @@
 
     <variable name="Image_PVRThumb">
         <value condition="!IsEmpty(Window(Home).Property(SkinHelper.PVR.FanArt))">$INFO[Window(Home).Property(SkinHelper.PVR.FanArt)]</value>
-        <value>special://skin/extras/backgrounds/home.jpg</value>
+        <value>$INFO[ListItem.Icon]</value>
     </variable>
 
     <variable name="Image_Icon">

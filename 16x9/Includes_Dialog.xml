@@ -161,6 +161,20 @@
         <orientation>horizontal</orientation>
     </include>
     
+    <include name="Dialog_Top_GroupList_PVR">         
+        <left>30</left>       
+        <right>30</right>
+        <top>80</top>
+        <bottom>pad</bottom>
+        <onup>165</onup>
+        <ondown>165</ondown>
+        <onleft>noop</onleft>
+        <onright>noop</onright>
+        <itemgap>10</itemgap>
+        <scrolltime>200</scrolltime>
+        <orientation>horizontal</orientation>
+    </include>
+    
     <include name="Dialog_Top_PowerMenu">      
         <left>150</left>                        
         <right>0</right>

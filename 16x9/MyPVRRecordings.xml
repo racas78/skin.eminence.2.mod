@@ -9,7 +9,7 @@
         <include>Furniture_RSS</include>
         <include>Furniture_TopBar</include>
         
-        <include>PVR_SimpleList</include>
+        <include>PVR_SimpleList2</include>
 
         <include>PVR_Menu</include>
     </controls>

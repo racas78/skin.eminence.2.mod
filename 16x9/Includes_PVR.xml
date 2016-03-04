@@ -2,7 +2,7 @@
 <includes>
     <!-- PVR LIST -->
     <include name="PVR_List">
-        <param name="id" default="50" />
+        <param name="id" default="165" />
         <param name="visible" default="true" />
         <param name="label" default="537" />
         <definition>
@@ -170,7 +170,7 @@
                             </control>
                         </focusedlayout>
                     </control>
-                    <include>Object_Scrollbar</include>
+                    <include>Object_Scrollbar_PVR</include>
                     <include>Object_Arrows_Vertical</include>
                 </control>
                 <include>PVR_InfoBox</include>
@@ -231,7 +231,7 @@
 
     <!-- PVR Small List -->
     <include name="PVR_SmallList">
-        <param name="id" default="50" />
+        <param name="id" default="164" />
         <param name="visible" default="true" />
         <param name="label" default="535" />
         <param name="include" default="PVR_SmallList_Progress" />
@@ -393,7 +393,7 @@
                             </control>
                         </focusedlayout>
                     </control>
-                    <include>Object_Scrollbar</include>
+                    <include>Object_Scrollbar_PVR</include>
                     <include>Object_Arrows_Vertical</include>
                 </control>
                 <include>PVR_InfoBox</include>
@@ -403,7 +403,7 @@
 
     <!-- PVR Wide List -->
     <include name="PVR_WideList">
-        <param name="id" default="52" />
+        <param name="id" default="163" />
         <param name="visible" default="true" />
         <param name="label" default="31168" />
         <param name="include" default="PVR_SmallList_Progress" />
@@ -591,7 +591,7 @@
                         <onleft condition="!StringCompare(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onleft>
                         <left>0</left>
                         <height>483</height>
-                        <onright>50</onright>
+                        <onright>165</onright>
                         <width>8</width>
                         <orientation>vertical</orientation>
                         <animation effect="fade" condition="!Control.HasFocus(60) + !Container.Scrolling" time="200" start="100" end="0">Conditional</animation>
@@ -635,6 +635,137 @@
 
     <!-- PVR SIPLE LIST -->
     <include name="PVR_SimpleList">
+        <control type="group">
+            <include>Animation_Common</include>
+            <visible>Control.IsVisible(165)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <control type="group">
+                <width>1140</width>
+                <include name="Object_Line">
+                    <param name="width" value="1130" />
+                    <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+                </include>
+                <control type="panel" id="165">
+                    <width>1140</width>
+                    <height>700</height>
+                    <onup>165</onup>
+                    <ondown>165</ondown>
+                    <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
+                    <onleft>60</onleft>
+                    <pagecontrol>60</pagecontrol>
+                    <preloaditems>2</preloaditems>
+                    <orientation>vertical</orientation>
+                    <viewtype>list</viewtype>
+                    <scrolltime tween="quadratic">400</scrolltime>
+                    <itemlayout height="140" width="1140">
+                        <control type="group">
+                            <left>0</left>
+                            <right>pad</right>
+                            <bottom>pad</bottom>
+                            <control type="image">
+                                <width>100%</width>
+                                <height>100%</height>
+                                <texture colordiffuse="PosterBorder">common/white.png</texture>
+                            </control>
+                            <control type="image">
+                                <left>side</left>
+                                <width>110</width>
+                                <top>pad</top>
+                                <bottom>pad</bottom>
+                                <aspectratio>keep</aspectratio>
+                                <texture background="true">$INFO[ListItem.Icon]</texture>
+                            </control>
+                            <control type="label">
+                                <left>160</left>
+                                <right>side</right>
+                                <top>30</top>
+                                <height>30</height>
+                                <selectedcolor>ListLabel</selectedcolor>
+                                <label>$INFO[ListItem.Label]</label>
+                            </control>
+                            <control type="label">
+                                <left>160</left>
+                                <right>side</right>
+                                <bottom>30</bottom>
+                                <height>30</height>
+                                <font>Font-ListInfo</font>
+                                <selectedcolor>ListLabel</selectedcolor>
+                                <label>$INFO[ListItem.Label2]</label>
+                            </control>
+                            <control type="image">
+                                <right>30</right>
+                                <centertop>65</centertop>
+                                <height>32</height>
+                                <width>32</width>
+                                <texture>$VAR[Image_Indicator]</texture>
+                                <visible>!IsEmpty(ListItem.Overlay)</visible>
+                            </control>
+                        </control>
+                    </itemlayout>
+
+                    <focusedlayout height="140" width="1140">
+                        <control type="group">
+                            <left>0</left>
+                            <right>pad</right>
+                            <bottom>pad</bottom>
+                            
+                            <control type="image">
+                                <width>100%</width>
+                                <height>100%</height>
+                                <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                            </control>
+                            <control type="image">
+                                <left>side</left>
+                                <width>110</width>
+                                <top>pad</top>
+                                <bottom>pad</bottom>
+                                <aspectratio>keep</aspectratio>
+                                <texture background="true">$INFO[ListItem.Icon]</texture>
+                            </control>
+                            <control type="label">
+                                <left>160</left>
+                                <right>side</right>
+                                <top>30</top>
+                                <height>30</height>
+                                <selectedcolor>Selected</selectedcolor>
+                                <textcolor>Selected</textcolor>
+                                <label>$INFO[ListItem.Label]</label>
+                            </control>
+                            <control type="label">
+                                <left>160</left>
+                                <right>side</right>
+                                <bottom>30</bottom>
+                                <height>30</height>
+                                <font>Font-ListInfo</font>
+                                <selectedcolor>Selected</selectedcolor>
+                                <textcolor>Selected</textcolor>
+                                <label>$INFO[ListItem.Label2]</label>
+                            </control>
+                            <control type="image">
+                                <right>30</right>
+                                <centertop>65</centertop>
+                                <height>32</height>
+                                <width>32</width>
+                                <texture>$VAR[Image_Indicator]</texture>
+                                <visible>!IsEmpty(ListItem.Overlay)</visible>
+                            </control>
+                        </control>
+                    </focusedlayout>
+                </control>
+                <include>Object_Scrollbar_PVR</include>
+                <include>Object_Arrows_Vertical</include>
+            </control>
+            <include>PVR_InfoBox</include>
+        </control>
+    </include>
+    
+    <!-- PVR SIPLE LIST -->
+    <include name="PVR_SimpleList2">
         <control type="group">
             <include>Animation_Common</include>
             <visible>Control.IsVisible(50)</visible>
@@ -844,6 +975,41 @@
             </control>
         </control>
     </include>
+    <include name="PVR_Menu2">
+        <!-- Menu -->
+        <control type="group">
+            <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+            <include>Dialog_Top</include>
+            <include>Dialog_Background</include>
+            <include name="Dialog_Top_IconHeader">
+                <param name="label" value="$LOCALIZE[31068]" />
+                <param name="icon" value="special://skin/extras/icons/settings.png" />
+            </include>
+            <include name="Dialog_Top_Arrows">
+                <param name="id" value="9000" />
+            </include>
+
+            <control type="grouplist" id="9000">
+                <include>Dialog_Top_GroupList_PVR</include>
+                <defaultcontrol always="true">3</defaultcontrol>
+                <include>Object_BasicViewList</include>
+                <!-- Groups -->
+                <control type="button" id="28">
+                    <include>Defs_OptionButton</include>
+                    <label>103</label>
+                    <visible>Control.IsEnabled(28)</visible>
+                </control>
+                <!-- Filter -->
+                <control type="radiobutton" id="31">
+                    <include>Defs_OptionButton</include>
+                    <label>587</label>
+                    <selected>Container.Filtered</selected>
+                    <visible>Control.IsEnabled(31) + Window.IsVisible(MyPVRChannels.xml)</visible>
+                </control>
+            </control>
+        </control>
+    </include>
+    
     <include name="PVR_Menu">
         <!-- Menu -->
         <control type="group">
