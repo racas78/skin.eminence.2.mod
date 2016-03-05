@@ -2,6 +2,7 @@
 Add possibility to view CDArt instead of ClearArt on video infos.
 Add possibility to hide submenus icons.
 Many changes in PVR.
+Fix views.
 
 [B]1.5.9[/B]
 Add number of TV shows on header.
