@@ -60,6 +60,19 @@
                         <fontcolor>HomeBarFG</fontcolor>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
+                        <visible>!Skin.HasSetting(home.hidesubmenusicons)</visible>
+                    </control>
+                    <control type="label">
+                        <left>side</left>
+                        <right>side</right>
+                        <height>149</height>
+                        <scroll>yes</scroll>
+                        <font>Font-ListInfo-Small</font>
+                        <fontcolor>HomeBarFG</fontcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                        <visible>Skin.HasSetting(home.hidesubmenusicons)</visible>
                     </control>
                     <control type="image"> 
                         <height>100</height>
@@ -67,6 +80,7 @@
                         <right>0</right>
                         <centertop>50%</centertop>
                         <texture colordiffuse="ListLabel">$PARAM[icon]</texture>
+                        <visible>!Skin.HasSetting(home.hidesubmenusicons)</visible>
                     </control>
                 </itemlayout>
                 <focusedlayout width="354" height="149">
@@ -85,6 +99,19 @@
                         <font>Font-ListInfo-Small</font>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
+                        <visible>!Skin.HasSetting(home.hidesubmenusicons)</visible>
+                    </control>
+                    <control type="label">
+                        <left>side</left>
+                        <right>side</right>
+                        <height>149</height>
+                        <scroll>yes</scroll>
+                        <textcolor>Selected</textcolor>
+                        <font>Font-ListInfo-Small</font>
+                        <aligny>center</aligny>
+                        <align>center</align>
+                        <label>$INFO[ListItem.Label]</label>
+                        <visible>Skin.HasSetting(home.hidesubmenusicons)</visible>
                     </control>
                     <control type="image"> 
                         <height>100</height>
@@ -92,6 +119,7 @@
                         <right>0</right>
                         <centertop>50%</centertop>
                         <texture colordiffuse="Selected">$PARAM[icon]</texture>
+                        <visible>!Skin.HasSetting(home.hidesubmenusicons)</visible>
                     </control>
                 </focusedlayout>
     </include>

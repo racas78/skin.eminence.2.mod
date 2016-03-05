@@ -1713,3 +1713,11 @@ msgstr ""
 msgctxt "#31750"
 msgid "Show CDArts on video infos."
 msgstr ""
+
+msgctxt "#31751"
+msgid "Hide submenus icons"
+msgstr ""
+
+msgctxt "#31752"
+msgid "Hide submenus icons."
+msgstr ""

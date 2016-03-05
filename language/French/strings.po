@@ -1709,3 +1709,11 @@ msgstr "Afficher les disques sur les informations vidéos"
 msgctxt "#31750"
 msgid "Show CDArts on video infos."
 msgstr "Permet d'afficher les disques (CDArt) sur les informations vidéos."
+
+msgctxt "#31751"
+msgid "Hide submenus icons"
+msgstr "Masquer les icônes des sous-menus"
+
+msgctxt "#31752"
+msgid "Hide submenus icons."
+msgstr "Permet de masquer les icônes des sous-menus."
