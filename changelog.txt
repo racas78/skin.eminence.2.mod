@@ -1,3 +1,6 @@
+[B]1.6.1[/B]
+Enable CleartArt on tv shows when CDArt is enable.
+
 [B]1.6.0[/B]
 Add possibility to view CDArt instead of ClearArt on video infos.
 Add possibility to hide submenus icons.
