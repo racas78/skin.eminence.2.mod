@@ -7,9 +7,9 @@
     </variable>
 
     <variable name="Label_Year">
-        <value condition="Container.Content(tvshows)">$LOCALIZE[31731] $INFO[ListItem.LastPlayed]</value>      
-        <value condition="Container.Content(episodes)">$LOCALIZE[31732] $INFO[ListItem.Premiered]</value>       
-        <value condition="!IsEmpty(ListItem.Year)">$INFO[ListItem.Year]</value>
+        <value condition="Container.Content(tvshows) + !IsEmpty(ListItem.LastPlayed)">$LOCALIZE[31731] $INFO[ListItem.LastPlayed]</value>      
+        <value condition="Container.Content(episodes) + !IsEmpty(ListItem.Premiered)">$LOCALIZE[31732] $INFO[ListItem.Premiered]</value>       
+        <value condition="!IsEmpty(ListItem.Year) + !Container.Content(episodes) + !Container.Content(tvshows)">$INFO[ListItem.Year]</value>
     </variable>
 
 <!-- Ajout ICI -->
@@ -431,7 +431,15 @@
 <!-- Ajout Value -->
          <value condition="Control.HasFocus(9022)">$LOCALIZE[31750]</value>  
 <!-- Ajout Value -->
-         <value condition="Control.HasFocus(8146)">$LOCALIZE[31752]</value>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+         <value condition="Control.HasFocus(8146)">$LOCALIZE[31752]</value>
+<!-- Ajout Value -->
+         <value condition="Control.HasFocus(8814)">$LOCALIZE[31755]</value>
+<!-- Ajout Value -->
+         <value condition="Control.HasFocus(8816)">$LOCALIZE[31756]</value>
+<!-- Ajout Value -->
+         <value condition="Control.HasFocus(8815)">$LOCALIZE[31593]</value> 
+<!-- Ajout Value -->
+         <value condition="Control.HasFocus(8817)">$LOCALIZE[31661]</value>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
     </variable>
 
     <variable name="Label_PlayerStatus">
@@ -646,5 +654,13 @@
     <variable name="Label_Indicators">
         <value condition="IsEmpty(Skin.String(indicators))">$LOCALIZE[31735]</value>
         <value>$INFO[Skin.String(indicators)]</value>
+    </variable>
+    <variable name="Label_SkinSetting_IndicatorsPrimaryColor">
+        <value condition="!IsEmpty(Skin.String(IndicatorsPrimaryColor))">$INFO[Skin.String(IndicatorsPrimaryColor)]</value>
+        <value>$LOCALIZE[31180]</value>
+    </variable>
+    <variable name="Label_SkinSetting_IndicatorsSecondaryColor">
+        <value condition="!IsEmpty(Skin.String(IndicatorsSecondaryColor))">$INFO[Skin.String(IndicatorsSecondaryColor)]</value>
+        <value>$LOCALIZE[31180]</value>
     </variable>
 </includes>

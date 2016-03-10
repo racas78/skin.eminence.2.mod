@@ -295,8 +295,8 @@
 					<animation effect="slide" end="240,0" time="1500" reverisble="true" condition="!StringCompare(MusicPlayer.Cover,DefaultAlbumCover.png)">Conditional</animation>
 					<animation effect="slide" end="0,0" reverisble="true" time="1500" condition="StringCompare(MusicPlayer.Cover,DefaultAlbumCover.png)">Conditional</animation>
 					<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
-					<!--<texture background="true" fallback="osd/cd.png">$INFO[Player.FolderPath]cdart.png</texture>-->
-					<texture background="true" fallback="osd/cd.png">$INFO[Skin.String(musiccdart.location)]$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album,/,.png]</texture>
+					<texture background="true" fallback="osd/cd.png">$INFO[Player.FolderPath]cdart.png</texture>
+					<!--<texture background="true" fallback="osd/cd.png">$INFO[Skin.String(musiccdart.location)]$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album,/,.png]</texture>-->
 				</control>
 				<control type="label">
 					<left>-226</left>

@@ -791,16 +791,16 @@ msgid "Show artists clearlogos"
 msgstr "Afficher les logos des artistes"
 
 msgctxt "#31520"
-msgid "Path to Artists Artworks directory"
-msgstr "Chemin des logos des artistes"
+msgid "Path to musics directory"
+msgstr "Chemin du dossier des musiques"
 
 msgctxt "#31521"
 msgid "Show albums CDArt on albums infos"
 msgstr "Afficher les disques des albums sur les informations des albums"
 
 msgctxt "#31522"
-msgid "Path to albums CDArt directory"
-msgstr "Chemin des disques des albums"
+msgid "Path to musics directory"
+msgstr "Chemin du dossier des musiques"
 
 msgctxt "#31523"
 msgid "Last Updated :"
@@ -1059,16 +1059,16 @@ msgid "Show artists ClearLogo on header."
 msgstr "Permet d'afficher les logos (ClearLogo) des artistes sur l'en-tête."
 
 msgctxt "#31588"
-msgid "Set artists ClearLogo path."
-msgstr "Définir le chemin des logos (ClearLogo) des artistes."
+msgid "Set folder path where music files are located."
+msgstr "Définir l'emplacement du dossier où sont stockées les musiques."
 
 msgctxt "#31589"
 msgid "Show albums CDArt on albums infos."
 msgstr "Permet d'afficher les disques (CDArt) des albums sur les informations des albums."
 
 msgctxt "#31590"
-msgid "Set albums CDArt path."
-msgstr "Définir le chemin des disques (CDArt) des albums."
+msgid "Set folder path where music files are located."
+msgstr "Définir l'emplacement du dossier où sont stockées les musiques."
 
 msgctxt "#31591"
 msgid "Set primary color for focused items."
@@ -1717,3 +1717,19 @@ msgstr "Masquer les icônes des sous-menus"
 msgctxt "#31752"
 msgid "Hide submenus icons."
 msgstr "Permet de masquer les icônes des sous-menus."
+
+msgctxt "#31753"
+msgid "Main color of indicators"
+msgstr "Couleur principale des indicateurs"
+
+msgctxt "#31754"
+msgid "Secondary color of indicators"
+msgstr "Couleur secondaire des indicateurs"
+
+msgctxt "#31755"
+msgid "Set the main color of watched, unwatched, recently added and ongoing indicators."
+msgstr "Définir la couleur principale des indicateurs de fichiers vus, non vus, récemment ajoutés et en cours."
+
+msgctxt "#31756"
+msgid "Set the secondary color of watched, unwatched, recently added and ongoing indicators."
+msgstr "Définir la couleur secondaire des indicateurs de fichiers vus, non vus, récemment ajoutés et en cours."

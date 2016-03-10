@@ -791,7 +791,7 @@ msgid "Show artists clearlogos"
 msgstr ""
 
 msgctxt "#31520"
-msgid "Path to Artists Artworks directory"
+msgid "Path to musics directory"
 msgstr ""
 
 msgctxt "#31521"
@@ -799,7 +799,7 @@ msgid "Show albums CDArt on albums infos"
 msgstr ""
 
 msgctxt "#31522"
-msgid "Path to albums CDArt directory"
+msgid "Path to musics directory"
 msgstr ""
 
 msgctxt "#31523"
@@ -1063,7 +1063,7 @@ msgid "Show artists ClearLogo on header."
 msgstr ""
 
 msgctxt "#31588"
-msgid "Set artists ClearLogo path."
+msgid "Set folder path where music files are located."
 msgstr ""
 
 msgctxt "#31589"
@@ -1071,7 +1071,7 @@ msgid "Show albums CDArt on albums infos."
 msgstr ""
 
 msgctxt "#31590"
-msgid "Set albums CDArt path."
+msgid "Set folder path where music files are located."
 msgstr ""
 
 msgctxt "#31591"
@@ -1720,4 +1720,20 @@ msgstr ""
 
 msgctxt "#31752"
 msgid "Hide submenus icons."
+msgstr ""
+
+msgctxt "#31753"
+msgid "Main color of indicators"
+msgstr ""
+
+msgctxt "#31754"
+msgid "Secondary color of indicators"
+msgstr ""
+
+msgctxt "#31755"
+msgid "Set the main color of watched, unwatched, recently added and ongoing indicators."
+msgstr ""
+
+msgctxt "#31756"
+msgid "Set the secondary color of watched, unwatched, recently added and ongoing indicators."
 msgstr ""

@@ -394,7 +394,7 @@
                     <top>pad</top>
                     <bottom>pad</bottom>
 <!-- Modification Aspectratio -->                    
-                    <aspectratio>stretch</aspectratio>
+                    <aspectratio>keep</aspectratio>
                     <fadetime>200</fadetime>
                     <texture background="true">$VAR[Image_Poster]</texture>
                     <visible>IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))</visible>
@@ -405,7 +405,7 @@
                     <top>pad</top>
                     <bottom>pad</bottom>
 <!-- Modification Aspectratio -->                    
-                    <aspectratio>stretch</aspectratio>
+                    <aspectratio>keep</aspectratio>
                     <fadetime>200</fadetime>
                     <texture background="true">$VAR[Image_Poster]</texture>
                     <visible>![IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))]</visible>
@@ -546,7 +546,7 @@
             <right>pad</right>
             <height>120</height>
             <font>Font-ListInfo</font>
-            <align>left</align>
+            <align>justify</align>
             <label>$VAR[Label_Plot]</label>
             <visible>!IsEmpty(ListItem.Genre)</visible>
         </control>
@@ -555,7 +555,7 @@
             <right>pad</right>
             <height>154</height>
             <font>Font-ListInfo</font>
-            <align>left</align>
+            <align>justify</align>
             <label>$VAR[Label_Plot]</label>
             <visible>IsEmpty(ListItem.Genre)</visible>
         </control>

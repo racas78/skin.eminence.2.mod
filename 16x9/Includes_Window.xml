@@ -129,7 +129,7 @@
 <!-- Modification Bottom -->                    
                             <bottom>5</bottom>
                             <height>68</height>
-                            <align>left</align>
+                            <align>justify</align>
                             <font>Font-ListInfo-Small</font>
                             <textcolor>HomeSubLabel</textcolor>
                             <label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.Property(Addon.Description)]</label>

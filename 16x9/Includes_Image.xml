@@ -60,8 +60,9 @@
 
 <!-- Ajout Variable -->    
     <variable name="MusicCDArt">
-		<value>$INFO[Skin.String(musiccdart.location)]$INFO[ListItem.Artist]$INFO[ListItem.Album,/,.png]</value>	
-	</variable>	
+		<!--<value>$INFO[Skin.String(musiccdart.location)]$INFO[ListItem.Artist]$INFO[ListItem.Album,/,.png]</value>-->
+		<value>$INFO[Skin.String(musiccdart.location)]$INFO[ListItem.Artist,,/]$INFO[ListItem.Album,,/]cdart.png</value>		
+    </variable>	
 
     <variable name="Image_Poster">
         <value condition="[Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)] + Control.IsVisible(150) + !IsEmpty(Container(150).ListItem.Icon)">$INFO[Container(150).ListItem.Icon]</value>

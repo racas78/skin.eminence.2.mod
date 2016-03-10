@@ -90,7 +90,7 @@
                             <top>side</top>
                             <height>32</height>
                             <width>32</width>                         
-                            <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+                            <texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
                         </control>
                         <control type="image">
@@ -99,7 +99,7 @@
                             <height>32</height>
                             <width>32</width>
 <!-- Modification Texture -->                            
-                            <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+                            <texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
                         </control>
                     </control>
@@ -228,7 +228,7 @@
                             <top>44</top>
                             <height>32</height>
                             <width>32</width>                         
-                            <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+                            <texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
                         </control>
 <!-- Ajout Control -->                                                
@@ -237,7 +237,7 @@
                             <top>44</top>
                             <height>32</height>
                             <width>32</width>                            
-                            <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+                            <texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
                         </control>
                         </control>
@@ -284,7 +284,7 @@
                             <top>side</top>
                             <height>32</height>
                             <width>32</width>                         
-                            <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+                            <texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
                         </control>                        
                         <control type="image">
@@ -293,7 +293,7 @@
                             <height>32</height>
                             <width>32</width>
 <!-- Modification Texture -->                            
-                            <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+                            <texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
                         </control>
                     </control>
@@ -437,7 +437,7 @@
                             <top>44</top>
                             <height>32</height>
                             <width>32</width>                         
-                            <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+                            <texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
                         </control>
 <!-- Ajout Control -->                                                
@@ -446,7 +446,7 @@
                             <top>44</top>
                             <height>32</height>
                             <width>32</width>                            
-                            <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+                            <texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
                         </control>
                         </control>
@@ -540,7 +540,7 @@
                         <right>pad</right>
                         <height>154</height>
                         <font>Font-ListInfo</font>
-                        <align>left</align>
+                        <align>justify</align>
                         <label>$VAR[Label_Plot]</label>
                         <visible>!IsEmpty(ListItem.Genre)</visible>
                     </control>
@@ -549,7 +549,7 @@
                         <right>pad</right>
                         <height>190</height>
                         <font>Font-ListInfo</font>
-                        <align>left</align>
+                        <align>justify</align>
                         <label>$VAR[Label_Plot]</label>
                         <visible>IsEmpty(ListItem.Genre)</visible>
                     </control>
@@ -676,7 +676,7 @@
                             <top>15</top>
                             <height>32</height>
                             <width>32</width>                         
-                            <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+                            <texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
                         </control>                            
                             <control type="image">
@@ -685,7 +685,7 @@
                                 <height>32</height>
                                 <width>32</width>
 <!-- Modification Texture -->                            
-                            <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+                            <texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
                                 <visible>!IsEmpty(ListItem.Overlay)</visible>
                             </control>
                         </control>
@@ -726,7 +726,7 @@
                                 <top>15</top>
                                 <height>32</height>
                                 <width>32</width>
-                                <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+                                <texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
                                 <visible>!IsEmpty(ListItem.Overlay)</visible>
                             </control>
                             <control type="image">
@@ -735,7 +735,7 @@
                                 <height>32</height>
                                 <width>32</width>
 <!-- Modification Texture -->                            
-                                <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+                                <texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
                                 <visible>!IsEmpty(ListItem.Overlay)</visible>
                             </control>
                         </control>
@@ -783,7 +783,7 @@
                             <top>15</top>
                             <height>32</height>
                             <width>32</width>                         
-                            <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+                            <texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
                         </control>                            
                             <control type="image">
@@ -792,7 +792,7 @@
                                 <height>32</height>
                                 <width>32</width>
 <!-- Modification Texture -->                            
-                            <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+                            <texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
                                 <visible>!IsEmpty(ListItem.Overlay)</visible>
                             </control>
                         </control>
@@ -839,7 +839,7 @@
                                 <top>15</top>
                                 <height>32</height>
                                 <width>32</width>
-                                <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+                                <texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
                                 <visible>!IsEmpty(ListItem.Overlay)</visible>
                             </control>
                             <control type="image">
@@ -848,7 +848,7 @@
                                 <height>32</height>
                                 <width>32</width>
 <!-- Modification Texture -->                            
-                                <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+                                <texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
                                 <visible>!IsEmpty(ListItem.Overlay)</visible>
                             </control>
                         </control>
@@ -1041,7 +1041,7 @@
                                 <width>32</width>
                                 <height>32</height>
                                 <aspectratio aligny="top">keep</aspectratio>        
-                                <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+                                <texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
                                  <visible>!IsEmpty(ListItem.Overlay)</visible>
                             </control>                           
                             <control type="image">
@@ -1050,7 +1050,7 @@
                                 <width>32</width>
                                 <height>32</height>
                                 <aspectratio aligny="top">keep</aspectratio>  
-                                <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+                                <texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
                                 <visible>!IsEmpty(ListItem.Overlay)</visible>
                             </control>
                         </control>
@@ -1087,7 +1087,7 @@
                                 <width>32</width>
                                 <height>32</height>
                                 <aspectratio aligny="top">keep</aspectratio>           
-                                <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+                                <texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
                                  <visible>!IsEmpty(ListItem.Overlay)</visible>
                             </control>                                                     
                             <control type="image">
@@ -1096,7 +1096,7 @@
                                 <width>32</width>
                                 <height>32</height>
                                 <aspectratio aligny="top">keep</aspectratio>
-                                <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+                                <texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
                                 <visible>!IsEmpty(ListItem.Overlay)</visible>
                             </control>
                         </control>                      
@@ -1146,7 +1146,7 @@
                         <right>pad</right>
                         <height>80</height>
                         <font>Font-ListInfo</font>
-                        <align>left</align>
+                        <align>justify</align>
                         <label>$VAR[Label_Plot]</label>
                     </control>
                     <control type="label">
@@ -1407,7 +1407,7 @@
                             <top>15</top>
                             <height>32</height>
                             <width>32</width>                         
-                            <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+                            <texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
                         </control>                            
                             <control type="image">
@@ -1416,7 +1416,7 @@
                                 <height>32</height>
                                 <width>32</width>
 <!-- Modification Texture -->                            
-                            <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+                            <texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
                                 <visible>!IsEmpty(ListItem.Overlay)</visible>
                             </control>
                         </control>
@@ -1536,7 +1536,7 @@
 			<posy>60</posy>
 			<width>445</width>
 			<height>230</height>
-			<align>left</align>
+			<align>justify</align>
 			<font>Font-ListInfo-Small</font>
 			<label>$INFO[ListItem.Plot]</label>
 			<textcolor>LineLabel</textcolor>
@@ -1601,7 +1601,7 @@
 			<posy>60</posy>
 			<width>445</width>
 			<height>230</height>
-			<align>right</align>
+			<align>justify</align>
 			<font>Font-ListInfo-Small</font>
 			<label>$INFO[ListItem.Plot]</label>
 			<textcolor>LineLabel</textcolor>
@@ -1787,7 +1787,7 @@
       				<width>32</width>
             			<height>32</height>
 				<aspectratio aligny="top">keep</aspectratio>         
-				<texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+				<texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
 				<animation effect="fade" start="0" end="100" delay="100" time="200" reversible="false">Focus</animation>
 			</control>
 			<control type="image">  
@@ -1796,7 +1796,7 @@
       				<width>32</width>
             			<height>32</height>
 				<aspectratio aligny="top">keep</aspectratio>         
-				<texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+				<texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
 				<animation effect="fade" start="0" end="100" delay="100" time="200" reversible="false">Focus</animation>
 			</control>                        
                     </focusedlayout>
@@ -1866,7 +1866,7 @@
       				<width>32</width>
             			<height>32</height>
 				<aspectratio aligny="top">keep</aspectratio>         
-				<texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+				<texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
 				<animation effect="fade" start="0" end="100" delay="100" time="200" reversible="false">Focus</animation>
 			</control>
 			<control type="image">  
@@ -1875,7 +1875,7 @@
       				<width>32</width>
             			<height>32</height>
 				<aspectratio aligny="top">keep</aspectratio>         
-				<texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+				<texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
 				<animation effect="fade" start="0" end="100" delay="100" time="200" reversible="false">Focus</animation>
 			</control>  
 		    </control>	   

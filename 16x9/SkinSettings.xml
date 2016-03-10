@@ -951,8 +951,7 @@
                         <visible>Skin.HasSetting(home.tilecolor)</visible>
                         <visible>ControlGroup(8000).HasFocus(8008)</visible>
                     </control>
-                    
-<!-- Ajout Control -->                    
+                                      
                     <!-- Home Menu Text Colors -->
                     <control type="radiobutton" id="8806">
                         <width>100%</width>
@@ -962,7 +961,45 @@
                         <selected>Skin.HasSetting(home.textcolor)</selected>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8008)</visible>
-                    </control> 
+                    </control>
+                    
+                    <!-- Indicators Primary Color -->
+                    <control type="button" id="8814">
+                        <width>100%</width>
+                        <label>31753</label>
+                        <label2>$VAR[Label_SkinSetting_IndicatorsPrimaryColor]</label2>
+                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=IndicatorsPrimaryColor)</onclick>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8008)</visible>
+                    </control>
+                    
+                    <!-- Reset Indicator Primary Color -->
+                    <control type="button" id="8815">
+                        <width>100%</width>
+                        <label>- $LOCALIZE[31113]</label>
+                        <onclick>Skin.Reset(IndicatorsPrimaryColor)</onclick>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8008)</visible>
+                    </control>
+                    
+                    <!-- Indicators Secondary Color -->
+                    <control type="button" id="8816">
+                        <width>100%</width>
+                        <label>31754</label>
+                        <label2>$VAR[Label_SkinSetting_IndicatorsSecondaryColor]</label2>
+                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=IndicatorsSecondaryColor)</onclick>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8008)</visible>
+                    </control>
+                    
+                    <!-- Reset Indicator Secondary Color -->
+                    <control type="button" id="8817">
+                        <width>100%</width>
+                        <label>- $LOCALIZE[31660]</label>
+                        <onclick>Skin.Reset(IndicatorsSecondaryColor)</onclick>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8008)</visible>
+                    </control>      
                     
                     <control type="radiobutton" id="8810">
                         <width>100%</width>

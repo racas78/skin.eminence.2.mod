@@ -81,7 +81,17 @@
     <variable name="Widget_SecondaryColor">
         <value condition="IsEmpty(Skin.String(WidgetSecondaryColor))">HomeWidgetBG</value>
         <value>$INFO[Skin.String(WidgetSecondaryColor)]</value>
-    </variable>               
+    </variable>
+    
+    <variable name="Indicators_PrimaryColor">
+        <value condition="IsEmpty(Skin.String(IndicatorsPrimaryColor))">Indicator</value>
+        <value>$INFO[Skin.String(IndicatorsPrimaryColor)]</value>
+    </variable>
+    
+    <variable name="Indicators_SecondaryColor">
+        <value condition="IsEmpty(Skin.String(IndicatorsSecondaryColor))">IndicatorBack</value>
+        <value>$INFO[Skin.String(IndicatorsSecondaryColor)]</value>
+    </variable>                       
 
     <!-- DBUG INCLUDS -->
     <include name="WindowID">

@@ -1,7 +1,11 @@
 [B]1.6.0[/B]
 Add possibility to view CDArt instead of ClearArt on video infos.
 Add possibility to hide submenus icons.
+Add possibility to change colors of indicators.
 Many changes in PVR.
+Change : justify all plots.
+Change posters aspect ratio.
+Change structure for music artworks (logo.png and cdart.png).
 Fix views.
 
 [B]1.5.9[/B]
