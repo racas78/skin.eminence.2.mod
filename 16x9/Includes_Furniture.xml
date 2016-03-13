@@ -708,7 +708,7 @@
     <variable name="Furniture_TopBar_Header_SubLabel">
         <value condition="Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(NextAired.Total)][/COLOR] $LOCALIZE[31084]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(NextAired.TodayTotal)][/COLOR] $LOCALIZE[31085]</value>
         <value condition="Window.IsVisible(LoginScreen.xml)">$LOCALIZE[20115]</value>
-        <value condition="Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">[COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(TotalItems)][/COLOR] $LOCALIZE[31001]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(CurrentPage)][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(TotalPages)][/COLOR] $LOCALIZE[31067]</value>
+        <value condition="Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">[COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(TotalItems)][/COLOR] $LOCALIZE[31001]  •  $LOCALIZE[31067] [COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(CurrentPage)][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(TotalPages)][/COLOR]</value>
 <!-- Modification Value -->        
         <value condition="!IsEmpty(Container.NumItems)">[COLOR=$VAR[HighlightColor2]]$INFO[Container.NumItems][/COLOR] $LOCALIZE[31001]  •  $LOCALIZE[31067] [COLOR=$VAR[HighlightColor2]]$INFO[Container.CurrentPage][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Container.NumPages][/COLOR]</value>
         <value condition="!IsEmpty(Skin.String(home.subheadertext))">$INFO[Skin.String(home.subheadertext)]</value>

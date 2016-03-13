@@ -6,7 +6,7 @@
 
         <!-- Background -->
         <include>Furniture_Background</include>
-        <include>Furniture_RSS</include>  
+        <include>Furniture_RSS</include> 
         
         <control type="group">
             <visible>Control.IsVisible(500)</visible>
@@ -45,7 +45,7 @@
                     <width>100%</width>
                     <height>100%</height>
 <!-- Modification Texture -->                    
-                    <texture colordiffuse="Background">common/white.png</texture>
+                    <texture colordiffuse="PosterBorder">common/white.png</texture>
                 </control>
                 <control type="grouplist">
                     <usecontrolcoords>true</usecontrolcoords>
@@ -60,13 +60,14 @@
                         <height>363</height>
                         <aspectratio>scale</aspectratio>
                         <fadetime>200</fadetime>
-                        <texture background="true">$INFO[Container(500).ListItem.Property(Fanart_small)]</texture>
+                        <texture background="true">$INFO[Container(500).ListItem.Art(fanart_small)]</texture>
                     </control>
                     <control type="label">
                         <top>pad</top>
                         <left>pad</left>
                         <right>pad</right>
                         <height>32</height>
+                        <scroll>yes</scroll>
                         <font>Font-Button-Black</font>
                         <label>$INFO[Container(500).ListItem.Label]</label>
                     </control>
@@ -76,6 +77,7 @@
                         <height>24</height>
                         <textcolor>$VAR[HighlightColor2]</textcolor>
                         <font>Font-ListInfo-Small-Bold</font>
+                        <scroll>yes</scroll>
                         <label>$INFO[Container(500).ListItem.Genre,[UPPERCASE],[/UPPERCASE]]</label>
                         <visible>!IsEmpty(Container(500).ListItem.Genre)</visible>
                     </control>
@@ -84,7 +86,7 @@
                         <right>pad</right>
                         <height>154</height>
                         <font>Font-ListInfo</font>
-                        <align>left</align>
+                        <align>justify</align>
                         <label>$INFO[Container(500).ListItem.Plot]</label>
                         <visible>!IsEmpty(Container(500).ListItem.Genre)</visible>
                     </control>
@@ -93,7 +95,7 @@
                         <right>pad</right>
                         <height>190</height>
                         <font>Font-ListInfo</font>
-                        <align>left</align>
+                        <align>justify</align>
                         <label>$INFO[Container(500).ListItem.Plot]</label>
                         <visible>IsEmpty(Container(500).ListItem.Genre)</visible>
                     </control>
