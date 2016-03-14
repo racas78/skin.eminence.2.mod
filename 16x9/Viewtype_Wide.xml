@@ -1612,7 +1612,7 @@
         </control>
     <control type="group">
         <visible>Skin.HasSetting(hide.moviesplots)</visible>
-        <visible>Container.Content(movies)</visible>
+        <visible>Container.Content(movies) | Container.Content(sets)</visible>
         <control type="group">
             <top>0</top>
             <height>430</height>
@@ -1659,7 +1659,7 @@
     
     <control type="group">
         <visible>!Skin.HasSetting(hide.moviesplots)</visible>
-        <visible>Container.Content(movies)</visible>
+        <visible>Container.Content(movies) | Container.Content(sets)</visible>
         <control type="group">
             <top>0</top>
             <height>430</height>
@@ -2002,7 +2002,7 @@
         </control>
     <control type="group">
         <visible>Skin.HasSetting(hide.moviesplots)</visible>
-        <visible>Container.Content(movies)</visible>
+        <visible>Container.Content(movies) | Container.Content(sets)</visible>
         <control type="group">
             <top>0</top>
             <height>430</height>
@@ -2049,7 +2049,7 @@
     
     <control type="group">
         <visible>!Skin.HasSetting(hide.moviesplots)</visible>
-        <visible>Container.Content(movies)</visible>
+        <visible>Container.Content(movies) | Container.Content(sets)</visible>
         <control type="group">
             <top>0</top>
             <height>430</height>

@@ -439,7 +439,9 @@
 <!-- Ajout Value -->
          <value condition="Control.HasFocus(8815)">$LOCALIZE[31593]</value> 
 <!-- Ajout Value -->
-         <value condition="Control.HasFocus(8817)">$LOCALIZE[31661]</value>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+         <value condition="Control.HasFocus(8817)">$LOCALIZE[31661]</value>
+<!-- Ajout Value -->
+         <value condition="Control.HasFocus(8147)">$LOCALIZE[31758]</value>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
     </variable>
 
     <variable name="Label_PlayerStatus">
@@ -662,5 +664,9 @@
     <variable name="Label_SkinSetting_IndicatorsSecondaryColor">
         <value condition="!IsEmpty(Skin.String(IndicatorsSecondaryColor))">$INFO[Skin.String(IndicatorsSecondaryColor)]</value>
         <value>$LOCALIZE[31180]</value>
+    </variable>
+    <variable name="Label_SkinSetting_SubmenuStyle">
+        <value condition="IsEmpty(Skin.String(SubmenuStyle))">$LOCALIZE[31759]</value>
+        <value>$INFO[Skin.String(SubmenuStyle.label)]</value>
     </variable>
 </includes>

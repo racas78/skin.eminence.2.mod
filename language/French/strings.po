@@ -1733,3 +1733,19 @@ msgstr "Définir la couleur principale des indicateurs de fichiers vus, non vus,
 msgctxt "#31756"
 msgid "Set the secondary color of watched, unwatched, recently added and ongoing indicators."
 msgstr "Définir la couleur secondaire des indicateurs de fichiers vus, non vus, récemment ajoutés et en cours."
+
+msgctxt "#31757"
+msgid "Submenus style"
+msgstr "Style des sous-menus"
+
+msgctxt "#31758"
+msgid "Set submenus style."
+msgstr "Sélectionner l'apparence des sous-menus."
+
+msgctxt "#31759"
+msgid "Large"
+msgstr "Large"
+
+msgctxt "#31760"
+msgid "Small"
+msgstr "Réduit"

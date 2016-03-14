@@ -1737,3 +1737,19 @@ msgstr ""
 msgctxt "#31756"
 msgid "Set the secondary color of watched, unwatched, recently added and ongoing indicators."
 msgstr ""
+
+msgctxt "#31757"
+msgid "Submenus style"
+msgstr ""
+
+msgctxt "#31758"
+msgid "Set submenus style."
+msgstr ""
+
+msgctxt "#31759"
+msgid "Large"
+msgstr ""
+
+msgctxt "#31760"
+msgid "Small"
+msgstr ""

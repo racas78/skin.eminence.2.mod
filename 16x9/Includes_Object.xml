@@ -239,7 +239,7 @@
             <selected>Skin.HasSetting(hide.moviesplots)</selected>
             <onclick>Skin.ToggleSetting(hide.moviesplots)</onclick>
             <visible>Control.IsVisible(600) | Control.IsVisible(506) | Control.IsVisible(56) | Control.IsVisible(505) | Control.IsVisible(53) | Control.IsVisible(159) | Control.IsVisible(160) | Control.IsVisible(161) | Control.IsVisible(162)</visible>
-            <visible>Container.Content(movies)</visible>
+            <visible>Container.Content(movies) | Container.Content(sets)</visible>
         </control>
 <!-- Ajout Control -->             
         <!-- TVShows Fanarts/Thumbs Setting -->

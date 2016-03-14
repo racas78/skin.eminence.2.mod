@@ -147,10 +147,20 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8001)</visible>
                     </control>
+                    <!-- Submenus Style -->
+                    <control type="button" id="8147">
+                        <width>100%</width>
+                        <label>31757</label>
+                        <label2>$VAR[Label_SkinSetting_SubmenuStyle]</label2>
+                        <onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=SubmenuStyle,header=$LOCALIZE[31757])</onclick>
+                        <onclick>ReloadSkin()</onclick>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8001)</visible>
+                    </control>
                     <!-- Hide Submenus Icons -->
                     <control type="radiobutton" id="8146">
                         <width>100%</width>
-                        <label>31751</label>
+                        <label>- $LOCALIZE[31751]</label>
                         <radioposx>1350</radioposx>
                         <selected>Skin.HasSetting(home.hidesubmenusicons)</selected>
                         <onclick>Skin.ToggleSetting(home.hidesubmenusicons)</onclick>

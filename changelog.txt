@@ -1,6 +1,8 @@
 [B]1.6.1[/B]
+Add small home submenu.
 Enable CleartArt on tv shows when CDArt is enable.
 Fix on Extended infos.
+Fix logos list views with sets.
 
 [B]1.6.0[/B]
 Add possibility to view CDArt instead of ClearArt on video infos.

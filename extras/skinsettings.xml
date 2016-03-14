@@ -54,4 +54,11 @@
     <setting id="MusicVisualisation" value="albumswall" label="$LOCALIZE[31637]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/music_albumswall_default.jpg" description=""/>
     <setting id="MusicVisualisation" value="pixelated" label="$LOCALIZE[31740]" condition="System.HasAddon(script.colorbox) + Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/music_pixelated_default.jpg" description=""/>
     <setting id="MusicVisualisation" value="none" label="$LOCALIZE[31189]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/music_none_default.jpg" description=""/>
+    
+    <!-- Submenus Style -->
+    <setting id="SubmenuStyle" value="Large" label="$LOCALIZE[31759]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/submenus_large_light.jpg" description=""/>
+    <setting id="SubmenuStyle" value="Small" label="$LOCALIZE[31760]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/submenus_small_light.jpg" description=""/>
+    
+    <setting id="SubmenuStyle" value="Large" label="$LOCALIZE[31759]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/submenus_large_default.jpg" description=""/>
+    <setting id="SubmenuStyle" value="Small" label="$LOCALIZE[31760]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/submenus_small_default.jpg" description=""/>
 </settings>

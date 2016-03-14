@@ -1287,22 +1287,31 @@
             <visible>Control.HasFocus(9000) | Control.HasFocus(9002)</visible>
             <visible>[IsEmpty(Container(9000).ListItem.Property(ParentalControl)) | SubString(Container(9000).ListItem.Property(ParentalControl),no)] | StringCompare(Skin.String(mypassword),Skin.String(passcode))</visible>
             <include>Dialog_Top</include>
-            <include>Dialog_Background_Home</include>
-            <include name="Dialog_Top_IconHeader_Home">
-<!-- Modification Param -->            
+            <include condition="IsEmpty(Skin.String(SubmenuStyle)) | Skin.String(SubmenuStyle, Large)">Dialog_Background_Home</include>
+            <include condition="Skin.String(SubmenuStyle, Small)">Dialog_Background_Home_Small</include>
+            <include name="Dialog_Top_IconHeader_Home" condition="IsEmpty(Skin.String(SubmenuStyle)) | Skin.String(SubmenuStyle, Large)">    
                 <param name="label" value="$LOCALIZE[1034] / $INFO[Container(9000).ListItem.Label] / $INFO[Container(9002).ListItem.Label]" />
                 <param name="icon" value="$INFO[Container(9000).ListItem.Icon]" />
             </include>
-            <include name="Dialog_Top_Arrows_Home">
+            <include name="Dialog_Top_IconHeader_Home_Small" condition="Skin.String(SubmenuStyle, Small)">
+                <param name="icon" value="$INFO[Container(9000).ListItem.Icon]" />
+            </include>
+            <include name="Dialog_Top_Arrows_Home" condition="IsEmpty(Skin.String(SubmenuStyle)) | Skin.String(SubmenuStyle, Large)">
                 <param name="id" value="9002" />
-            </include>               
+            </include>
+            <include name="Dialog_Top_Arrows_Home_Small" condition="Skin.String(SubmenuStyle, Small)">
+                <param name="id" value="9002" />
+            </include>                   
                <control type="panel" id="9002">
                 <onup>9000</onup>
                 <ondown>9000</ondown>
                 <onback>9000</onback>
                 <onleft>9002</onleft>
                 <onright>9002</onright>
-                <include name="DefSubMenu">
+                <include name="DefSubMenu" condition="IsEmpty(Skin.String(SubmenuStyle)) | Skin.String(SubmenuStyle, Large)">
+                <param name="icon" value="$INFO[ListItem.Icon]" />
+                </include> 
+                <include name="DefSubMenu_Small" condition="Skin.String(SubmenuStyle, Small)">
                 <param name="icon" value="$INFO[ListItem.Icon]" />
                 </include>     
                 <content>

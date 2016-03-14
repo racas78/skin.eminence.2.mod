@@ -26,7 +26,7 @@
     </include>
 
 <!-- Ajout Include -->    
-        <include name="Dialog_Background_Home">
+    <include name="Dialog_Background_Home">
         <control type="image">
             <top>0</top>
             <left>0</left>
@@ -84,6 +84,71 @@
             <visible>IntegerGreaterThan(Container(9002).NumItems,4) | IntegerGreaterThan(Container(9000).NumItems,4)</visible>
         </control>
     </include>
+    
+    <include name="Dialog_Background_Home_Small">
+        <control type="image">
+            <top>0</top>
+            <left>0</left>
+            <right>0</right>
+            <height>60</height>
+            <aspectratio>scale</aspectratio>
+            <texture colordiffuse="$VAR[HomeBar_Color]">common/white.png</texture>
+        </control>
+        <control type="image">
+            <top>0</top>
+            <left>60</left>
+            <height>60</height>
+            <width>1</width>
+            <texture colordiffuse="LineLabel">common/separator.png</texture>
+        </control>
+        <control type="image">
+            <top>0</top>
+            <left>110</left>
+            <height>60</height>
+            <width>1</width>
+            <texture colordiffuse="LineLabel">common/separator.png</texture>
+        </control>
+        <control type="image">
+            <top>0</top>
+            <right>50</right>
+            <height>60</height>
+            <width>1</width>
+            <texture colordiffuse="LineLabel">common/separator.png</texture>
+        </control>
+        <control type="image">
+            <top>0</top>
+            <left>462</left>
+            <height>60</height>
+            <width>1</width>
+            <texture colordiffuse="LineLabel">common/separator.png</texture>
+            <visible>IntegerGreaterThan(Container(9002).NumItems,1) | IntegerGreaterThan(Container(9000).NumItems,1)</visible>
+        </control>
+        <control type="image">
+            <top>0</top>
+            <left>814</left>
+            <height>60</height>
+            <width>1</width>
+            <texture colordiffuse="LineLabel">common/separator.png</texture>
+            <visible>IntegerGreaterThan(Container(9002).NumItems,2) | IntegerGreaterThan(Container(9000).NumItems,2)</visible>
+        </control>
+        <control type="image">
+            <top>0</top>
+            <left>1166</left>
+            <height>60</height>
+            <width>1</width>
+            <texture colordiffuse="LineLabel">common/separator.png</texture>
+            <visible>IntegerGreaterThan(Container(9002).NumItems,3) | IntegerGreaterThan(Container(9000).NumItems,3)</visible>
+        </control>
+        <control type="image">
+            <top>0</top>
+            <left>1518</left>
+            <height>60</height>
+            <width>1</width>
+            <texture colordiffuse="LineLabel">common/separator.png</texture>
+            <visible>IntegerGreaterThan(Container(9002).NumItems,4) | IntegerGreaterThan(Container(9000).NumItems,4)</visible>
+        </control>
+    </include>
+
 
     <include name="Dialog_Top_IconHeader">
         <control type="image">
@@ -120,8 +185,18 @@
             <height>48</height>
             <aligny>center</aligny>
             <align>left</align>
-
             <label>$PARAM[label]</label>
+        </control>
+    </include>
+    
+    <include name="Dialog_Top_IconHeader_Home_Small">
+        <control type="image">
+            <top>0</top>
+            <left>0</left>
+            <width>60</width>
+            <height>60</height>
+            <aspectratio>scale</aspectratio>
+            <texture colordiffuse="ListLabel">$PARAM[icon]</texture>
         </control>
     </include>
 
@@ -242,7 +317,7 @@
         </control>
     </include>
     
-        <include name="Dialog_Top_Arrows_Home">
+    <include name="Dialog_Top_Arrows_Home">
         <control type="group">
             <control type="image">
                 <top>15</top>               
@@ -254,6 +329,27 @@
             </control>
             <control type="image">
                 <top>15</top>         
+                <right>16</right>
+                <width>18</width>
+                <height>18</height>
+                <texture colordiffuse="ListLabel" flipx="true">common/arrow-left.png</texture>
+                <visible>Container($PARAM[id]).HasNext</visible>
+            </control>
+        </control>
+    </include>
+    
+    <include name="Dialog_Top_Arrows_Home_Small">
+        <control type="group">
+            <control type="image">
+                <top>21</top>               
+                <left>76</left>
+                <width>18</width>
+                <height>18</height>
+                <texture colordiffuse="ListLabel">common/arrow-left.png</texture>
+                <visible>Container($PARAM[id]).HasPrevious</visible>
+            </control>
+            <control type="image">
+                <top>21</top>         
                 <right>16</right>
                 <width>18</width>
                 <height>18</height>
