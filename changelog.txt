@@ -1,5 +1,6 @@
 [B]1.6.1[/B]
 Add small home submenu.
+Add small powermenu.
 Enable CleartArt on tv shows when CDArt is enable.
 Fix on Extended infos.
 Fix logos list views with sets.

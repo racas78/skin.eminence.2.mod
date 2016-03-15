@@ -293,6 +293,50 @@
                     </control>
                 </focusedlayout>
     </include>
+    
+    <include name="Dialog_Top_PowerMenu_Small">      
+        <left>110</left>                        
+        <right>50</right>
+        <top>0</top>
+        <height>60</height>
+        <onup>Close</onup>
+        <ondown>Close</ondown>
+        <onleft>9000</onleft>
+        <onright>9000</onright>
+        <scrolltime>200</scrolltime>
+        <orientation>horizontal</orientation>
+                <itemlayout width="352" height="60">
+                    <control type="label">
+                        <left>side</left>
+                        <right>side</right>
+                        <height>60</height>
+                        <scroll>yes</scroll>
+                        <font>Font-ListInfo-Small</font>
+                        <fontcolor>HomeBarFG</fontcolor>
+                        <aligny>center</aligny>
+                        <align>center</align>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="352" height="60">
+                    <control type="image">
+                        <width>352</width> 
+                        <height>60</height>
+                        <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                    </control>
+                    <control type="label">
+                        <left>side</left>
+                        <right>side</right>
+                        <height>60</height>
+                        <scroll>yes</scroll>
+                        <textcolor>Selected</textcolor>
+                        <font>Font-ListInfo-Small</font>
+                        <aligny>center</aligny>
+                        <align>center</align>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </focusedlayout>
+    </include>
 
     <include name="Dialog_Top_Arrows">
         <control type="group">
