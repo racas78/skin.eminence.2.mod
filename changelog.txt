@@ -1,3 +1,6 @@
+[B]1.6.2[/B]
+Fix duration flag
+
 [B]1.6.1[/B]
 Add small home submenu.
 Add small powermenu.
