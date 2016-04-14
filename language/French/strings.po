@@ -710,6 +710,10 @@ msgctxt "#31194"
 msgid "Show plot for Hub widget"
 msgstr "Afficher le synopsis sur le widget Hub"
 
+msgctxt "#31195"
+msgid "Allow widget reloading"
+msgstr "Autoriser le rechargement des widgets"
+
 msgctxt "#31500"
 msgid "None"
 msgstr "Aucune"
@@ -1749,3 +1753,7 @@ msgstr "Large"
 msgctxt "#31760"
 msgid "Small"
 msgstr "Réduit"
+
+msgctxt "#31761"
+msgid "Allow widgets reloading."
+msgstr "Permet d'autoriser le rechargement des widgets."

@@ -710,6 +710,10 @@ msgctxt "#31194"
 msgid "Show plot for Hub widget"
 msgstr ""
 
+msgctxt "#31195"
+msgid "Allow widget reloading"
+msgstr ""
+
 msgctxt "#31500"
 msgid "None"
 msgstr ""
@@ -1752,4 +1756,8 @@ msgstr ""
 
 msgctxt "#31760"
 msgid "Small"
+msgstr ""
+
+msgctxt "#31761"
+msgid "Allow widgets reloading."
 msgstr ""

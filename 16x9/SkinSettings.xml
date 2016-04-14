@@ -175,9 +175,19 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8001)</visible>
                     </control>
-                    <!-- Widget Info Box -->
-                    <control type="radiobutton" id="8103">
-                        <width>100%</width>
+                    <!-- Persistent Widgets-->
+                      <control type="radiobutton" id="8148">
+                          <width>100%</width>
+                         <label>31195</label>
+                         <radioposx>1350</radioposx>
+                         <selected>!Skin.HasSetting(widgets.persistent)</selected>
+                         <onclick>Skin.ToggleSetting(widgets.persistent)</onclick>
+                         <include>Defs_OptionButton</include>
+                         <visible>ControlGroup(8000).HasFocus(8001)</visible>
+                     </control>
+                     <!-- Widget Info Box -->
+                     <control type="radiobutton" id="8103">
+                       <width>100%</width>
                         <label>31016</label>
                         <radioposx>1350</radioposx>
                         <selected>!Skin.HasSetting(home.hidewidgetbox)</selected>

@@ -1,5 +1,6 @@
 [B]1.6.2[/B]
-Fix duration flag
+Fix duration flag.
+Set non-persistent widgets as default (Use option "Allow widget reloading" to enable non-persistent widgets).
 
 [B]1.6.1[/B]
 Add small home submenu.
